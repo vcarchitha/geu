@@ -1,0 +1,7 @@
+<div class="cq-placeholder" data-sly-test.author="${wcmmode.edit || wcmmode.design}" data-emptytext="Image Component"></div>
+<sly data-sly-use.img="com.geu.aem.web.core.models.ImageComponentModel" data-sly-unwrap>
+   <div class="image-component ${properties.fullWidth}">
+      <img src="${img.fileReference}" alt="${img.alt}">
+      <div class="image-component-label"><a href="${img.linkURL}">${img.caption}</a></div>
+   </div>
+</sly>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/geu-web"/>
+    <filter root="/etc/designs/geu-web/clientlib-geu-web"/>
+    <filter root="/etc/designs/geu-web/clientlib-rte"/>
+    <filter root="/etc/designs/geu-web/clientlib-third-party"/>  
+    <filter root="/etc/designs/geu-web/clientlib-widgets"/> 
+    <filter root="/etc/designs/geu-web/clientlib-admissionform"/> 
+    <filter root="/etc/designs/geu-web/clientlib-admissionform-gehu"/>
+	<filter root="/etc/designs/geu-web/clientlib-landingpage"/>
+    <filter root="/etc/workflow/models/geu-updateprograms"/> 
+    <filter root="/etc/workflow/models/gehu-updateprograms"/>
+    <filter root="/etc/workflow/models/gehu-offline-payment-update"/>            
+    <filter root="/apps/sling" />
+</workspaceFilter>

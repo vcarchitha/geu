@@ -1,0 +1,78 @@
+
+.tab-content-container {
+    margin: 50px 0;
+    padding: 0 25px;
+}
+
+.tab-content .tab-pane-academic-details {
+    padding: 30px;
+}
+
+.tab-contents-wrapper {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+    margin-right: 15px;
+}
+
+.tab-contents-wrapper .tab-image {
+    display: inline-block;
+    width: 90px;
+    vertical-align: top;
+}
+
+.tab-content .tab-pane-academic-details img {
+    padding: 5px 0;
+}
+
+.tab-contents-wrapper .tab-content-block {
+    display: inline-block;
+    width: 80%;
+    vertical-align: top;
+}
+
+.tab-contents-wrapper .tab-content-block h3 {
+    font-family: Roboto-regular;
+    font-size: 14px;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+
+.tab-contents-wrapper .tab-content-block p {
+    font-size: 12px;
+    font-family: Roboto-light;
+    margin: 10px 10px 35px;
+}
+
+/*Mobile Styles*/
+@media only screen and (min-width: 0) and (max-width: 767px) {
+    /*Tabs Section*/
+    .tabs-wrapper {
+        min-width: 100%;
+    }
+    .tabs-wrapper ul {
+        min-width: 200px;
+    }
+    .tab-contents-wrapper {
+        width: 100%;
+        margin-right: 0;
+    }
+    .tab-content .tab-pane-academic-details {
+        padding: 15px;
+        margin: 30px 0;
+    }
+    .tab-contents-wrapper .tab-content-block {
+        width: 63%;
+    }
+    .tab-contents-wrapper .tab-content h3 {
+        margin-top: 5px;
+    }
+
+}
+
+/*Tablet and Medium Device Styles*/
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .tab-contents-wrapper {
+        width: 100%;
+    }
+}

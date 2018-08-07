@@ -1,0 +1,415 @@
+/*Partial Form Styles*/
+.partially-filled-form-error-message,
+.terms-error,
+.payment-error,
+.payment-mode-error,
+.payment-option-error {
+	color: #dc2e27;
+	text-align: center;
+	font: 12px/15px 'Roboto-Regular';
+	margin: 15px 0 20px;
+}
+.part-payment input:required {
+	outline: 1px solid #f00;
+}
+.payment-page-wrapper .partially-filled-form {
+	background-color: #e5e5e5;
+	display: block;
+	vertical-align: top;
+	width: 50%;
+	min-height: 450px;
+	text-align: center;
+	margin: 0;
+}
+.payment-page-wrapper .partially-filled-form.changebg {
+	background-color: #373737;
+}
+.payment-page-wrapper .partially-filled-form.changebg .partial-form label,
+.payment-page-wrapper .partially-filled-form.changebg #hideMsg {
+	color: #fff;
+}
+.payment-page-wrapper .partially-filled-form .two-column-heading h4 {
+	color: #fff;
+	background-color: #dc2e27;
+	height: 50px;
+	line-height: 50px;
+}
+.payment-page-wrapper .partially-filled-form .partial-form {
+	padding-top: 80px;
+}
+.payment-page-wrapper .partially-filled-form .partial-form label {
+	color: #373737;
+	width: 25%;
+	font: 14px/15px 'Roboto-Regular';
+	display: inline-block;
+	vertical-align: middle;
+	text-align: right;
+	padding-right: 10px;
+}
+.partially-filled-form .partial-form input,
+.payment-page-wrapper .payment-page-wrapper .partially-filled-form .partial-form select {
+	width: 250px;
+	height: 35px;
+}
+.payment-page-wrapper .partially-filled-form .partial-form .form-group {
+	margin: 0 0 30px;
+}
+.payment-page-wrapper .partially-filled-form .partial-form input.submit-button {
+	display: inline-block;
+	vertical-align: top;
+	width: 150px;
+	height: 40px;
+	float: right;
+	margin-right: 75px;
+	line-height: 40px;
+	color: #fff;
+	background-color: #dc2e27;
+	border: 1px solid #9a8783;
+}
+.payment-page-wrapper .partially-filled-form .partial-form .otp-wrapper {
+	display: none;
+	float: left;
+	width: 100%;
+	padding-left: 135px;
+}
+.payment-page-wrapper .partially-filled-form .partial-form .otp-wrapper .otp {
+	display: inline-block;
+	vertical-align: top;
+}
+.payment-page-wrapper .partially-filled-form .partial-form .otp-wrapper .enterOtp,
+.payment-page-wrapper .partially-filled-form .partial-form .otp-wrapper .sendOtp {
+	width: 115px;
+}
+.payment-page-wrapper .partially-filled-form .partial-form .otp-wrapper .sendOtp {
+	background: #373737;
+	border: 1px solid #fff;
+	color: #fff;
+	margin-left: 18px;
+}
+.payment-page-wrapper .partially-filled-form .partial-form .otp-wrapper input.sendOtp:disabled {
+	background: #e5e5e5;
+}
+
+/*Terms and Conditions Wrapper Styles*/
+.terms-and-conditions {
+	text-align: center;
+	background-color: #dc2e27;
+	width: 100%;
+	margin: 0 0 40px;
+}
+.terms-and-conditions h2 {
+	font: 28px/60px 'Roboto-Regular';
+	color: #fff;
+}
+.terms-and-conditions .terms-content-section {
+	background-color: #373737;
+	padding: 30px 0 50px;
+}
+.terms-and-conditions .terms-content-section h3 {
+	font-size: 18px;
+	color: #fff;
+	margin: 0 0 40px;
+}
+.terms-and-conditions .terms-content-section form {
+	padding-left: 20%;
+}
+.terms-and-conditions .terms-content-section label {
+	text-align: left;
+	display: block;
+}
+
+.terms-and-conditions .terms-content-section .input-wrapper {
+	margin: 0 0 20px;
+}
+.terms-and-conditions .terms-content-section label, 
+.terms-and-conditions .terms-content-section label a {
+	font: 18px 'Roboto-Regular';
+	color: #fff;
+}
+.terms-and-conditions .terms-content-section label a {
+	text-decoration: underline;
+	font-weight: bold;
+}
+.terms-and-conditions .terms-content-section input[type="checkbox"] {
+	margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+}
+.terms-and-conditions .terms-content-section span {
+	font: 12px/18px 'Roboto-Regular';
+	color: #fff;
+	display: block;
+	text-align: left;
+	padding-left: 40px;
+}
+.terms-submit {
+	margin: 20px 0 0;
+	text-align: left;
+}
+.terms-submit input {
+	font: 14px/35px 'Roboto-Regular';
+	background-color: #dc2e27;
+	border: 1px solid #897c7c;
+	width: 120px;
+	height: 40px;
+	color: #fff;
+}
+
+/*Payment Styles*/ 
+.payment {
+	text-align: center;
+	background-color: #dc2e27;
+	width: 100%;
+}
+.payment h2 {
+	font: 28px/60px 'Roboto-Regular';
+	color: #fff;
+}
+.payment-section {
+	background-color: #373737;
+	padding: 50px 65px;
+}
+.left-side-wrapper,
+.right-side-wrapper {
+	width: 50%;
+	float: left;
+	margin: 0 0 60px;
+}
+.full-payment {
+	background-color: #e5e5e5;
+	padding: 35px 0 25px;
+	margin: 0 0 50px;
+	min-height: 300px;
+}
+.full-payment.changebg,
+.payment-gateway-left-content.changebg {
+	background-color: #fff;
+}
+.full-payment h3,
+.part-payment h3 {
+	font: 24px 'Roboto-Bold';
+	color: #373737;
+}
+.full-payment h3 {
+	margin: 0 0 60px;
+}
+.full-payment span,
+.part-payment span {
+	font: 24px 'Roboto-Regular';
+	color: #373737;
+	margin: 0 0 35px;
+	display: block;
+}
+.full-payment input[type="radio"],
+.part-payment input[type="radio"] {
+	width: 20px;
+	height: 20px;
+	margin: 0 auto 25px;
+	display: block;
+}
+.full-payment .fees-table ul {
+	float: left;
+}
+.full-payment .fees-table {
+	display: inline-block;
+}
+.full-payment .fees-table ul li {
+	border: 1px solid #626262;
+	text-align: center;
+	list-style: none;
+	padding: 10px 20px;
+}
+
+.part-payment {
+	background-color: #e5e5e5;
+	padding: 35px 0 25px;
+	margin: 0 0 50px;
+	min-height: 300px;
+}
+.part-payment.changebg,
+.payment-gateway-right-content.changebg {
+	background-color: #fff;
+}
+.part-payment .partial-fee-content {
+	text-align: center;
+	margin: 0 0 35px;
+}
+.part-payment .partial-fee-content input {
+	font: 24px/50px 'Roboto-Bold';
+	text-align: center;
+	margin: 0 50px;
+	min-height: 50px;
+	background-color: transparent;
+	border: 1px solid #373737;
+}
+.online-payment-selection input[type="radio"],
+.offline-payment-selection input[type="radio"] {
+	width: 20px;
+	height: 20px;
+	margin-right: 15px;
+	vertical-align: bottom;
+}
+.online-payment-selection label,
+.offline-payment-selection label {
+	font: 20px/24px 'Roboto-Regular';
+	color: #fff;
+	display: block;
+	margin: 0;
+}
+.online-payment-selection, .offline-payment-selection {
+	min-height: 130px;
+}
+.offline-payment-selection label {
+	padding: 0 0 30px;
+}
+.offline-payment-selection span {
+	font-size: 14px;
+	color: #fff;
+	display: inline-block;
+	width: 210px;
+	margin: 0 0 25px;
+}
+
+.payment-gateway-left-content,
+.payment-gateway-right-content {
+	font: 18px/18px 'Roboto-Regular';
+	background-color: #e5e5e5;
+	text-align: center;
+	color: #373737;
+	padding-top: 25px;
+	min-height: 90px;
+}
+.payment-submit input {
+	font: 14px/35px 'Roboto-Regular';
+	background-color: #dc2e27;
+	color: #fff;
+	border: 1px solid #897c7c;
+	margin: 0 auto;
+	display: block;
+	width: 120px;
+	height: 40px;
+}
+
+/*Mobile and Small Device Styles*/
+@media only screen and (min-width: 0) and (max-width: 767px) {
+	/*Step-1*/
+	.payment-page-wrapper .partially-filled-form {
+		width: 100%;
+	}
+	.partially-filled-form .two-column-heading h4 {
+		font-size: 16px;
+	}
+	.partially-filled-form .partial-form input {
+		width: 70%;
+	}
+	.partially-filled-form .partial-form input.submit-button {
+		margin-right: 5px;
+	}
+	.partially-filled-form .partial-form .otp-wrapper {
+		padding-left: 0;
+	}
+
+	/*Terms Styles*/
+	.terms-and-conditions {
+		text-align: left;
+	}
+	.terms-and-conditions h2 {
+		text-align: center;
+		font-size: 16px;
+		line-height: 30px;
+		min-height: 30px;
+	}
+	.terms-and-conditions .terms-content-section h3 {
+		margin: 0 0 20px;
+	}
+	.terms-and-conditions .terms-content-section h3,
+	.terms-and-conditions .terms-content-section label, .terms-and-conditions .terms-content-section label a {
+		font-size: 13px;
+	}
+	.terms-and-conditions .terms-content-section {
+		padding: 20px 15px 50px;
+	}
+	.terms-and-conditions .terms-content-section form {
+		padding-left: 0;
+	}
+	.terms-submit {
+		text-align: right;
+	}
+
+	/*Payment Styles*/
+	.payment-section {
+		padding: 20px;
+	}
+	.left-side-wrapper, .right-side-wrapper {
+		width: 100%;
+	}
+	.full-payment h3 {
+		margin: 0 0 20px;
+	}
+	.full-payment h3, .part-payment h3,
+	.full-payment span, .part-payment span {
+		font-size: 16px;
+	}
+	.full-payment .fees-table ul li {
+	    padding: 2px;
+	    font-size: 12px;
+	}
+	.online-payment-selection input[type="radio"], 
+	.offline-payment-selection input[type="radio"] {
+		vertical-align: text-bottom;
+	}
+	.online-payment-selection label {
+		font-size: 16px;
+	    margin: 0 0 40px;
+	}
+	.payment-gateway-left-content, .payment-gateway-right-content {
+		font-size: 14px;
+		padding: 30px 15px;
+	}
+	.part-payment {
+		margin: 0 0 30px;
+	}
+	.part-payment .partial-fee-content input {
+		font-size: 16px;
+		width: 80%;
+		margin: 0;
+	}
+	.payment-gateway-left-content, .payment-gateway-right-content {
+		font-size: 12px;
+		padding: 15px;
+	}
+}
+
+/*Tablet and Medium Device Styles*/
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+	.payment-page-wrapper .partially-filled-form .partial-form .otp-wrapper {
+		padding-left: 90px;
+	}
+	.terms-and-conditions .terms-content-section {
+		padding: 35px;
+	}
+	.terms-and-conditions .terms-content-section form {
+	    padding-left: 5px;
+	}
+	.terms-submit {
+		text-align: center;
+	}
+	.full-payment h3, .part-payment h3,
+	.full-payment span, .part-payment span {
+		font-size: 16px;
+	}
+	.full-payment .fees-table ul li {
+		padding: 4px;
+	}
+	.part-payment .partial-fee-content input {
+	    font: 18px/35px 'Roboto-Bold';
+	    margin: 0;
+	    min-height: 35px;
+	    width: 80%;
+	}
+	.payment-gateway-left-content, .payment-gateway-right-content {
+		font-size: 16px;
+		line-height: 16px;
+	}
+}

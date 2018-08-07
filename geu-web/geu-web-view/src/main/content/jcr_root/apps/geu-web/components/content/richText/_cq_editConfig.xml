@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:dialogMode="floating"
+    cq:disableTargeting="{Boolean}true"
+    cq:layout="editbar"
+    jcr:mixinTypes="[cq:ReplicationStatus]"
+    jcr:primaryType="cq:EditConfig">
+    <cq:listeners
+        jcr:primaryType="cq:EditListenersConfig"
+        afterdelete="REFRESH_PAGE"
+        afteredit="REFRESH_PAGE"/>
+    <cq:inplaceEditing
+        jcr:primaryType="cq:InplaceEditingConfig"
+        active="{Boolean}true"
+        editorType="text">
+        <config jcr:primaryType="nt:unstructured">
+            <rtePlugins jcr:primaryType="nt:unstructured">
+                <links
+                    jcr:primaryType="nt:unstructured"
+                    features="*"/>
+                <edit
+                    jcr:primaryType="nt:unstructured"
+                    features="*"/>
+                <findreplace
+                    jcr:primaryType="nt:unstructured"
+                    features="*"/>
+                <format
+                    jcr:primaryType="nt:unstructured"
+                    features="*"/>
+                <keys
+                    jcr:primaryType="nt:unstructured"
+                    features="*"/>
+                <justify
+                    jcr:primaryType="nt:unstructured"
+                    features="*"/>
+                <lists
+                    jcr:primaryType="nt:unstructured"
+                    features="*"/>
+                <misctools
+                    jcr:primaryType="nt:unstructured"
+                    features="*">
+                    <specialCharsConfig jcr:primaryType="nt:unstructured">
+                        <chars jcr:primaryType="nt:unstructured">
+                            <half
+                                jcr:primaryType="nt:unstructured"
+                                entity="1/2"/>
+                            <copyright
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;copy;"/>
+                            <registered
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;reg;"/>
+                            <trademark
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;trade;"/>
+                        </chars>
+                    </specialCharsConfig>
+                </misctools>
+                <paraformat
+                    jcr:primaryType="nt:unstructured"
+                    features="*">
+                    <formats jcr:primaryType="nt:unstructured">
+                        <p
+                            jcr:primaryType="nt:unstructured"
+                            description="Paragraph"
+                            tag="p"/>
+                        <h2
+                            jcr:primaryType="nt:unstructured"
+                            description="Heading2"
+                            tag="h2"/>
+                        <h3
+                            jcr:primaryType="nt:unstructured"
+                            description="Heading3"
+                            tag="h3"/>
+                        <h4
+                            jcr:primaryType="nt:unstructured"
+                            description="Heading4"
+                            tag="h4"/>
+                        <div
+                            jcr:primaryType="nt:unstructured"
+                            description="div"
+                            tag="div"/>
+                        <hr
+                            jcr:primaryType="nt:unstructured"
+                            description="hr"
+                            tag="hr"/>
+                    </formats>
+                </paraformat>
+                <subsuperscript
+                    jcr:primaryType="nt:unstructured"
+                    features="*"/>
+                <table
+                    jcr:primaryType="nt:unstructured"
+                    features="*"/>
+                <undo
+                    jcr:primaryType="nt:unstructured"
+                    features="*"/>
+                <image
+                    jcr:primaryType="nt:unstructured"
+                    features="*"/>
+                <customlist
+                    jcr:primaryType="nt:unstructured"
+                    features="*"/>
+                <tablestyles
+                    jcr:primaryType="nt:unstructured"
+                    features="*">
+                    <tablestyles jcr:primaryType="cq:WidgetCollection">
+                        <removestyles
+                            jcr:primaryType="nt:unstructured"
+                            cssName="removeClass"
+                            text="Remove applied styles"/>
+                        <noborder
+                            jcr:primaryType="nt:unstructured"
+                            cssName="noborder"
+                            text="No Border"/>
+                        <rowborder
+                            jcr:primaryType="nt:unstructured"
+                            cssName="rowborder"
+                            text="Row Border"/>
+                        <fullborder
+                            jcr:primaryType="nt:unstructured"
+                            cssName="fullborder"
+                            text="Full Border"/>
+                    </tablestyles>
+                </tablestyles>
+                <customstyles
+                    jcr:primaryType="nt:unstructured"
+                    features="*">
+                    <customstyles jcr:primaryType="cq:WidgetCollection">
+                        <redtext
+                            jcr:primaryType="nt:unstructured"
+                            cssName="red-text"
+                            text="Red Text"/>
+                        <redbutton
+                            jcr:primaryType="nt:unstructured"
+                            cssName="red-button"
+                            text="Red Button"/>
+                        <imageleft
+                            jcr:primaryType="nt:unstructured"
+                            cssName="image-left"
+                            text="Image Left"/>
+                        <imageright
+                            jcr:primaryType="nt:unstructured"
+                            cssName="image-right"
+                            text="Image Right"/>
+                        <tata-tech
+                            jcr:primaryType="nt:unstructured"
+                            cssName="tatatech-rte"
+                            text="Text Centre Align"/>
+                    </customstyles>
+                </customstyles>
+            </rtePlugins>
+            <htmlRules jcr:primaryType="nt:unstructured">
+                <links
+                    jcr:primaryType="nt:unstructured"
+                    protocols="\[http://,https://,ftp://,tel:,mailto:,file://]"/>
+                <blockhandling
+                    jcr:primaryType="nt:unstructured"
+                    removeSingleParagraphContainer="{Boolean}true"
+                    singleParagraphContainerReplacement=" "/>
+            </htmlRules>
+        </config>
+        <cq:htmlTag
+            cq:tagName="div"
+            jcr:primaryType="nt:unstructured"/>
+    </cq:inplaceEditing>
+</jcr:root>

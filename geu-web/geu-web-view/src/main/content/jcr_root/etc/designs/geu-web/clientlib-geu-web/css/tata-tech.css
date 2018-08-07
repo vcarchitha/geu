@@ -1,0 +1,261 @@
+.tata-tech-content-page-main-wrapper {
+    background-color: #e5e5e5;
+    position: relative;
+}
+.tata-tech-enquire-form-content form {
+    padding: 20px 20px 0px 20px;
+    text-align: center;
+}
+
+ul.enquire-now-form {
+    float: left;
+}
+
+ul.tata-tech-enquire-form-content {
+    position: absolute;
+    left: 12.4%;
+    top: 0;
+    z-index: 1000;
+    padding: 5px 0;
+    margin: 25px 0 0;
+    list-style: none;
+    background-color: #dc2e27;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    width: 25%;
+    height: auto;
+}
+
+.form-control-textField {
+    display: block;
+    width: 100%;
+    height: 36px;
+    padding: 6px 12px;
+    font-family: 'Roboto-Light';
+    font-size: 12px;
+    line-height: 1.42857143;
+    color: #7a7a7a;
+    background-color: #ececec;
+    background-image: none;
+    border: 1px solid #f7f7f7;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-control-textField.error {
+    font-size: 12px;
+}
+
+#tataTechEnquireForm .input-group-custom {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    margin-bottom: 15px;
+    width: 100%;
+}
+#tataTechEnquireForm .select {
+    line-height: 2.5;
+    background: #ececec;
+    width: 100% !important;
+}
+#tataTechEnquireForm #email {
+    position: relative;
+}
+#tataTechEnquireForm #emailerrormsg {
+    position: absolute;
+    right: 10px;
+    top:;
+}
+#tataTechEnquireForm select {
+    width: 100%;
+    height: 37px;
+    margin: 0;
+    padding: 0 0 0 .5em;
+    color: #7a7a7a;
+    cursor: pointer;
+    font-family: 'Roboto-Light';
+    font-size: 12px;
+}
+
+#tataTechEnquireForm .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 1em;
+    background: #dcdcdc;
+    pointer-events: none;
+    color: #7a7a7a;
+}
+.courseSelectContainer {
+    padding: 0;
+}
+
+#tataTechEnquireForm textarea {
+    width: 100%;
+    height: 100px;
+    color: #7a7a7a;
+    font-family: 'Roboto-Light';
+    font-size: 12px;
+    padding: 6px 12px;
+    vertical-align: middle;
+    resize: vertical;
+}
+
+.tata-tech-form-submit {
+    font-family: 'Roboto-Bold';
+    color: #fff;
+    background-color: #373737;
+    padding: 8px 35px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 1px solid #6f6e6e;
+    width: 100%;
+}
+span#errormsg, #successMsg {
+    font-size: 10px;
+    color: #fff;
+    display: none;
+}
+#emailerrormsg {
+    font-size: 10px;
+    text-align: center;
+    color: #fff;
+    display: none;
+}
+#tataTechEnquireForm label.error {
+    margin-top: 3px;
+    text-align: right;
+    display: block;
+    margin-bottom: -10px;
+}
+#tataTechEnquireForm input.error {
+    margin-bottom: 0px;
+}
+#tataTechEnquireForm .form-group label.error {
+    color: #fff;
+}
+#tataTechEnquireForm .form-group:after {
+    content: '';
+    display: table;
+    width: 100%;
+}
+#tataTechEnquireForm  .form-group {
+    position: relative;
+    text-align: right;
+}
+
+div#message {
+    color: #fff;
+    padding: 10px;
+    position: static;
+    top: 20%;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}
+input#backToHomePage {
+    padding: 10px 40px;
+    background: #dc2e27;
+    border: none;
+    color: #fff;
+    position: absolute;
+    top: 120%;
+    left: 30%;
+    display: none;
+}
+.geu-fullwidth-page-wrapper .cardLayout {
+    margin: 0 0 20px;
+}
+
+.error {
+    /*border: 2px solid #dc2e27;*/
+    font-size: 10px;
+    /*color: #fff;*/
+}
+.mandate {
+    border: 2px solid #dc2e27;
+}
+
+@media only screen and (min-width: 0) and (max-width: 767px) {
+    ul.tata-tech-enquire-form-content {
+        position: relative;
+        margin: 0;
+        width: 100%;
+        left: 0;
+    }
+    .geu-fullwidth-page-wrapper .cardLayout {
+        margin: 0 0 30px;
+    }
+    .geu-fullwidth-page-wrapper .fourColumn {
+        width: 46%;
+        margin: 0 0 12px 8px;
+    }
+    .geu-fullwidth-page-wrapper .fourColumn .content-page-descriptions h3 {
+        margin: 0 0 8px;
+    }
+    .geu-fullwidth-page-wrapper .fourColumn .content-page-descriptions.dark {
+        min-height: 100px;
+        padding: 10px;
+    }
+    .award-component .container {
+        padding-left: 15px;
+    }
+}
+/*Mobile and small Devices landscape */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .geu-fullwidth-page-wrapper .fourColumn {
+        width: 47.5%;
+    }
+}
+/*Tablet and Medium Device Styles*/
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .tataTechForm .tata-tech-content-page-banner-wrapper .content-page-banner, 
+    .tataTechForm .tata-tech-content-page-banner-wrapper .content-page-banner img {
+        min-height: 545px;
+    }
+    ul.tata-tech-enquire-form-content {
+        width: 50%;
+        margin: 10px 0;
+        left: 25%;
+    }
+    .geu-fullwidth-page-wrapper .cardLayout {
+        margin: 0 0 30px;
+    }
+    .geu-fullwidth-page-wrapper .fourColumn {
+        width: 45%;
+        margin: 0 20px 35px;
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .tataTechForm .tata-tech-content-page-banner-wrapper .content-page-banner, 
+    .tataTechForm .tata-tech-content-page-banner-wrapper .content-page-banner img {
+        min-height: 545px;
+    } 
+    ul.tata-tech-enquire-form-content {
+        width: 50%;
+        margin: 18px 0;
+        left: 25%;
+    }
+    .geu-fullwidth-page-wrapper .cardLayout {
+        margin: 0 0 30px;
+    }
+    .geu-fullwidth-page-wrapper .fourColumn {
+        width: 45%;
+        margin: 0 15px 35px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
+    ul.tata-tech-enquire-form-content {
+       margin: 11px 0 0;
+    }
+}

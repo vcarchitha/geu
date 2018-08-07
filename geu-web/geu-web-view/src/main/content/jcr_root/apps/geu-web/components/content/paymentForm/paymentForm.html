@@ -1,0 +1,127 @@
+<sly data-sly-use.paymentForm="com.geu.aem.web.core.models.PaymentFormModel">
+<div class="payment-page-wrapper">
+    <div class="partially-filled-form">
+        <div class="two-column-heading">
+            <h4>${paymentForm.title}</h4>
+        </div>
+        <div class="partial-form">
+            <div class="partially-filled-form-error-message"></div>
+            <form>
+                <div class="form-group formNumber">
+                    <label>Form Id</label>
+                    <input type="text" name="formNumber" class="formNumber" id="formNumber">
+                </div>
+                <div class="otp-wrapper clearfix">
+                    <div class="form-group otp">
+                        <input type="text" name="enterOtp" class="enterOtp" placeholder="Enter OTP" id="enterOtp">
+                    </div>
+                    <div class="form-group otp">
+                        <input type="button" name="sendOtp" class="sendOtp" value="Re-Send OTP" id="sendPaymentOtp" disabled>
+                    </div>
+                    <div id="hideMsg">
+                        This Button will re-enable after&nbsp;<span>5</span> Seconds
+                    </div>
+                </div>
+                <div class="form-group submit">
+                    <input type="submit" value="Proceed" class="submit-button" id="partiallyFilledPaymentForm">
+                    <input type="submit" value="Verify OTP & Proceed" class="submit-button" id="partiallyFilledOTPForm" style="display: none;">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="terms-wrapper" style="display: none;">
+        <div class="terms-and-conditions">
+            <h2>Payment</h2>
+            <div class="terms-content-section">
+                <h3>You have completed the entry of necessary details for the online form and you are left with the following: </h3>
+                <div class="terms-error"></div>
+                <form>
+                    <div class="input-wrapper">
+                        <label>
+                            <input type="checkbox" name="termsAndCondition" id="termsAndCondition" class="termsAndCondition">*Accept the <a href="${paymentForm.termsLink}" target="_blank">Terms and conditions</a> for Admissions
+                        </label>
+                    </div>
+                    <div class="input-wrapper">
+                        <label>
+                            <input type="checkbox" name="declaration" id="declaration" class="declaration">*Declaration
+                        </label>
+                        <span>${paymentForm.declarationText}</span>
+                    </div>
+                    <div class="terms-submit">
+                        <input type="submit" value="Proceed" name="proceedTerms" class="proceedTerms" id="proceedTerms">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="payment" style="display: none;">
+            <h2>Payment</h2>
+            <div class="payment-section">
+                <div class="payment-option-error"></div>
+                <div class="payment-mode-error"></div>
+                <form id="paymentForm">
+                    <div class="left-side-wrapper">
+                        <div class="full-payment selected">
+                            <h3>Full Fee Payment</h3>
+                            <!-- <span id="discountMessage"></span> -->
+                            <input type="radio" name="fee-payment" id="fullFeePayment" class="fullFeePayment">
+                            <div class="fees-table clearfix">
+                                <ul>
+                                    <li>Total Payable Fees</li>
+                                    <li class="totalFees" id="totalFees"></li>
+                                </ul>
+                                <!-- <ul>
+                                    <li id="discount">Discount ()</li>
+                                    <li class="discount" id="discountAmount"></li>
+                                </ul>
+                                <ul>
+                                    <li>Total Payment</li>
+                                    <li class="totalPayment" id="totalPayment"></li>
+                                </ul> -->
+                            </div>
+                        </div>
+                        <div class="online-payment-selection">
+                        	<input id="formType" type="hidden" name="formType" value="GEU"/>
+                            <input id="vpc_Version" type="hidden" name="vpc_Version" value="${paymentForm.version}"/>
+                            <input id="vpc_AccessCode" type="hidden" name="vpc_AccessCode" value="${paymentForm.merchantAccessCode}"/>
+                            <input id="vpc_Command" type="hidden" name="vpc_Command" value="${paymentForm.commandType}"/>
+                            <input id="vpc_MerchTxnRef" type="hidden" name="vpc_MerchTxnRef" value="${paymentForm.merchTxnRef}"/>
+                            <input id="vpc_Amount" type="hidden" name="vpc_Amount" value=""/>
+                            <input id="vpc_MerchantId" type="hidden" name="vpc_MerchantId" value="${paymentForm.merchantID}"/>
+                            <input id="vpc_ReturnURL" type="hidden" name="vpc_ReturnURL" value="${paymentForm.receiptReturnURL}"/>
+                            <label for="onlinePayment">
+                                <input type="radio" name="payment-mode" id="onlinePayment" class="onlinePayment">Online Payment
+                            </label>
+                        </div>
+                        <div class="payment-gateway-left-content">
+                            Via Axis Gateway
+                            <br/> Debit / Credit / Net Banking
+                        </div>
+                    </div>
+                    <div class="right-side-wrapper">
+                        <div class="part-payment selected">
+                            <h3>Partial Fee Payment</h3>
+                            <span>(not less than &#8377; ${paymentForm.partialPayment})</span>
+                            <input type="radio" name="fee-payment" id="partialPayment" class="partialPayment">
+                            <div class="partial-fee-content">
+                                <input type="text" name="amount" id="amount" class="amount">
+                            </div>
+                        </div>
+                        <div class="offline-payment-selection">
+                            <label for="offlinePayment">
+                                <input type="radio" name="payment-mode" id="offlinePayment" class="offlinePayment">Offline Payment
+                            </label>
+                            <span>(Within 24 Hrs Mail and SMS will be sent with Pay Portal Link)</span>
+                        </div>
+                        <div class="payment-gateway-right-content">
+                            Redirection to AXIS Pay portal for further processing
+                            <br/>(Cheque, DD, Cash, NEFT, RTGS, IMPS)
+                        </div>
+                    </div>
+                    <div class="payment-submit">
+                        <input type="submit" value="Submit" name="inprocess" class="paymentSubmit" id="paymentSubmit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

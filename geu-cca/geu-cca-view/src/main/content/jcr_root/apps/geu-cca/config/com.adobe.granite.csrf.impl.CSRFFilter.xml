@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    filter.enable.safe.user.agents="{Boolean}false"
+    filter.excluded.paths="[\0]"
+    filter.methods="[PUT,DELETE]"
+    filter.safe.user.agents="[Apache-HttpClient/*,Jakarta Commons-HttpClient/*,Jakarta-Commons-VFS,curl/*,Wget/*,WebDAVFS/*,Microsoft-WebDAV-MiniRedir/*,Ruby,Adobe-Campaign/*,Forms-Mobile *]"/>

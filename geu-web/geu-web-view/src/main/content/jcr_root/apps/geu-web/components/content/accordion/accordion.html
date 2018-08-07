@@ -1,0 +1,16 @@
+<div class="cq-placeholder"
+   data-sly-test.author="${wcmmode.edit || wcmmode.design}"
+   data-emptytext="Accordion Component"></div>
+<sly data-sly-use.accordion="com.geu.aem.web.core.models.AccordionModel" data-sly-unwrap>
+   <div class="accordion-container" id="accordion" role="tablist" aria-multiselectable="true" data-sly-list="${accordion.tabNames}">
+      <div class="panel">
+         <div class="panel-heading" role="tab" id="${item.trimmedName}" data-sly-test="${item.trimmedName}">
+            <h4 class="panel-title">${item.name @ context='html'}</h4><span class="plusminus"> + </span>
+         </div>
+         <div class="panel-collapse collapse in" role="tabpanel" aria-labelledby="${item.trimmedName}" data-sly-test="${item.trimmedName}">
+            <div data-sly-resource="${'accordionitems_{0}' @ format=[itemList.count], resourceType='wcm/foundation/components/parsys'}">
+            </div>
+         </div>
+      </div>
+   </div>
+</sly>

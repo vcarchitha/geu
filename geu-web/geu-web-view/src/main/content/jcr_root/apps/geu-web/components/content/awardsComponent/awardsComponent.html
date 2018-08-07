@@ -1,0 +1,23 @@
+<div class="cq-placeholder"
+   data-sly-test.author="${wcmmode.edit || wcmmode.design}"
+   data-emptytext="Awards Component"></div>
+<sly data-sly-use.awards="com.geu.aem.web.core.models.AwardsModel" data-sly-unwrap>
+   <div class="award-component">
+      <div class="container">
+         <div class="award-component-wrapper">
+            <h3>${awards.heading}</h3>
+            <div class="award-section" data-sly-list="${awards.awardsList}" >
+               <div class="awards-each-records clearfix" data-sly-test="${item.imagePath}" >
+                  <div class="pull-left image-section">
+                     <img alt="image" class="img-responsive" src="${item.imagePath}">
+                  </div>
+                  <div class="headlines active pull-left" data-sly-test="${item.imagePath}">
+                     <p class="bold">${item.imageDescription}</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</sly>
+

@@ -1,0 +1,16 @@
+<div class="cq-placeholder" data-sly-test.author="${wcmmode.edit || wcmmode.design}" data-emptytext="ImageList Component"></div>
+<sly data-sly-use.top="com.geu.aem.web.core.models.ImageListModel" data-sly-unwrap>
+   <h1>${top.heading}</h1>
+   <section class="image-list-wrapper clearfix">
+     <div class="image-list-component clearfix" data-sly-list="${top.imageListItems}">
+         <div class="image-list-component-wrapper">
+            <div class="image-list-content-page-image">
+                <a href="${item.imgPath}" class="image-list-popup fancybox">
+                    <img src="${item.imgPath}" class="img-responsive">
+               </a>
+            </div>
+         </div>
+      </div>
+   </section>
+</sly>
+

@@ -1,0 +1,55 @@
+.image-gallery-content-wrapper {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .image-list-wrapper {
+        margin-bottom: 20px;
+    }
+
+    .image-list-content-page-image img {
+        width: 100%;
+    }
+
+    .image-list-component-wrapper {
+        width: 200px !important;
+        vertical-align: top;
+        margin: 0 9px 0px 6px;
+        float: left;
+    }
+
+    .image-list-component-wrapper:last-child {
+        margin-right: 0;
+    }
+
+    .image-list-content-page-image {
+        margin: 0 0 13px;
+    }
+
+    /*Mobile and Small Device Styles*/
+
+    @media only screen and (min-width: 0) and (max-width: 767px) {
+        .pagingInfo,
+        .next,
+        .slick-dots {
+            font-size: 12px;
+        }
+        .upcoming-events-component-wrapper:first-child {
+            margin-left: 0;
+        }
+        .image-list-component-wrapper {
+            width: 100% !important;
+            margin: 0;
+        }
+    }
+    /*Tablet and Medium Device Styles*/
+
+    @media only screen and (min-width: 768px) and (max-width: 1199px) {
+        .image-list-component-wrapper {
+            width: 47% !important;
+        }
+        .image-list-component {
+            width: 100% !important;
+            margin-left: 10px;
+        }
+    }

@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:language="en"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="nt:folder">
+    <_x002b_
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="+"
+        sling:message="+"/>
+    <aadharNumber
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aadharNo"
+        sling:message="Aadhar No"/>
+    <aggregatePercentage
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aggregatePercentage"
+        sling:message="Aggregate Percentage"/>
+    <applyfresh
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="applyfresh"
+        sling:message="Apply Fresh"/>
+    <areaOfInterest
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="areaOfInterest"
+        sling:message="Area Of Interest"/>
+    <association
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="association"
+        sling:message="Association of any Family member with Graphic Era?"/>
+    <basicdetails
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="basicdetails"
+        sling:message="Basic Details"/>
+    <bhimtal
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="bhimtal"
+        sling:message="Bhimtal"/>    
+    <board
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="board"
+        sling:message="Board"/>
+    <caste
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="caste"
+        sling:message="Caste"/>
+    <cgpaaggregatePercentage
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="cgpaaggregatePercentage"
+        sling:message="Aggregate Percentage / CGPA Percentage"/>  
+    <choosecampuslevel
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="choosecampuslevel"
+        sling:message="Choose Campus and Level"/>      
+    <city
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="city"
+        sling:message="City"/>
+    <classTenthDeclared
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="classTenthDeclared"
+        sling:message="X Results Declared ?"/>
+    <classTweleveDeclared
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="classTwelveDeclared"
+        sling:message="XII Results Declared ? "/>
+    <classtwelve
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="classTwelve"
+        sling:message="Class XII"/>
+    <collegeName
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="collegeName"
+        sling:message="College Name"/>
+    <continueform
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="continueform"
+        sling:message="Continue Partially Filled Form (2018)"/>
+    <correspondanceAddress
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="correspondanceAddress"
+        sling:message="CORRESPONDENCE ADDRESS - FOR ALL COMMUNICATION RELATED TO YOUR ADMISSION"/>
+    <course
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="course"
+        sling:message="Course"/>
+    <campus
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="campus"
+        sling:message="Campus"/>    
+    <crores
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="crores"
+        sling:message="Crores"/>
+    <dateOfBirth
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="dateOfBirth"
+        sling:message="Date Of Birth"/>
+    <defence
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="defence"
+        sling:message="Defence Candidate"/>    
+    <dehradun
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="dehradun"
+        sling:message="Dehradun"/>
+    <directAdmission
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="directAdmission"
+        sling:message="Direct Admission"/>        
+    <educationdetails
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="educationdetails"
+        sling:message="Education Details"/>
+    <eligibilityduration
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="eligibilityduration"
+        sling:message="Eligibility"/>
+    <eligibilityError
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="eligibilityError"
+        sling:message="You are not eligible to Apply online. Please contact nearby center or campus."/>    
+    <email
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="email"
+        sling:message="Email"/>
+    <enableOTPtext
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="enableOTPText"
+        sling:message="This Button will re-enable after"/>
+    <familyInfomation
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="familyInformation"
+        sling:message="Family Information"/>
+    <fatherDetails
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="fatherDetails"
+        sling:message="Father Details"/>
+    <firstname
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="firstname"
+        sling:message="FirstName"/>
+    <formid
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="formid"
+        sling:message="Form ID"/>
+    <formNo
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="formNo"
+        sling:message="Form No"/>
+    <graduation
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="graduation"
+        sling:message="Graduation"/>
+    <graduationno
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="graduationno"
+        sling:message="No (If No, then mention % in till current semester)"/>
+    <graduationyes
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="graduationyes"
+        sling:message="Yes (If Yes, then mention % in all semester) "/>        
+    <graduationDeclared
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="graduationDeclared"
+        sling:message="Graduation Results Declared ?"/>
+    <lastname
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="lastname"
+        sling:message="LastName"/>
+    <level
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="level"
+        sling:message="Level"/>
+    <login
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="login"
+        sling:message="Login"/>
+    <markingSystem
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="markingSystem"
+        sling:message="Marking System"/>
+    <mobile
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="mobile"
+        sling:message="Mobile"/>
+    <motherDetails
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="motherDetails"
+        sling:message="Mother Details"/>
+    <name
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="name"
+        sling:message="Name"/>
+    <passingYear
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="passingYear"
+        sling:message="Passing Year"/>
+    <percentageScore
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="percentageScore"
+        sling:message="Aggregate Percentage / CGPA Percentage"/>
+    <permanentAddress
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="permanentAddress"
+        sling:message="Permanent Address"/>
+    <personalDetails
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="personalDetails"
+        sling:message="Personal Details"/>
+    <pincode
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="pincode"
+        sling:message="Pincode"/>
+    <please
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="please"
+        sling:message="Please"/>    
+    <program
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="program"
+        sling:message="Program"/>
+    <programdetails
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="programdetails"
+        sling:message="Program Details"/>
+    <registration
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="registration"
+        sling:message="Registration"/>    
+    <rollNo
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="rollNo"
+        sling:message="Roll No."/>
+    <sameCorrespondanceAddress
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="sameCorrespondanceAddress"
+        sling:message="Same As Correspondence Address"/>
+    <school
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="school"
+        sling:message="School"/>
+    <select
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="select"
+        sling:message="--Select--"/>
+    <selectCourse
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="selectCourse"
+        sling:message="--SelectCourse--"/>
+    <selectionmode
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="selectionmode"
+        sling:message="Selection Mode"/>    
+    <selectProgram
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="selectProgram"
+        sling:message="--SelectProgram--"/>
+    <specialization
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="specialization"
+        sling:message="Specialization"/>
+    <status
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="status"
+        sling:message="Status"/>
+    <suffer
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="suffer"
+        sling:message="Do you suffer from any chronic aliment or disability?"/>
+    <title
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="title"
+        sling:message="Title"/>
+    <universityName
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="universityName"
+        sling:message="University Name"/>
+    <uploaddocs
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="uploaddocs"
+        sling:message="Upload Documents / Payment"/>
+    <uploadDocument
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="uploadDocument"
+        sling:message="Upload Document"/>    
+    <uploadGraduationMarksheet
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="uploadGraduationMarksheet"
+        sling:message="UPLOAD UG MARKSHEET"/>
+    <uploadGraduationMarksheetText
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="uploadGraduationMarksheetText"
+        sling:message="Upload your UG marksheet (format should be jpg, gif, png, jpeg, bmp,pdf and maximum file size alloted is 2 MB)"/>
+    <uploadLatestMarksheet
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="uploadLatestMarksheet"
+        sling:message="Upload Latest Marksheet"/>
+    <uploadLatestMarksheetText
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="uploadLatestMarksheetText"
+        sling:message="Upload your latest marksheet (format should be jpg, gif, png, jpeg, bmp,pdf and maximum file size alloted is 2 MB)"/> 
+    <uploadGraduationMarksheet
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="uploadGraduationMarksheet"
+        sling:message="Upload Graduation Marksheet"/>
+    <uploadGraduationMarksheetText
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="uploadGraduationMarksheetText"
+        sling:message="Upload your Graduation marksheet (format should be jpg, gif, png, jpeg, bmp,pdf and maximum file size alloted is 2 MB)"/>       
+    <uploadPhoto
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="uploadPhoto"
+        sling:message="Upload Photo"/>
+    <uploadPhotoText
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="uploadPhotoText"
+        sling:message="Upload your recent passport size (3.5 x 4.5cm) color photograph (format should be jpg, gif, png, jpeg, bmp and maximum file size alloted is 1 MB)"/>
+    <uploadTenMarksheet
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="uploadTenMarksheet"
+        sling:message="UPLOAD X MARKSHEET"/>
+    <uploadTenMarksheetText
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="uploadTenMarksheetText"
+        sling:message="Upload your X marksheet (format should be jpg, gif, png, jpeg, bmp,pdf and maximum file size alloted is 2 MB)"/>
+    <uploadTwelveMarksheet
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="uploadTwelveMarksheet"
+        sling:message="UPLOAD XII MARKSHEET"/>
+    <uploadTwelveMarksheetText
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="uploadTwelveMarksheetText"
+        sling:message="Upload your XII prelims/marksheet (format should be jpg, gif, png, jpeg, bmp,pdf and maximum file size alloted is 2 MB)"/>
+    <watsappVideoMessage
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="watsappVideoMessage"
+        sling:message="I, will send the video on Whatsapp"/> 
+	<next 
+		jcr:primaryType="sling:MessageEntry" 
+		sling:key="next" 
+		sling:message="Next"/>
+	<arrow 
+		jcr:primaryType="sling:MessageEntry" 
+		sling:key=">" 
+		sling:message=">"/>
+    <interest
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="interest"
+        sling:message="Area of Interest"/>
+    <country
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="country"
+        sling:message="Country"/>
+    <state
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="state"
+        sling:message="State"/>
+    <query
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="query"
+        sling:message="Query"/>
+    <submit
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="submit"
+        sling:message="Submit"/>
+    <thankYou
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="thankYou"
+        sling:message="Thank You for Submitting your enquiry."/>
+    <thankYouAdmission
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="thankyouadmission"
+        sling:message="Thank You for Submitting your Admission Form."/>
+	<firstName
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="firstName"
+        sling:message="First Name"/>
+    <lastName
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="lastName"
+        sling:message="Last Name"/>	
+	<city
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="city"
+        sling:message="City"/>
+    <errormsg
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="errormsg"
+        sling:message="Please enter mandatory fields"/>
+    <emailerrormsg
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="emailerrormsg"
+        sling:message="Please enter valid email"/>
+    <successMsg
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="successMsg"
+        sling:message="Inserted Successfully &#33;"/>
+    <yes
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="yes"
+        sling:message="Yes (If Yes, then mention % in all subjects)"/> 
+    <no
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="no"
+        sling:message="No (If No, then mention Pre-Board % in all subjects)"/>                	
+</jcr:root>

@@ -1,0 +1,22 @@
+<div class="cq-placeholder"
+   data-sly-test.author="${wcmmode.edit || wcmmode.design}"
+   data-emptytext="TimeLine Component"></div>
+<sly data-sly-use.time="com.geu.aem.web.core.models.TimelineModel" data-sly-unwrap/>
+<section class="glorious-wrapper">
+   <div class="container">
+      <div>
+         <h2>${time.headerTitle}<span class="brand-color">${time.titleInRed} </span></h2>
+         <div class="glorious-carousel-image owl-carousel owl-theme" data-sly-list="${time.timelineItems}">
+            <div class="item">
+               <img src="${item.image}" alt="${item.altText}" class="img-responsive">
+               <p>${item.description}</p>
+            </div>
+         </div>
+         <div class="glorious-carousel-year owl-carousel owl-theme navigate" data-sly-list="${time.timelineItems}">
+            <div class="item" data-hash="${item.year}" data-sly-test="${item.year}">
+               <a class="button secondary url">${item.year}</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

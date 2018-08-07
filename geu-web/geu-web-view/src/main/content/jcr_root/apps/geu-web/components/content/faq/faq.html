@@ -1,0 +1,16 @@
+<div class="cq-placeholder"
+   data-sly-test.author="${wcmmode.edit || wcmmode.design}"
+   data-emptytext="FAQ Component"></div>
+<sly data-sly-use.faq="com.geu.aem.web.core.models.FAQModel" data-sly-unwrap>
+   <div class="faq-container" role="tablist" aria-multiselectable="true" data-sly-list="${faq.tabNames}">
+      <div class="panel">
+         <div class="panel-heading" role="tab" id="${item.trimmedName}" data-sly-test="${item.trimmedName}">
+            <h4 class="panel-title">${item.name @ context='html'}</h4><span class="plusminus"> + </span>
+         </div>
+         <div class="panel-collapse collapse in" role="tabpanel" aria-labelledby="${item.trimmedName}" data-sly-test="${item.trimmedName}">
+            <div data-sly-resource="${'faqItems_{0}' @ format=[itemList.count], resourceType='geu-web/components/content/richText'}">
+            </div>
+         </div>
+      </div>
+   </div>
+</sly>

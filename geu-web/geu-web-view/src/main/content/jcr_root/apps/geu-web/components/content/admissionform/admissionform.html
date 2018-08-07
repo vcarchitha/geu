@@ -1,0 +1,769 @@
+<!--Admission Form-->
+<div class="cq-placeholder" data-sly-test.author="${wcmmode.edit || wcmmode.design}" data-emptytext="Admission Form component."></div>
+<sly data-sly-use.admissionForm="com.geu.aem.web.core.models.AdmissionModel" data-sly-unwrap>
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.all @ categories='geu.admissionform'}" />
+<input type="hidden" id="resourcePath" value="${currentPage.getPath}">
+    <div class="form-wrapper">
+        <div class="form-tabs">
+            <ul class="clearfix" id="myLinks">
+                <li><a>${'login' @ i18n}</a></li>
+                <li><a>${'selectionmode' @ i18n}</a></li>
+                <li><a>${'basicdetails' @ i18n}</a></li>
+                <li><a>${'uploaddocs' @ i18n}</a></li>
+            </ul>
+        </div>
+        <div id="myTabs">
+            <div class="form-two-column-wrapper" >
+                <div class="login-component-wrapper">
+                    <div class="two-column-heading">
+                        <h4>${'applyfresh' @ i18n}</h4>
+                    </div>
+                    <div class="login-form">
+                        <form class="registration-form" id="registration-form" novalidate>
+                            <div class="form-error-message"></div>
+                            <div class="invalid-error-message"></div>
+                            <div class="custom-error-message"></div>
+                            <div class="form-group fname">
+                                <label>${'first name' @ i18n}</label>
+                                <input type="text" name="firstName" class="fname" id="fname">
+                            </div>
+                            <div class="form-group lname">
+                                <label>${'last name' @ i18n}</label>
+                                <input type="text" name="lastName" class="lname" id="lname">
+                            </div>
+                            <div class="form-group">
+                                <label>${'areaOfInterest' @ i18n}</label>
+                                <select name="interest" id="area-of-interest">
+                                    <option name="areaOfInterest" value="select" selected>--Select Area of Interest--</option>
+                                    <sly data-sly-list.areaOfInterest="${admissionForm.interestList}" data-sly-unwrap>
+                                       <option name="interest" value="${areaOfInterest.value}">${areaOfInterest.value}</option>
+                                    <sly>
+                                </select>
+                            </div>
+                            <div class="form-group email">
+                                <label>${'email' @ i18n}</label>
+                                <input type="text" name="email" class="email" id="email">
+                            </div>
+                            <div class="form-group mobile">
+                                <label>${'mobile' @ i18n}</label>
+                                <input type="text" name="contactNum" class="mobile" id="mobile">
+                            </div>
+                            <div class="otp-wrapper clearfix">
+                                <div class="form-group otp">
+                                    <input type="text" name="enterOtp" class="enterOtp" placeholder="Enter OTP" id="enterOtp">
+                                </div>
+                                <div class="form-group otp">
+                                    <input type="button" name="sendOtp" class="sendOtp" value="Re-Send OTP" id="sendOtp" disabled>
+                                </div>
+                                <div id="hideMsg">
+                                    ${'enableOTPText' @ i18n}&nbsp;<span>5</span> Seconds
+                                </div>
+                            </div>
+                            <div class="form-group submit clearfix">
+                                <input type="submit" value="Proceed" class="submit-button" id="login-form-submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="partially-filled-form">
+                    <div class="two-column-heading">
+                        <h4>${'continueform' @ i18n}</h4>
+                    </div>
+                    <div class="partial-form">
+                        <div class="partially-filled-form-error-message"></div>
+                        <form class="partiallyfilled-form" id="partiallyfilled-form" novalidate>
+                            <div class="form-group formNumber">
+                                <label>${'Form Id' @ i18n}</label>
+                                <input type="text" name="formNumber" class="formNumber" id="formNumber">
+                            </div>
+                                <div class="otp-wrapper clearfix">
+                                    <div class="form-group otp">
+                                        <input type="text" name="enterOtpPartially" class="enterOtpPartially" placeholder="Enter OTP" id="enterOtpPartially" autocomplete="off">
+                                            </div>
+                                        <div class="form-group otp">
+                                            <input type="button" name="sendOtpPartially" class="sendOtpPartially" value="Re-Send OTP" id="sendOtpPartially">
+                                                </div>
+                                            <div id="hideMsgPartially" style="display: none;">
+                                                ${'enableOTPText' @ i18n}&nbsp;<span>0</span> Seconds
+                                                </div>
+                                                </div>
+                            <div class="form-group submit">
+                                <input type="submit" value="Proceed" class="submit-button" id="partiallyFilledForm">
+                                <input type="submit" value="Verify OTP & Proceed" class="submit-button" id="partiallySubmit" style="display: none;">
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="payment-success" style="display: none;"></div>
+            </div>
+
+            <div class="selection-mode" style="display: none;">
+            	<form class="selection-mode-form" id="selection-mode-form" novalidate>
+            		<div class="selection-mode-error" style="display: none;">Please Select Any one option to Proceed.</div>
+	            	<div class="form-group select-option">
+						<div class="registration">
+							<label>
+								<input type="radio" name="selectionMode" value="registration" id="registration">${'registration' @ i18n}
+							</label>
+						</div>
+						<div class="direct-admission">
+							<label>
+								<input type="radio" name="selectionMode" value="direct-admission" id="direct-admission">${'directAdmission' @ i18n}
+							</label>
+						</div>
+					</div>
+					<div class="form-group submit clearfix">
+	                    <input type="submit" value="Proceed" class="submit-button" id="selection-mode-submit">
+	                </div>
+	            </form>
+            </div>
+			<!--Registration Step2-->
+			<div class="basic-details-section" style="display: none;">
+				<form id="basic-details-form">
+					<div class="basic-details-wrapper">
+						<div class="basic-details-form-error-message"></div>
+						<div class="aadhar-error-message"></div>
+						<div class="basic-details-mobile-error-message"></div>
+						<!-- <ul id="basic--details-error-message">
+							<li></li>
+						</ul> -->
+						<div class="top-section-wrapper clearfix">
+							<div class="personal-details">
+								<div class="each-section name">
+									<div class="label">${'name' @ i18n}</div>
+									<div class="content" id="name" name="name"></div>
+								</div>
+								<div class="each-section mobile">
+									<div class="label">${'mobile' @ i18n}</div>
+									<div class="content" id="contactNum" name="contactNum"></div>
+								</div>
+								<div class="each-section email">
+									<div class="label">${'email' @ i18n}</div>
+									<div class="content" id="basicEmail" name="basicEmail"></div>
+								</div>
+								<div class="each-section formid">
+									<div class="label">${'formid' @ i18n}</div>
+									<div class="content" id="formId" name="formId"></div>
+								</div>
+							</div>
+							<div class="form-group selection">
+								<label>${'areaOfInterest' @ i18n}</label>
+                                <select name="interest" id="areaOfInterestForm">
+                                    <option value="" selected>${'selectCourse' @ i18n}</option>
+                                    <sly data-sly-list.areaOfInterest="${admissionForm.interestList}" data-sly-unwrap>
+                                       <option value="${areaOfInterest.value}">${areaOfInterest.value}</option>
+                                    <sly>
+                                </select>
+							</div>
+						</div>
+					</div>
+
+					<!--Level Selection-->
+					<div class="choose-level">
+						<div class="tab-heading">Choose Level </div>
+						<div class="form-group level">
+							<label>${'level' @ i18n}</label>
+							<select id="level" name="level">
+								<option value="">${'select' @ i18n}</option>
+							</select>
+						</div>
+					</div>
+
+					<!--Education Details-->
+					<div class="education-wrapper">
+						<div class="tab-heading">${'educationdetails' @ i18n}</div>
+						<div class="sslc-wrapper">
+							<div class="education-heading">Class X</div>
+							<div class="form-group selection sslcBoard">
+								<label>${'board' @ i18n}</label>
+								<select id="board_10th" name="board_10th">
+									<option value="">${'select' @ i18n}</option>
+                                    <sly data-sly-list.eachTenBoard="${admissionForm.tenBoardList}" data-sly-unwrap>
+                                       <option value="${eachTenBoard.tenBoard}">${eachTenBoard.tenBoard}</option>
+                                    <sly>
+								</select>
+							</div>
+							<div class="form-group sslcSchool">
+								<label>${'school' @ i18n}</label>
+								<input type="text" name="school_name_10th" id="school_name_10th" class="sslcSchool">
+							</div>
+							<div class="form-group sslcRollNo">
+								<label>${'rollNo' @ i18n}</label>
+								<input type="text" name="rollno_10th" id="rollno_10th" class="sslcRollNo">
+							</div>
+							<div class="form-group sslcPassingYear">
+								<label>${'passingYear' @ i18n}</label>
+								<input type="text" name="year_of_passing_10th" id="year_of_passing_10th" class="sslcPassingYear">
+							</div>
+							<div class="form-group selection sslcMarks">
+								<label>${'markingSystem' @ i18n}</label>
+								<select id="marking_system_10th" name="marking_system_10th">
+									<option value="">${'select' @ i18n}</option>
+                                    <option value="garde-system">Grade System </option>
+                                    <option value="mark-system">Mark System </option>
+								</select>
+							</div>
+							<div class="form-group sslcPercentage">
+								<label>${'cgpaaggregatePercentage' @ i18n}</label>
+								<input type="text" name="aggregate_marks_10th" id="aggregate_marks_10th" class="sslcPercentage">
+							</div>
+						</div>
+						<div class="hsc-wrapper">
+							<div class="education-heading">
+								${'classTwelve' @ i18n}
+							</div>
+							<div class="top-section">
+								<div class="form-group selection pucBoard">
+									<label>${'board' @ i18n}</label>
+									<select id="board_12th" name="board_12th">
+										<option value="">--Select XII Board--</option>
+                                        <sly data-sly-list.eachTwelveBoard="${admissionForm.twelveBoardList}" data-sly-unwrap>
+                                       		<option value="${eachTwelveBoard.twelveBoard}">${eachTwelveBoard.twelveBoard}</option>
+                                    	<sly>
+									</select>
+								</div>
+								<div class="form-group pucSchool">
+									<label>${'school' @ i18n}</label>
+									<input type="text" name="intermediate_senior" id="intermediate_senior" class="pucSchool">
+								</div>
+								<div class="form-group pucStatus">
+									<label>${'status' @ i18n}</label>
+									<select id="status_12th" name="status_12th">
+										<option value="">${'select' @ i18n}</option>
+                                        <sly data-sly-list.eachStatus="${admissionForm.statusList}" data-sly-unwrap>
+                                       		<option value="${eachStatus.status}">${eachStatus.status}</option>
+                                    	<sly>
+									</select>
+								</div>
+								<div class="form-group pucRollNo">
+									<label>${'rollNo' @ i18n}</label>
+									<input type="text" name="rollno_12th" id="rollno_12th" class="pucRollNo">
+								</div>
+								<div class="form-group pucPassingYear">
+									<label>${'passingYear' @ i18n}</label>
+									<input type="text" name="year_of_passing_12th" id="year_of_passing_12th" class="pucPassingYear">
+								</div>
+								<div class="form-group pucCity">
+									<label>${'city' @ i18n}</label>
+									<input type="text" name="city_12th" id="city_12th" class="pucCity">
+								</div>
+								<div class="form-group pucPincode">
+									<label>${'pincode' @ i18n}</label>
+									<input type="text" name="pincode_12th" id="pincode_12th" class="pucPincode">
+								</div>
+								<div class="form-group jeeScore">
+									<label>${'JEE Score' @ i18n}</label>
+									<input type="text" name="jeeScore" id="jeeScore" class="jeeScore">
+								</div>
+							</div>
+							<div class="bottom-section">
+								<div class="form-group select-option">
+									<div class="heading">${'classTwelveDeclared' @ i18n}</div>
+									<label>
+										<input type="radio" name="resultsDeclared_12th" value="Yes" id="pucResultsYes">${'yes' @ i18n}
+									</label>
+									<label>
+										<input type="radio" name="resultsDeclared_12th" value="No" id="pucResultsNo">${'no' @ i18n}
+									</label>
+								</div>
+								<div class="form-group pucPercentage">
+									<label>${'aggregatePercentage' @ i18n}</label>
+									<input type="text" name="projected_marks_12th" id="projected_marks_12th" class="pucPercentage">
+								</div>
+								<div class="form-group pcmPercentage">
+									<label>${'PCM Percentage' @ i18n}</label>
+									<input type="text" name="pcmPercentage" id="pcmPercentage" class="pcmPercentage">
+								</div>
+							</div>
+						</div>
+						<!--Graduation Wrapper-->
+						<div class="graduation-wrapper">
+							<div class="education-heading">
+								${'graduation' @ i18n}
+							</div>
+							<div class="top-section">
+								<div class="form-group">
+									<label>${'collegeName' @ i18n}</label>
+									<input type="text" name="higher_education_institute" id="higher_education_institute" class="ugCollege">
+								</div>
+								<div class="form-group">
+									<label>${'universityName' @ i18n}</label>
+									<input type="text" name="grduationUniversityName" id="grduationUniversityName" class="ugUniversity">
+								</div>
+								<div class="form-group">
+									<label>${'course' @ i18n}</label>
+									<input type="text" name="graduationCourse" id="graduationCourse" class="ugCourse">
+								</div>
+								<div class="form-group">
+									<label>${'specialization' @ i18n}</label>
+									<input type="text" name="graduationSpecialisation" id="graduationSpecialisation" class="ugSpecialization">
+								</div>
+								<div class="form-group">
+									<label>${'passingYear' @ i18n}</label>
+									<input type="text" name="year_of_graduation" id="year_of_graduation" class="ugPassingYear">
+								</div>
+								<div class="form-group">
+									<label>${'city' @ i18n}</label>
+									<input type="text" name="cityGraduation" id="cityGraduation" class="ugCity">
+								</div>
+								<div class="form-group">
+									<label>${'pincode' @ i18n}</label>
+									<input type="text" name="pincodeGraduation" id="pincodeGraduation" class="ugPincode">
+								</div>
+							</div>
+							<div class="bottom-section">
+								<div class="form-group select-option">
+									<div class="heading">${'graduationDeclared' @ i18n}</div>
+									<label>
+										<input type="radio" name="resultsDeclaredGraduation" value="Yes" id="ugResultsYes">${'graduationyes' @ i18n}
+									</label>
+									<label>
+										<input type="radio" name="resultsDeclaredGraduation" value="No" id="ugResultsNo">${'graduationno' @ i18n}
+									</label>
+								</div>
+								<div class="form-group">
+									<label>${'percentageScore' @ i18n}</label>
+									<input type="text" name="cgpa_percentage" id="cgpa_percentage" class="ugPercentage">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="upload-registration-error"></div>
+					<div class="upload-registration-wrapper clearfix" style="display:none;">
+						<div class="tab-heading">
+							${'uploadDocument' @ i18n}
+						</div>
+						<div class="upload-registration" id="upload-registration">
+	                        <div class="upload-registration-option">
+	                            <span class="upload-registration-close-button" style="display:none;"></span>
+	                            <label for="registrationMarksheet" class="custom-file-upload">
+	                                <i class="fa fa-cloud-upload"></i> Upload Marksheet
+	                            </label>
+	                            <input id="registrationMarksheet" class="registrationMarksheet" name="registrationMarksheet" type="file" style="display:none;">
+	                            <label id="registration-marksheet-name"></label>
+	                        </div>
+	                        <div class="upload-registration-marksheet">
+	                            <div class="upload-registration-marksheet-content">
+	                                <h4>${'uploadLatestMarksheet' @ i18n}</h4>
+	                                <p>${'uploadLatestMarksheetText' @ i18n}</p>
+	                            </div>
+	                        </div>
+						</div>
+					</div>
+					<!--Personal Details-->
+					<div class="personal-details-wrapper clearfix">
+						<div class="tab-heading">
+							${'personalDetails' @ i18n}
+						</div>
+						<div class="personal-details">
+							<div class="form-group selection">
+								<div class="heading">Gender</div>
+								<label>
+									<input type="radio" name="gender" value="male" id="male" checked="checked">Male
+								</label>
+								<label>
+									<input type="radio" name="gender" value="female" id="female"> Female
+								</label>
+								<label>
+									<input type="radio" name="gender" value="transgender" id="transgender"> Transgender
+								</label>
+							</div>
+							<div class="form-group selection">
+								<div class="heading">${'Category' @ i18n}</div>
+								<label>
+									<input type="radio" name="caste" value="genreral" id="genreral" checked="checked">General
+								</label>
+								<label>
+									<input type="radio" name="caste" value="sc" id="sc"> SC
+								</label>
+								<label>
+									<input type="radio" name="caste" value="st" id="st"> ST
+								</label>
+								<label>
+									<input type="radio" name="caste" value="obc" id="obc"> OBC
+								</label>
+							</div>
+							<div class="form-group dob">
+                                <label>${'dateOfBirth' @ i18n}</label>
+								<input type="text" name="date_of_birth" id="date_of_birth" class="dob">
+							</div>
+							<div class="form-group aadharNo">
+								<label>${'aadharNo' @ i18n}</label>
+								<input type="text" name="aadharNo" id="aadharNo" class="aadharNo">
+							</div>
+							<div class="form-group defence">
+								<div class="heading">${'Defence Candidate ' @ i18n}</div>
+								<label>
+									<input type="radio" name="defence" value="defence-yes" id="defence-yes">Yes
+								</label>
+								<label>
+									<input type="radio" name="defence" value="defence-no" id="defence-no" checked="checked"> No
+								</label>
+							</div>
+						</div>
+						<div class="communication-address">
+							<div class="address-heading">
+								${'correspondanceAddress' @ i18n}
+							</div>
+							<textarea id="correspondence_address" name="correspondence_address" class="correspondence_address"></textarea>
+						</div>
+						<div class="permanent-address">
+							<div class="address-heading">
+								<div class="heading">
+									${'permanentAddress' @ i18n}
+								</div>
+								<label>
+									<input type="checkbox" name="copyAddress" id="copyAddress" class="copyAddress">${'sameCorrespondanceAddress' @ i18n}
+								</label>
+							</div>
+							<textarea id="permanent_address" name="permanent_address" class="permanentAddress"></textarea>
+						</div>
+						<div class="form-group suffer-section">
+							<div class="heading">${'suffer' @ i18n}</div>
+							<label>
+								<input type="radio" name="illness" value="Yes" id="sufferYes">Yes
+							</label>
+							<label>
+								<input type="radio" name="illness" value="No" id="suffer-no" checked="checked"> No
+							</label>
+							<textarea id="suffering" name="name_illness" class="suffering"></textarea>
+						</div>						
+					</div>
+					<!--Family Information-->
+					<div class="family-details-wrapper clearfix">
+						<div class="tab-heading">
+							${'Family Details' @ i18n}
+						</div>
+						<div class="father-details">
+							<div class="heading">
+								${'fatherDetails' @ i18n}
+							</div>
+							<div class="form-group fatherName">
+								<label>${'name' @ i18n}</label>
+								<input type="text" name="father_name" id="father_name" class="fatherName">
+							</div>
+							<div class="form-group">
+								<label>${'email' @ i18n}</label>
+								<input type="text" name="father_email" id="father_email" class="fatherEmail">
+							</div>
+							<div class="form-group">
+								<label>${'mobile' @ i18n}</label>
+								<input type="text" name="father_contact" id="father_contact" class="fatherMobile">
+							</div>
+						</div>
+						<div class="mother-details">
+							<div class="heading">
+								${'motherDetails' @ i18n}
+							</div>
+							<div class="form-group motherName">
+								<label>${'name' @ i18n}</label>
+								<input type="text" name="mother_name" id="mother_name" class="motherName">
+							</div>
+							<div class="form-group">
+								<label>${'email' @ i18n}</label>
+								<input type="text" name="mother_email" id="mother_email" class="motherEmail">
+							</div>
+							<div class="form-group">
+								<label>${'mobile' @ i18n}</label>
+								<input type="text" name="mother_contact" id="mother_contact" class="motherMobile">
+							</div>
+						</div>
+						<div class="mobile-disclaimer">
+							Mobile Number of either Mother or Father mandatory
+						</div>
+						<div class="form-group relation-section">
+							<div class="heading">${'association' @ i18n}</div>
+							<label>
+								<input type="radio" name="association_GEU" value="employee" id="employee">Employeee
+							</label>
+							<label>
+								<input type="radio" name="association_GEU" value="student" id="student"> Student
+							</label>
+							<label>
+								<input type="radio" name="association_GEU" value="alumni" id="alumni">Alumni
+							</label>
+							<label>
+								<input type="radio" name="association_GEU" value="none" id="none" checked="checked"> None
+							</label>
+						</div>
+
+						<!--Program Details-->
+						<div class="program-wrapper">
+							<div class="tab-heading">${'programdetails' @ i18n}</div>
+							<div class="form-group course-preference">
+								<label>${'program' @ i18n}</label>
+								<select name="course_preference_1" id="course_preference_1">
+									<option value="">${'selectProgram' @ i18n}</option>
+								</select>
+							</div>
+							<div class="no-course-found" style="display: none;">
+								<div class="heading"></div>
+							</div>
+							<div class="course-details-wrapper">
+								<div class="heading">${'title' @ i18n}</div>
+								<div class="course-details clearfix">
+									<div class="course-title" name="eligibilityLabel" id="eligibilityLabel">
+										${'eligibilityduration' @ i18n}
+									</div>
+									<div class="course-description clearfix">
+										<div class="eligibilityText" name="eligibility" id="eligibility">
+										</div>
+									</div>
+								</div>
+								<div class="course-details clearfix">
+									<div class="course-title" name="durationLabel" id="durationLabel">
+										${'Duration' @ i18n}
+									</div>
+									<div class="course-duration clearfix">
+										<div class="duration" name="duration" id="duration">
+										</div>
+									</div>
+								</div>
+								<!-- <div class="course-details clearfix">
+									<div class="course-title" name="discountPercentageLabel" id="discountPercentageLabel">
+										${'Discount Percentage' @ i18n}
+									</div>
+									<div class="course-discountPercentage clearfix">
+										<div class="discountPercentage" name="discountRate" id="discountRate">
+										</div>
+									</div>
+								</div> -->
+								<div class="course-details clearfix">
+									<!-- <div class="course-title" name="discountAmountLabel" id="discountAmountLabel">
+										${'Total Payable Fees' @ i18n}
+									</div>
+									<div class="course-discountAmount clearfix">
+										<div class="discountAmount" name="discountedFees" id="discountedFees">
+										</div>
+									</div> -->
+
+									<div class="course-title" name="totalFeesLabel" id="totalFeesLabel">
+										${'Total Payable Fees' @ i18n}
+									</div>
+									<div class="course-toalFees clearfix">
+										<div class="totalFees" name="totalFees" id="totalFees">
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="basic-pcm-error-message"></div>
+                        <input type="submit" name="submit" value="Save and Continue" id="save">
+					</div>
+				</form>
+			</div>
+			<!--Registration Step3 Upload Documents-->
+			<div class="upload-section clearfix" style="display: none;">
+				<div class="upload-section-wrapper">
+					<div class="upload-error-message"></div>
+					<div class="declaration-error"></div>
+					<form method="POST" enctype="multipart/form-data" id="upload-details-form">
+                        <!-- <div class="upload-wrapper photo" id="photoWrapper">
+                            <input type="file" name="photo_name" id="uploadPhoto" class="uploadPhoto">
+                                <span id="photo"></span>
+                                
+                        </div> -->
+                    <div class="upload-wrapper photo" id="photoWrapper">
+                        <div class="upload-option">
+                            <span class="photo" style="display:none;"></span>
+                            <label for="uploadPhoto" class="custom-file-upload">
+                                <i class="fa fa-cloud-upload"></i> Upload Image
+                            </label>
+                            <input id="uploadPhoto" class="uploadPhoto" name="uploadPhoto" type="file" style="display:none;">
+                            <label id="photo-name"></label>
+                        </div>
+                        <div class="upload-photo">
+                            <div class="upload-photo-content">
+                                <h4>${'uploadPhoto' @ i18n}</h4>
+                                <p>${'uploadPhotoText' @ i18n}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="upload-wrapper sslcMarkSheet" id="sslcWrapper">
+                        <!-- <input type="file" name="uploadSslcMarksheet" id="uploadSslcMarksheet" class="uploadSslcMarksheet">
+                        <span id="sslcMarksCard"></span> -->
+                        <div class="upload-sslc-option">
+                            <span class="sslc" style="display:none;"></span>
+                            <label for="uploadSslcMarksheet" class="custom-file-upload">
+                                <i class="fa fa-cloud-upload"></i> Upload Marksheet
+                            </label>
+                            <input id="uploadSslcMarksheet" class="uploadSslcMarksheet" name="uploadSslcMarksheet" type="file" style="display:none;">
+                            <label id="sslc-marksheet-name"></label>
+                        </div>
+                        <div class="upload-sslc-marksheet">
+                            <div class="upload-sslc-marksheet-content">
+                                <h4>${'uploadTenMarksheet' @ i18n}</h4>
+                                <p>${'uploadTenMarksheetText' @ i18n}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="upload-wrapper HscMarksheet">
+                        <!-- <input type="file" name="uploadHscMarksheet" id="uploadHscMarksheet" class="uploadHscMarksheet">
+                            <span></span> -->
+                        <div class="upload-hsc-option">
+                            <span class="hsc" style="display:none;"></span>
+                            <label for="uploadHscMarksheet" class="custom-file-upload">
+                                <i class="fa fa-cloud-upload"></i> Upload Marksheet
+                            </label>
+                            <input id="uploadHscMarksheet" class="uploadHscMarksheet" name="uploadHscMarksheet" type="file" style="display:none;">
+                            <label id="hsc-marksheet-name"></label>
+                        </div>
+                        <div class="upload-hsc-marksheet">
+                            <div class="upload-hsc-marksheet-content">
+                                <h4>${'uploadTwelveMarksheet' @ i18n}</h4>
+                                <p>${'uploadTwelveMarksheetText' @ i18n}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="upload-wrapper UgMarksheet">
+                        <!-- <input type="file" name="uploadUgMarksheet" id="uploadUgMarksheet" class="uploadUgMarksheet">
+                            <span></span> -->
+	                    <div class="upload-ug-option">
+                            <span class="ug" style="display:none;"></span>
+                            <label for="uploadUgMarksheet" class="custom-file-upload">
+                                <i class="fa fa-cloud-upload"></i> Upload Marksheet
+                            </label>
+                            <input id="uploadUgMarksheet" class="uploadUgMarksheet" name="uploadUgMarksheet" type="file" style="display:none;">
+                            <label id="ug-marksheet-name"></label>
+                        </div>
+                        <div class="upload-ug-marksheet">
+                            <div class="upload-ug-marksheet-content">
+                                <h4>${'uploadGraduationMarksheet' @ i18n}</h4>
+                                <p>${'uploadGraduationMarksheetText' @ i18n}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-disclaimer">
+						The below section is not mandatory, but comes recommended, as it would help your application get selected over other candidates. If this seems too cumbersome and you already have the required % criteria, feel free to skip this. 
+		            </div>
+							<div class="video-section">
+								<div class="video-content">
+                                    ${admissionForm.videoMessage}
+								</div>
+								<div class="video-input">
+									<input type="text" name="selfVideoURL" id="selfVideoURL" class="videoUrl">
+								</div>
+								<div class="video-checkbox">
+									<label>
+										<input type="checkbox" name="videoWhatsApp" class="videoWhatsApp" id="videoWhatsApp">${'watsappVideoMessage' @ i18n}
+									</label>
+								</div>
+							</div>
+							<div class="one-field-mandate"></div>
+							<div class="essay-question-first">
+								<div class="essay-question">
+									${admissionForm.essayQuestion1}
+								</div>
+								<div class="essay-answer">
+									<textarea placeholder="Char limit 100 - 2000 max" name="essayQuestion1" id="essayQuestion1"></textarea>
+								</div>
+							</div>
+							<div class="essay-question-second">
+								<div class="essay-question">
+									${admissionForm.essayQuestion2}
+								</div>
+								<div class="essay-answer">
+									<textarea placeholder="Char limit 100 - 2000 max" name="essayQuestion2" id="essayQuestion2"></textarea>
+								</div>
+							</div>
+							<div class="declarion-section">
+								<div class="declarion-checkbox">
+									<label>
+										<input type="checkbox" name="admissionDeclaration" class="admissionDeclaration" id="admissionDeclaration">* Declaration 
+									</label>
+									<span>I hereby declare that all information and documents submitted by me, as part of this form are genuine and I assume full responsibility of the possibility of cancellation of my admission in case of any misrepresented or misleading information submitted here.</span>
+								</div>
+							</div>
+							<input type="submit" name="uploadSubmit" value="Submit" class="uploadSubmit" id="uploadSubmit">
+						</div>
+					</form>
+				</div>
+                <!--RegistrationComplete-->
+	                <div class="thanks-wrapper" style="display: none;">
+	                    <div class="thanks-content">
+	                        ${'thankyouadmission' @ i18n} ${'please' @ i18n} <a href="${admissionForm.paymentLink}">Click here</a> to proceed with your payment.
+	                    </div>
+	                </div>
+			</div>
+
+			<!--Payment Step for Registration-->
+			<div class="registration-payment" style="display: none;">
+				<div class="terms-wrapper">
+				    <div class="terms-and-conditions">
+				        <h2>${admissionForm.paymentTitle}</h2>
+				        <div class="terms-content-section">
+				            <h3>You have completed the entry of necessary details for the online form and you are left with the following: </h3>
+				            <div class="terms-error"></div>
+				            <form>
+				                <div class="input-wrapper">
+				                    <label>
+				                        <input type="checkbox" name="termsAndCondition" id="termsAndCondition" class="termsAndCondition">*Accept the <a href="${admissionForm.paymentTermsLink}" target="_blank">Terms and conditions</a> for Admissions
+				                    </label>
+				                </div>
+				                <div class="input-wrapper">
+			                        <label>
+			                            <input type="checkbox" name="declaration" id="declaration" class="declaration">Declaration
+			                        </label>
+			                        <span>${admissionForm.paymentDeclarationText}</span>
+			                    </div>
+				                <div class="terms-submit">
+				                    <input type="submit" value="Proceed" name="proceedTermsRegistration" class="proceedTermsRegistration" id="proceedTermsRegistration">
+				                </div>
+				            </form>
+				        </div>
+				    </div>
+				</div>
+				<sly data-sly-use.paymentForm="com.geu.aem.web.core.models.PaymentFormModel">
+				    <div class="payment" style="display: none;">
+				        <h2>${admissionForm.paymentTitle}</h2>
+				        <div class="payment-section">
+				            <div class="payment-option-error"></div>
+				            <div class="payment-mode-error"></div>
+				            <form id="paymentForm">
+				                <div class="registration-payment-wrapper">
+				                    <h3>Please Pay the Registration FEE &#8377; ${admissionForm.paymentAmt}</h3>
+				                </div>
+				                <div class="left-side-wrapper">
+				                    <div class="online-payment-selection">
+				                        <input id="formType" type="hidden" name="formType" value="GEU" />
+				                        <input id="vpc_Version" type="hidden" name="vpc_Version" value="${paymentForm.version}" />
+				                        <input id="vpc_AccessCode" type="hidden" name="vpc_AccessCode" value="${paymentForm.merchantAccessCode}" />
+				                        <input id="vpc_Command" type="hidden" name="vpc_Command" value="${paymentForm.commandType}" />
+				                        <input id="vpc_MerchTxnRef" type="hidden" name="vpc_MerchTxnRef" value="${paymentForm.merchTxnRef}" />
+				                        <input id="vpc_Amount" type="hidden" name="vpc_Amount" value="${admissionForm.paymentAmt}" />
+				                        <input id="vpc_MerchantId" type="hidden" name="vpc_MerchantId" value="${paymentForm.merchantID}" />
+				                        <input id="vpc_ReturnURL" type="hidden" name="vpc_ReturnURL" value="${paymentForm.registrationReceiptURL}" />
+				                        <label for="onlinePayment">
+				                            <input type="radio" name="payment-mode" id="onlinePayment" class="onlinePayment">Online Payment
+				                        </label>
+				                    </div>
+				                    <div class="payment-gateway-left-content">
+				                        Via Axis Gateway
+				                        <br/> Debit / Credit / Net Banking
+				                    </div>
+				                </div>
+				                <div class="right-side-wrapper">
+				                    <div class="offline-payment-selection">
+				                        <label for="offlinePayment">
+				                            <input type="radio" name="payment-mode" id="offlinePayment" class="offlinePayment">Offline Payment
+				                        </label>
+				                        <span>(Within 24 Hrs Mail and SMS will be sent with Pay Portal Link)</span>
+				                    </div>
+				                    <div class="payment-gateway-right-content">
+				                        Redirection to AXIS Pay portal for further processing
+				                        <br/>(Cheque, DD, Cash, NEFT, RTGS, IMPS)
+				                    </div>
+				                </div>
+				                <div class="payment-submit">
+				                    <input type="submit" value="Submit" name="inprocess" class="paymentSubmitRegistration" id="paymentSubmitRegistration">
+				                </div>
+				            </form>
+				        </div>
+				    </div>
+			    </sly>
+			</div>
+        </div>
+    </div>
+</sly>

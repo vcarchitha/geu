@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Faculty">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <facultyName
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Faculty Name"
+            name="./jcr:title"
+            xtype="textfield"/>
+        <department
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Department"
+            name="./departmentTags"
+            xtype="tags"/>
+        <jobTitle
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Job Title"
+            name="./jobTitle"
+            xtype="textfield"/>
+        <description
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Faculty Description"
+            name="./facultyDescription"
+            xtype="textarea"/>
+        <facultyImage
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Faculty Image Path"
+            name="./facultyImage"
+            xtype="pathfield"/>
+    </items>
+</jcr:root>

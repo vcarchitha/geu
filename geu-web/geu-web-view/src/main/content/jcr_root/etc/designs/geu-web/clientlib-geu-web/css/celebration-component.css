@@ -1,0 +1,60 @@
+.celebration-component {
+  background: #373737;
+  color: #ffffff;
+  padding: 40px 0; }
+
+.celebration-component .celebration-section-wrapper {
+  width: 50%;
+  float: left;
+  padding-right: 8%; }
+
+.celebration-component .celebration-section-wrapper h3 {
+  color: #ffffff;
+  font-family: Roboto-Bold;
+  font-size: 24px;
+  margin: 0 0 30px; }
+
+.celebration-component .celebration-section-wrapper h3 .celebration-year-text {
+  color: #dc2e27; }
+
+.celebration-component .celebration-section-wrapper p {
+  font-size: 12px;
+  font-family: Roboto-regular;
+  margin: 0 0 40px; }
+
+.celebration-component .celebration-section-wrapper .more-information a {
+  font-size: 14px;
+  color: #dc2e27;
+  text-decoration: none; }
+
+.celebration-component .celebration-section-news, .celebration-component .celebration-section-events {
+  width: 25%;
+  float: left; }
+
+.celebration-section-news h3, .celebration-section-events h3 {
+  color: #ffffff;
+  font-family: Roboto-Bold;
+  font-size: 24px;
+  padding-bottom: 20px; }
+
+.news-each-records {
+  margin: 0 0 15px; }
+
+.news-headlines-body {
+  background: #fff;
+  padding: 6px 10px 6px 6px; }
+
+.news-headlines-body.active, .news-headlines-body:hover {
+  background: #dc2e27; }
+
+.news-headlines-body.active p, .news-headlines-body:hover p {
+  color: #fff; }
+
+.news-headlines-body p.bold {
+  font-family: 'Roboto-Bold';
+  padding: 0 0 5px;
+  margin: 0; }
+
+.news-headlines-body p {
+  color: #000;
+  font-size: 12px; }

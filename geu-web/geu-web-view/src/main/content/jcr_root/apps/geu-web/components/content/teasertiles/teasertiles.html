@@ -1,0 +1,18 @@
+<div class="cq-placeholder"
+   data-sly-test.author="${wcmmode.edit || wcmmode.design}"
+   data-emptytext="Tab Content"></div>
+<sly data-sly-use.tiles="com.geu.aem.web.core.models.TeaserTilesModel" data-sly-unwrap/>
+<div data-sly-list="${tiles.ListItems}" data-sly-unwrap >
+   <div class="tab-contents-wrapper" data-sly-test="${item.imagePath}">
+      <div class="tab-image">
+         <img alt="image" class="" src="${item.imagePath}">
+      </div>
+      <div class="tab-content-block">
+         <h3>${item.heading}</h3>
+         <p>${item.paragraph @context='html'}<div data-sly-test="${item.label}"  data-sly-unwrap>
+         <a href="${item.linkPath}" target="${item.newWindow}" class="view-more">${item.label @ context='html'}</a>
+         </div></p>
+       
+      </div>
+   </div>
+</div>

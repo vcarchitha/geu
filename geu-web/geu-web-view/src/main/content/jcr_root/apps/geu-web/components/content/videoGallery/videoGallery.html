@@ -1,0 +1,26 @@
+<div class="cq-placeholder" data-sly-test.author="${wcmmode.edit || wcmmode.design}" data-emptytext="Video Gallery"></div>
+<sly data-sly-use.video="com.geu.aem.web.core.models.VideoPlayerModel" data-sly-unwrap/>
+<div class="video-player-component">
+    <div class="video-player-gallery">
+        <div class="video-placeholder-gallery" id="${video.videoId}" data-videoid="${video.videoId}">
+			<img src="${video.imagePath}" data-videoid="ZWGvRsQjdxs" width="100%" />
+        </div>
+    </div>
+</div>
+<sly data-sly-use.videoItems="com.geu.aem.web.core.models.VideoGalleryModel" data-sly-unwrap />
+<div class="video-list-component">
+    <div class="video-list-row" data-sly-list="${videoItems.videoGalleryItems}">
+        <div class="video-item-wrapper" id="${item.dataVideoId}">
+            <div class="video-image" data-videoid="${item.dataVideoId}">
+				<img src="${item.imgPath}" alt="img">
+			</div>
+
+			<div class="video-lsit-descriptions">
+				<h3>${item.videoDescription}</h3>
+			</div>
+		</div>
+	</div>
+
+	<div class="load-more-videos">Load More</div>
+	
+</div>

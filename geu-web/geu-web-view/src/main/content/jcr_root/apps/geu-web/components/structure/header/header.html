@@ -1,0 +1,130 @@
+<!--Header -->
+<div class="cq-placeholder" data-sly-test.author="${wcmmode.edit || wcmmode.design}" data-emptytext="Header component."></div>
+<header class=" visible-lg">
+    <div class="container">
+        <div class="row">
+            <sly data-sly-use.header="com.geu.aem.web.core.models.HeaderModel" data-sly-unwrap>
+                <div class="col-xs-12 col-sm-8 col-md-3 col-lg-5">
+                    <div class="logo-wrapper">
+                        <div class="logo">
+                            <a href="${header.homeURL}">
+                                <img src="${header.homeLogo}" alt="GEU logo" class="img-responsive">
+                            </a>
+                        </div>
+                        <div class="anniversary-logo">
+                            <img src="${header.yearsLogo}" alt="GEU Anniversary logo" class="img-responsive">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-9 col-lg-7">
+                    <section class="right-side-nav-bar">
+                        <div class="nav-bar-wrapper">
+                            <nav>
+                                <ul data-sly-list.homeLink="${header.homeLinkLists}">
+                                    <li><a href="${homeLink.linkPath}">${homeLink.label @ context='html'}</a></li>
+                                    <li data-sly-test="${homeLinkList.last}" class="quick-links-menu"><a href="javascript:void(0)">${header.quickLabel}<i class="fas fa-angle-down"></i></a>
+                                        <ul data-sly-list.quickLink="${header.quickLinksLists}" class="quick-links-sub-menu">
+                                            <li><a href="${quickLink.linkPath}">${quickLink.label @ context='html'}</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <form action="${header.searchResultsUrl}" class="search-form" method="GET">
+                                <span><i class="fas fa-search"></i>
+                                    <input type="search" name="q" placeholder="Search">
+                                </span>
+                            </form>
+                        </div>
+                        <a href="${header.applyNowLink}" class="apply">${header.applyNowLabel}</a>
+                    </section>
+                </div>
+            </sly>        
+        </div>
+    </div>
+    <sly data-sly-use.mainNav="com.geu.aem.web.core.models.MainNavigationModel" data-sly-unwrap>
+        <nav class="main-menu">
+            <div class="container">
+                <ul data-sly-list.homeMenu="${mainNav.homeMenuItems}">
+                    <li><a href="${homeMenu.pageURL}">${homeMenu.pageTitle @ context='html'}</a>
+                    <div data-sly-test="${mainNav.pageID == homeMenu.pageTitle}" data-sly-unwrap>
+                        <ul data-sly-list.subMenu="${mainNav.subChildPages}">
+                            <li class="${subMenu.activePage}"><a href="${subMenu.pageURL}">${subMenu.pageTitle @ context='html'}</a></li>
+                        </ul>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </sly>
+</header>
+
+<!--Mobile View-->
+<sly data-sly-use.header="com.geu.aem.web.core.models.HeaderModel" data-sly-unwrap>
+<div class="mobile-header-wrapper hidden-lg">
+    <div class="navbar navbar-fixed-top">
+        <div class="container">
+            <div class="mobile-header">
+                <div class="row">
+                    <div class="col-xs-8 col-sm-8 col-md-8">
+                        <div class="logo-wrapper pull-left">
+                            <a href="${header.homeURL}" class="logo">
+                                <img src="${header.homeLogo}" alt="GEU logo" class="img-responsive">
+                            </a>
+                            <div class="anniversary-logo">
+                                <img src="${header.yearsLogo}" alt="GEU Anniversary logo" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                        <div class="right-side-wrapper pull-right">
+                            <div class="apply">
+                                <a class="apply-now" href="${header.applyNowLink}">${header.applyNowLabel}</a>
+                            </div>
+                            <div class="search">
+                                <form action="${header.searchResultsUrl}" class="search-form" method="GET">
+                                    <i class="fas fa-search"></i>
+                                        <input type="search" name="q" placeholder="Search">
+                                </form>
+                            </div>
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                    <span class="sr-only"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <div class="nav navbar-nav">
+                <sly data-sly-use.mainNavMobile="com.geu.aem.web.core.models.MainNavigationMobileModel" data-sly-unwrap>
+                <ul class="dropdown-main-menu" data-sly-list.mainMobile="${mainNavMobile.homeMenuItems}">
+                    <li><a href="${mainMobile.pageURL}">${mainMobile.pageTitle @ context='html'}</a>
+                        <div data-sly-list.subMobile="${mainNavMobile.subMenuPages}" data-sly-unwrap>
+                            <div data-sly-test="${subMobile.pageID == mainMobile.pageTitle}" data-sly-unwrap>
+                                <ul class="dropdown-menu" data-sly-list.subMobileMenu="${subMobile.subMenuList}">
+                                    <li><a href="${subMobileMenu.pageURL}">${subMobileMenu.pageTitle @ context='html'}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                </sly>
+                <ul><li class="dropdown quick-links">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">${header.quickLabel}<i class="fas fa-angle-down"></i></a>
+                    <ul class="dropdown-menu" data-sly-list.quickLink="${header.quickLinksLists}">
+                        <li class="quick-links"><a href="${quickLink.linkPath}">${quickLink.label @ context='html'}</a></li>
+                    </ul>
+                </li></ul>
+                <ul data-sly-list.homeLink="${header.homeLinkLists}">
+                    <li class="quick-links"><a href="${homeLink.linkPath}">${homeLink.label @ context='html'}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</sly>

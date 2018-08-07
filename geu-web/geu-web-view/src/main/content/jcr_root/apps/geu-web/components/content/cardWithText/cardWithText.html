@@ -1,0 +1,15 @@
+<div class="cq-placeholder" data-sly-test.author="${wcmmode.edit || wcmmode.design}" data-emptytext="Cards with Text Component"></div>
+<sly data-sly-use.stats="com.geu.aem.web.core.models.CardsWithTextModel" data-sly-unwrap>
+   <h1>${properties.heading}</h1>
+   <section class="cards-with-text-section clearfix">
+      <div class="${properties.selectCardType}">
+         <div data-sly-list="${stats.cardItemList}">
+           <a href="${item.redirectUrl}" target="${item.newWindow}" class="cards-with-text-content">
+               <div class="cards-with-text-content-wrap" data-sly-test="${item.cardText}">
+                  <div class="cards-with-text-textcontent">${item.cardText}</div>
+               </div>
+            </a>
+         </div>
+      </div>
+   </section>
+</sly>

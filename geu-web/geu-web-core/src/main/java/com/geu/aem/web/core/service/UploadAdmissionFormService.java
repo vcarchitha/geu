@@ -1,0 +1,20 @@
+package com.geu.aem.web.core.service;
+
+import java.io.InputStream;
+import java.util.Map;
+
+public interface UploadAdmissionFormService {
+
+	/**
+	 * This method updates the admission table with the uploaded documents from
+	 * Upload Documents tab of Admission Form.
+	 * 
+	 * @param uploadAdmissionMap
+	 * @param request
+	 */
+	public void updateUploadAdmissionData(
+			Map<String, Object> uploadAdmissionMap,
+			Map<String, InputStream> fileMap,
+			Map<String, String> uploadDocsMaps);
+
+}

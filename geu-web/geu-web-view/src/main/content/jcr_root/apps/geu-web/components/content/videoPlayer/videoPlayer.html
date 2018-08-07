@@ -1,0 +1,12 @@
+<div class="cq-placeholder"
+	data-sly-test.author="${wcmmode.edit || wcmmode.design}"
+	data-emptytext="Video Player"></div>
+<sly data-sly-use.video="com.geu.aem.web.core.models.VideoPlayerModel"
+	data-sly-unwrap />
+<div class="video-player-component">
+	<div class="video-player ${video.videoId} " >
+		<div class="video-placeholder" id="${video.videoId}" data-videoid="${video.videoId}">
+			<img src="${video.imagePath}"  width="100%" />
+		</div>
+	</div>
+</div>

@@ -1,0 +1,105 @@
+.statistics {
+    background-color: #373737;
+}
+
+.statistics-wrapper {
+    float: left;
+}
+
+.statistics-block {
+    width: 220px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.statistics-image {
+    width: 85px;
+    height: 85px;
+    border-radius: 85px;
+    background-color: #dc2e27;
+    margin: 20px 0;
+    float: left;
+}
+
+.statistics-image:hover {
+    background-color: #d65b56;
+    cursor: pointer;
+}
+
+.statistics-image img {
+    padding: 24px 10px;
+}
+
+.statistics-image.alumnus img {
+    padding: 15px 22px;
+}
+
+.statistics-image.students-placed img {
+    padding: 13px 15px;
+}
+
+.statistics-image.updated-computers img {
+    padding: 15px 18px;
+}
+
+.statistics-image.scholarship img {
+    padding: 15px;
+}
+
+.statistics-content {
+    color: #fff;
+    float: left;
+    width: 125px;
+    padding: 30px 0 20px 10px;
+}
+
+.statistics-content h3 {
+    font-size: 20px;
+    font-family: 'Roboto-Bold';
+    margin: 0 0 5px;
+    display: inline-block;
+}
+
+.statistics-content span {
+    font-size: 20px;
+    font-family: 'Roboto-Bold';
+}
+
+.statistics-content p {
+    font-size: 12px;
+    font-family: 'Roboto-Bold';
+}
+
+.counter-carousel.owl-carousel.off {
+    display: block;
+}
+/*Mobile Styles*/
+@media only screen and (min-width: 0) and (max-width: 767px) {
+    .statistics-wrapper {
+        float: none;
+        text-align: center;
+    }
+    #counter_mobile_slider.owl-theme .owl-nav.disabled+.owl-dots {
+        position: relative;
+        margin-top: 20px;
+    }
+}
+
+/*Tablet and Medium Device Styles*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .statistics .statistics-wrapper:nth-child(1) { 
+        margin-left: 8%;
+    }
+    .statistics .statistics-wrapper:nth-child(4) {
+        margin-left: 20%;
+    }
+}
+/*Tablet and Medium Device Styles*/
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .statistics .statistics-wrapper:nth-child(1) { 
+        margin-left: 20%;
+    }
+    .statistics .statistics-wrapper:nth-child(4) {
+        margin-left: 30%;
+    }
+}

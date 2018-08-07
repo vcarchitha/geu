@@ -1,0 +1,32 @@
+.breadcrumb {
+	background-color: #fff;
+	padding: 0;
+}
+.breadcrumb ul li {
+	display: inline-block;
+	margin: 0;
+}
+.breadcrumb ul li {
+  font-size: 12px;
+}
+.breadcrumb ul li:after {
+    content: '>';
+    position: relative;
+    top: 1px;
+    font-size: 16px;
+}
+.breadcrumb ul li.active:after {
+    content: "";
+}
+
+.breadcrumb ul li a {
+	font-size: 12px;
+	color: #373737;
+}
+@media only screen and (max-width: 1199px) {
+
+    .breadcrumb
+    {
+        display: none;
+    }
+}

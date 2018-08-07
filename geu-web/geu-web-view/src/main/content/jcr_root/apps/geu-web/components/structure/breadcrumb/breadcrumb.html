@@ -1,0 +1,13 @@
+<!--Breadcrumb-->
+<div class="cq-placeholder" data-sly-test.author="${wcmmode.edit || wcmmode.design}" data-emptytext="Breadcrumb component."></div>
+<div class="breadcrumb">
+	<sly data-sly-use.breadcrumb="com.geu.aem.web.core.models.BreadcrumbModel" data-sly-unwrap>
+		<ul data-sly-list.navItem="${breadcrumb.items}">
+	    	<li class=" ${navItem.active ? 'active' : ''}">
+	        	<a href="${navItem.page.path @ extension='html'}" data-sly-unwrap="${navItem.active}">
+	               ${navItem.page.navigationTitle || navItem.page.title || properties.jcr:title || navItem.page.name}
+	            </a>
+	    	</li>
+	    </ul>
+	</sly>
+</div>

@@ -1,0 +1,17 @@
+<div class="cq-placeholder"
+   data-sly-test.author="${wcmmode.edit || wcmmode.design}"
+   data-emptytext="Two Button Component"></div>
+<sly data-sly-use.buttonModel="com.geu.aem.web.core.models.TwoButtonModel" data-sly-unwrap>
+<section class="content-page-wrapper">
+	<div class="ugpg-component">
+		<ul class="tabs-nav">
+			<li class=""><a href="${buttonModel.buttonALink}" rel="nofollow" target="_blank">${buttonModel.buttonA}</a>
+			</li>
+			<li class="tab-active"><a href="${buttonModel.buttonBLink}" rel="nofollow" target="_blank">${buttonModel.buttonB}</a>
+			</li>
+		</ul>
+		<div class="tabs-stage"></div>
+		<h1></h1>
+	</div>
+</section>
+</sly>

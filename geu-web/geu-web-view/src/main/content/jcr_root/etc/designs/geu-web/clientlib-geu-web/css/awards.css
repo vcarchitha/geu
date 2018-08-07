@@ -1,0 +1,109 @@
+
+.award-component {
+    background-color: #373737;
+    padding: 35px 0;
+}
+
+.award-component h3 {
+    color: #ffffff;
+    font-family: Roboto-Bold;
+    font-size: 24px;
+    margin: 0 0 30px;
+}
+
+.award-component .headlines {
+    background: #2377c7;
+    padding: 10px 10px 6px 6px;
+    width: 70%;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.award-component p {
+    color: #fff;
+    text-align: left;
+}
+
+.award-image-wrapper {
+    background: orange;
+    width: 70px;
+    height: auto;
+}
+
+.award-section {
+    width: 100%;
+    float: left;
+    padding: 0 10px 20px;
+}
+.awards-each-records {
+    width: 33.3%;
+    float: left;
+}
+
+.award-component-wrapper {
+    text-align: center;
+}
+.award-component .container {
+    width: auto;
+    padding-left: 40px;
+}
+
+/*Mobile Styles*/
+
+@media only screen and (min-width: 0) and (max-width: 767px) {
+    .award-section {
+        width: 100%;
+    }
+    .awards-each-records {
+        width: 100%;
+        margin: 0 0 25px;
+    }
+    .award-component {
+        padding: 35px 0 10px;
+    }
+    .awardsComponent.section {
+        margin: 0 0 -1px;
+    }
+    .award-component .headlines {
+        width: 73%;
+        padding: 6px 5px;
+        min-height: 80px;
+    }
+    .award-section .pull-left.image-section {
+        width: auto;
+    }
+    .award-section .pull-left.image-section img {
+        height: 80px;
+    }
+    .award-component p {
+        font-size: 12px;
+    }
+}
+
+/*Mobile Landscape Styles*/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .award-component .headlines {
+        min-height: 80px;
+        width: 87%;
+    }
+    .award-component .pull-left.image-section {
+        width: 80px;
+    }
+}
+
+
+/*Tablet and Medium Devices Styles*/
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .award-section {
+        width: 100%;
+    }
+    .awards-each-records {
+        width: 100%;
+        margin: 0 0 15px;
+    }
+    .award-component .headlines {
+        padding: 28px;
+        width: 84%;
+    }
+}

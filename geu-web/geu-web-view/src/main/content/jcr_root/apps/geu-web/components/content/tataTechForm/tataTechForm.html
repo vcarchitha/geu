@@ -1,0 +1,65 @@
+<div class="cq-placeholder"
+   data-sly-test.author="${wcmmode.edit || wcmmode.design}"
+   data-emptytext="Tata Teach Component"></div>
+<sly data-sly-use.tata="com.geu.aem.web.core.models.TataTechModel" data-sly-unwrap>
+
+<div class="tata-tech-content-page-main-wrapper">
+    <!-- carousel -->
+    <div class="tata-tech-content-page-banner-wrapper">
+        <div class="content-page-banner">
+            <img src="${properties.backgroundImage}" alt="${properties.altText}">
+        </div>
+    </div>
+    <div class="tata-tech-enquire-form-component">
+
+
+        <ul class="tata-tech-enquire-form-content">
+
+        <div id="message"></div>
+        <input type="button" id="backToHomePage" value="Back To Home" />
+
+
+            <form id="tataTechEnquireForm">
+                <div class="form-group">
+                    <input type="text" class="form-control-textField" id="name" name="name" placeholder=" *Name">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control-textField" id="phoneNumber" name="phoneNumber" placeholder=" *Phone" maxlength="10">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control-textField" id="email" name="email" placeholder="*Email">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control-textField" id="city" name="city" placeholder="City">
+                </div>
+                <div class="form-group">
+                    <div class="course">
+                        <div class="input-group-custom">
+                            <div class="select">
+                                <select name="course" id="courseSelectContainer" class="form-control-textField required" data-sly-list=${tata.programItemList}>
+                                    <option value="${item.programName}">${item.programName}</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea rows="4" placeholder="Query" id="comment" name="query"></textarea>
+                </div>
+                <div class="form-group">
+                    <div class="courseSelectContainer">
+                        <div class="input-group-custom">
+                            <button type="submit" class="tata-tech-form-submit" id="submit-id">${'Submit' @ i18n}</button>
+                        </div>
+                    </div>
+                </div>
+                <span id="errormsg" name="errormsg" class="errormsg">${'errormsg' @ i18n} </span>
+                <span id="emailerrormsg" name="emailerrormsg" class="errormsg">${'emailerrormsg' @ i18n} </span>
+            </form>
+        </ul>
+    </div>
+</div>
+<input type="hidden"  id="successMessage" value="${properties.successMsg}">
+<input type="hidden"  id="failureMessage" value="${properties.failureMsg}">
+</sly>

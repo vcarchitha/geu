@@ -1,0 +1,175 @@
+.column-control-component {
+    color: #ffffff;
+    padding: 40px 0;
+}
+
+.column-control-component .control-component-text-wrapper {
+    width: 47%;
+    float: left;
+    padding-right: 4%;
+}
+
+.column-control-component .control-component-text-wrapper h3 {
+    color: #ffffff;
+    font-family: Roboto-Bold;
+    font-size: 24px;
+    margin: 0 0 30px;
+}
+
+.column-control-component .control-component-text-wrapper h3 .column-control-red-text {
+    color: #dc2e27;
+}
+
+.column-control-component .control-component-text-wrapper p {
+    font-size: 12px;
+    font-family: Roboto-regular;
+    margin: 0 0 40px;
+}
+
+img.img-responsive.columncontrol-img {
+    padding: 0;
+}
+
+.column-control-component .control-component-text-wrapper .more-information a {
+    font-size: 14px;
+    color: #dc2e27;
+    text-decoration: none;
+}
+
+.column-control-component .control-component-second-section,
+.column-control-component .control-component-third-section {
+    width: 25%;
+    float: left;
+}
+
+.control-component-second-section h3,
+.control-component-third-section h3 {
+    color: #ffffff;
+    font-family: Roboto-Bold;
+    font-size: 24px;
+    margin: 0 0 20px;
+}
+
+.column-control-component .each-records {
+    margin: 0 0 15px;
+}
+
+.column-control-component .each-records .headlines {
+    background: #fff;
+    padding: 6px 10px 6px 6px;
+    width: 65%;
+}
+
+.column-control-component .each-records .headlines.active, 
+.column-control-component .each-records .headlines:hover {
+    background: #dc2e27;
+    color: #fff;
+    cursor: pointer;
+}
+
+.column-control-component .each-records .headlines.active p,
+.column-control-component .each-records .headlines:hover p {
+    color: #fff;
+}
+
+.column-control-component .each-records .headlines p{
+    color: #000;
+    font-size: 12px;
+}
+
+.column-control-component .each-records .headlines p.bold {
+    font-family: 'Roboto-Bold';
+    padding: 0 0 5px;
+    margin: 0;
+}
+
+.column-control-component .view-more {
+    font-size: 12px;
+    line-height: 30px;
+    color: #373737;
+    background: #fff;
+    text-align: center;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    float: right;
+   margin-right: 16%;
+}
+.column-control-component .view-more:hover {
+    background-color: #dc2e27;
+    color: #fff;
+}
+
+/*Mobile Styles*/
+@media only screen and (min-width: 0) and (max-width: 767px) {
+    .column-control-component {
+        padding: 20px 0;
+    }
+    .column-control-component .control-component-text-wrapper, 
+    .column-control-component .control-component-second-section,
+    .column-control-component .control-component-second-section {
+        width: 100%;
+    }
+    .column-control-component .control-component-text-wrapper {
+        margin: 0 0 25px;
+    }
+    .column-control-component .control-component-text-wrapper h3,
+    .column-control-component .control-component-second-section h3,
+    .column-control-component .control-component-third-section h3 {
+        font-size: 18px;
+        margin: 0 0 15px;
+    }
+    .column-control-component .control-component-text-wrapper p {
+        margin: 0 0 15px;
+    }
+    .column-control-component .each-records
+    {
+        position: relative;
+    }
+    .column-control-component .each-records .columncontrol-img
+    {
+        position: absolute;
+    }
+    body .column-control-component .view-more {
+        margin-right: 0;
+    }
+    .column-control-component .each-records .headlines {
+        width: 100%;
+        padding-left: 70px;
+    }
+    .column-control-component .control-component-second-section, .column-control-component .control-component-third-section {
+        width: 100%;
+    }
+}
+
+/*Tablet and Medium Device Styles*/
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .control-component-wrapper {
+        padding: 30px;
+    }
+    .column-control-component .each-records {
+        padding: 0 20px;
+    }
+    .column-control-component .control-component-text-wrapper {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 50px;
+    }
+    .column-control-component .control-component-second-section, 
+    .column-control-component .control-component-third-section {
+        width: 50%;
+    }
+    .column-control-component .each-records .headlines {
+        width: 80%;
+    }
+    .column-control-component .view-more {
+        margin-right: 10%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .column-control-component .view-more {
+        margin-right: 7%;
+    }
+}

@@ -1,0 +1,13 @@
+<div class="cq-placeholder" data-sly-test.author="${wcmmode.edit || wcmmode.design}" data-emptytext="Find a Course component."></div>
+<div class="find-a-course-section">
+    <div class="container">
+    <sly data-sly-use.findCourse="com.geu.aem.web.core.models.FindACourseModel" data-sly-unwrap />
+        <h3>${findCourse.title}</h3>
+        <div class="course-details-wrapper">
+            <ul data-sly-list.department="${findCourse.departmentList}">
+                <li><a href="${department.pageURL}">${department.pageTitle}</a></li>
+            </ul>
+        </div>
+    </sly>
+    </div>
+</div>

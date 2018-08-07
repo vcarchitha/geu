@@ -1,0 +1,30 @@
+<div class="cq-placeholder"
+   data-sly-test.author="${wcmmode.edit || wcmmode.design}"
+   data-emptytext="Text Carousel Component"></div>
+<sly data-sly-use.textCarousel="com.geu.aem.web.core.models.TextCarouselModel" data-sly-unwrap/>
+<div class="text-carousel-wrapper">
+    <div class="text-carousel-content">
+        <h3>${textCarousel.headerTitle @context='html'}</h3>
+        <div class="text-carousel owl-theme" data-sly-list="${textCarousel.textCarouselItems}">
+            <div class="items">
+            	<div class="border-wrapper clearfix">
+                    <div class="border-left"></div>
+                    <div class="border-right"></div>
+                </div>
+                <p>${item.description}</p>
+                <div class="border"></div>
+                <div class="text-carousel-bottom-section">
+                	<sly data-sly-test="${item.authorName}">
+                    	<p class="bold">${item.authorName}</p>
+                    </sly>
+                    <sly data-sly-test="${item.authorDesignation}">
+                    	<p>${item.authorDesignation}</p>
+                    </sly>
+                </div>
+            </div>
+        </div>
+        <sly data-sly-test="${textCarousel.ctaButtonText}">
+        	<a class="default-button" href="${textCarousel.ctaButtonUrl}">${textCarousel.ctaButtonText @context='html'}</a>
+        </sly>
+    </div>
+</div>

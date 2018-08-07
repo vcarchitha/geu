@@ -1,0 +1,8 @@
+#base=js
+main.js
+payment-form.js
+image-gallery.js
+enquiryform.js
+faculty.js
+#admissionform.js
+tata-tech.js

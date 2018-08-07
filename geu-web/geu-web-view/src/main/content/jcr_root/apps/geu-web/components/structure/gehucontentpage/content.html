@@ -1,0 +1,18 @@
+<!-- page wrapper start -->
+<div class="geu-content-page-main-wrapper">
+    <div class="geu-content-page-banner-wrapper">
+        <div class="content-page-banner">
+            <img src="${properties.contentImage}" alt="GEU Campus Top View">
+        </div>
+    </div>
+    <div class="container">
+        <div class="main-content-wrapper">
+            <div data-sly-resource="${@path='breacrumb', resourceType='geu-web/components/structure/breadcrumb'}"></div>
+            <section class="content-page-wrapper">
+                <h1 data-sly-test="${properties.pageTitle}">${properties.pageTitle}</h1>
+                <div data-sly-resource="${@path='campustab', resourceType='geu-web/components/structure/campustab'}"></div>
+                <div data-sly-resource="${@path='par', resourceType='foundation/components/parsys'}"></div>
+            </section>
+        </div>
+    </div>
+</div>

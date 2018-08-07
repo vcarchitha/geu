@@ -1,0 +1,28 @@
+.image-component
+{
+    text-align: center;
+    padding: 20px 0;
+}
+.image-component img
+{
+    max-width: 100%;
+}
+.image-component-label
+{
+    padding-top: 10px;
+    font-family: Roboto-regular;
+    font-size: 14px;
+    color: #333;
+    clear: both;
+}
+.image-component-label a{
+    font-family: Roboto-regular;
+    font-size: 14px;
+    color: #333;
+}
+.image-component.on img {
+    width: 100%;
+}
+.image-component.on {
+    padding: 0;
+}

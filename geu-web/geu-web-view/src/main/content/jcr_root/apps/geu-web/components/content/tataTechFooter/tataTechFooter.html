@@ -1,0 +1,20 @@
+<div class="cq-placeholder"
+   data-sly-test.author="${wcmmode.edit || wcmmode.design}"
+   data-emptytext="TataTech Footer"></div>
+
+ <div class="tata-tech-footer" data-sly-use.footer="com.geu.aem.web.core.models.TataTechFooterModel">
+         <div class="container">
+            <div class="tata-tech-footer-wrapper">
+               <nav class="tata-tech-footer-links">
+               <div class="tataMediaText">${footer.socialMediaText}  </div>
+                  <ul data-sly-list="${footer.socialLinkItems}">
+                     <li> <a href="${item.linkPath}">${item.label} </a></li>
+                  </ul>
+                  <div class="subText">${footer.channelText}</div>
+                  <ul class="globalTextWrapper">
+                     <li>${footer.technologyGlobalText} - <a href="${footer.technologyGlobalPath}">${footer.technologyGlobalLabel}</a></li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>

@@ -1,0 +1,9 @@
+<sly data-sly-test="${!properties.htmlsnippet && wcmmode.edit}">
+   <div> [Please configure static HTML component] </div>
+</sly>
+<sly data-sly-test="${properties.htmlsnippet && wcmmode.edit}">
+    [Edit static HTML component here]
+</sly>
+<sly data-sly-test="${properties.htmlsnippet}">
+    ${properties.htmlsnippet @ context="unsafe"}
+</sly>

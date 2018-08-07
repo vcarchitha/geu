@@ -1,0 +1,53 @@
+.content-page-image img {
+    width: 100%;
+}
+
+a.content-page-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.content-page-descriptions {
+    padding: 20px 20px 40px 20px;
+}
+
+.content-page-descriptions h3 {
+    margin: 0 0 20px;
+}
+
+.content-page-descriptions:hover {
+    background: #dc2e27;
+    color: #fff;
+    cursor: pointer;
+}
+
+.upcoming-events-component-wrapper:last-child {
+    margin-right: 0;
+}
+
+.upcoming-events-component-wrapper {
+    vertical-align: top;
+    padding-right: 10px;
+    margin-bottom: 30px;
+}
+
+
+
+/*Mobile and Small Device Styles*/
+
+@media only screen and (min-width: 0) and (max-width: 767px) {
+    .pagingInfo,
+    .next,
+    .slick-dots {
+        font-size: 12px;
+    }
+    .upcoming-events-component-wrapper:first-child {
+        margin-left: 0;
+    }
+    .upcoming-events-component-wrapper {
+        padding-right: 0px;
+    }
+    .pagingInfo {
+        margin-top: -25px;
+    }
+}

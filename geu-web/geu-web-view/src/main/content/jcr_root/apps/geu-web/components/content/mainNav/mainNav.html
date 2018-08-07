@@ -1,0 +1,17 @@
+<!--Main Navigation -->
+<div class="cq-placeholder" data-sly-test.author="${wcmmode.edit || wcmmode.design}" data-emptytext="Main Navigation component."></div>
+    <sly data-sly-use.mainNav="com.geu.aem.web.core.models.MainNavigationModel" data-sly-unwrap>
+    	<nav class="main-menu">
+        	<div class="container">
+                <ul data-sly-list.homeMenu="${mainNav.homeMenuItems}">
+                	<li><a href="${homeMenu.pageURL}">${homeMenu.pageTitle @ context='html'}</a>
+                    <div data-sly-test="${mainNav.pageID == homeMenu.pageTitle}" data-sly-unwrap>
+                        <ul data-sly-list.subMenu="${mainNav.subChildPages}">
+                            <li><a href="${subMenu.pageURL}">${subMenu.pageTitle @ context='html'}</a></li>
+                        </ul>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+	</sly>

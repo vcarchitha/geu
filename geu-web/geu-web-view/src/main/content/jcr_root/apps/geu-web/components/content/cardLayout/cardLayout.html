@@ -1,0 +1,20 @@
+<div class="cq-placeholder" data-sly-test.author="${wcmmode.edit || wcmmode.design}" data-emptytext="CardLayout Component."></div>
+<sly data-sly-use.column="com.geu.aem.web.core.models.CardLayoutModel" data-sly-unwrap>
+   <section class="content-page-wrapper ${properties.selectViewColor}">
+   <div>
+      <div data-sly-list="${column.columnItemList}">
+         <div class="${properties.selectView}">
+            <div class="content-page-image">
+               <img src="${item.image}" alt="${item.thumbImage}">
+            </div>
+            <a href="${item.pageUrl}" class="content-description">
+               <div class="content-page-descriptions ${properties.selectViewColor}">
+                  <h3>${item.title}</h3>
+                  <p>${item.description @ context='html'}</p>
+               </div>
+            </a>
+         </div>
+      </div>
+   </div>
+   </section>
+</sly>

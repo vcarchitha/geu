@@ -1,0 +1,18 @@
+<div class="cq-placeholder"
+	data-sly-test.author="${wcmmode.edit || wcmmode.design}"
+	data-emptytext="Export Lead Component"></div>
+<sly data-sly-use.exportLead="com.geu.aem.cca.core.models.ExportLeadModel" data-sly-unwrap>
+    <div class="call-centre-main-component">
+        <h3>${exportLead.title}</h3>
+        <div class="admin-wrapper">        
+            <form>
+                <div class="cca-export">
+                    <a href="#" class="btn-export-leads">${exportLead.exportLeadLabel}</a>
+                </div>
+                <div class="cca-export">
+                    <button type="submit" class="btn-back" data-url="${exportLead.backButtonURL}">${exportLead.backButtonLabel}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</sly>

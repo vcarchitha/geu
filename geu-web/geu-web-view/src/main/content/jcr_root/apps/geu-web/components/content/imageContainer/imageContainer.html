@@ -1,0 +1,21 @@
+<div class="cq-placeholder" data-sly-test.author="${wcmmode.edit || wcmmode.design}" data-emptytext="Image Container Component."></div>
+<sly data-sly-use.imgContainer="com.geu.aem.web.core.models.ImageContainerModel" data-sly-unwrap>
+<div class="${properties.padding}">
+   <div class="image-block">
+      <img src="${properties.image}" alt="${properties.altText}" class="img-responsive">    
+   </div>
+   <div class="content-block">
+      <div class="content-top">
+         <h2 data-sly-test=${properties.title}>${properties.title}</h2>
+         <p data-sly-test=${properties.description}>${properties.description}</p>
+      </div>
+      <div class="content-bottom">
+        <div data-sly-resource="${'richText' @ resourceType='geu-web/components/content/richText'}"></div>
+      </div>
+      <div class="buttons-wrapper" data-sly-list="${imgContainer.buttonItemList}">
+         <div data-sly-test=${item.buttonLabel}>
+            <a href="${item.buttonURL}">${item.buttonLabel}</a>
+         </div>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,19 @@
+<header>
+        <nav id="header" class="navbar navbar-fixed-top">
+        <input type="hidden" id="resourcePath" value="${currentPage.getPath}">
+            <div id="header-container" class="container navbar-container">
+                <div class="navbar-header">
+                    <a id="brand" class="navbar-brand logo" href="#"><img class="img-responsive brandLogo" src="${properties.brandLogo}" alt="GEU Logo"></a>
+                    <a data-sly-test="${properties.anniversaryLogo}" id="geu-celebration" class="navbar-brand anniversary-logo" href="#"><img class="img-responsive brandLogo anniversary-logo" src="${properties.anniversaryLogo}" alt=" Logo"></a>
+                </div>
+                <div data-sly-test="${properties.enquireNow}" id="navbar" class="collapse navbar-collapse">
+                    <ul class="enquire-now-form">
+                        <h1>Admission Open</h1>
+                        <li class="enquire-now-btn"><a href="#" id="enquireNow-btn">Enquire Now </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Fixed navbar -->
+    </header>

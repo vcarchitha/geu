@@ -1,0 +1,9 @@
+<!--Title Text Link Component-->
+<div class="cq-placeholder" data-sly-test.author="${wcmmode.edit || wcmmode.design}" data-emptytext="Title Text Link component."></div>
+<div class="control-component-text-wrapper">
+	<sly data-sly-use.text="com.geu.aem.web.core.models.TitleTextLinkModel" data-sly-unwrap>
+		<h3>${text.title}<span class="column-control-red-text"> ${text.subTitle}</span></h3>
+		<p>${text.description @ context='html'}</p>
+		<span class="more-information"><a href="${text.linkURL}">${text.linkLabel}</a> </span>
+	</sly>
+</div>

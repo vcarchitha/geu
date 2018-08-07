@@ -1,0 +1,39 @@
+<div class="cq-placeholder"
+   data-sly-test.author="${wcmmode.edit || wcmmode.design}"
+   data-emptytext="Faculty Component"></div>
+
+<section class="faculty-main-section">
+<div class="faculty-component">
+     <div class="faculty-componentt-wrapper clearfix">
+         <div class="faculty-drop-down-content">
+             <div class="faculty-form">
+                 <div class="form-group">
+                     <div class="input-group-custom">
+                         <div class="select">
+                             <select name="faculty-department" id="faculty-department" class=".selectdisabled">
+                             </select>
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="form-group">
+                     <div class="input-group-custom">
+                         <div class="select">
+                             <select name="faculty-department" id="faculty-department-selection" class=".selectdisabled">                                   
+                             </select>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+</div>
+<input id="facultyType" type="hidden" name="facultyType" value="${properties.facultyType}"/>
+</section>
+<section class="faculty-content-page-component faculty-slider slider">
+</section>
+<div class="slider-arrows">
+    <a class="faculty-next"> Next &gt; </a>
+    <a class="faculty-prev">&lt; Prev </a>
+</div>
+<span class="pagingInfo"></span>

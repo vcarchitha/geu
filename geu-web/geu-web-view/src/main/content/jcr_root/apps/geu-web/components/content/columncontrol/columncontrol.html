@@ -1,0 +1,15 @@
+<!--Column Control Component-->
+<div class="cq-placeholder" data-sly-test.author="${wcmmode.edit || wcmmode.design}" data-emptytext="Column Control component."></div>
+<div class="column-control-component ${properties.backgroundColor}">
+	<div class="container">
+		<div class="control-component-wrapper" data-sly-test="${properties.columnType=='threecolumn'}">
+			<div class="control-component-first-section" data-sly-resource="${@path='firstcolumn', resourceType='foundation/components/parsys'}"></div>
+			<div class="control-component-second-section" data-sly-resource="${@path='secondcolumn', resourceType='foundation/components/parsys'}"></div>
+			<div class="control-component-third-section" data-sly-resource="${@path='thirdcolumn', resourceType='foundation/components/parsys'}"></div>
+		</div>
+		<div class="control-component-wrapper" data-sly-test="${properties.columnType=='twocolumn'}">
+			<div class="control-component-first-section" data-sly-resource="${@path='leftcolumn', resourceType='foundation/components/parsys'}"></div>
+			<div class="control-component-second-section" data-sly-resource="${@path='rightcolumn', resourceType='foundation/components/parsys'}"></div>
+		</div>
+	</div>
+</div>

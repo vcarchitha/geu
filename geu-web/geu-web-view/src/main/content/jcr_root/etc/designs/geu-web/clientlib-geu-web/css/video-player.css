@@ -1,0 +1,42 @@
+.video-player
+{
+    position: relative;
+    cursor: pointer;
+}
+.video-placeholder::after
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: url("/content/dam/geu/about/the-university/play-icon-medium.png") no-repeat center center;
+}
+.video-player-gallery
+{
+    position: relative;
+    cursor: pointer;
+}
+.video-placeholder-gallery::after
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: url("/content/dam/geu/about/the-university/play-icon-medium.png") no-repeat center center;
+}
+
+@media only screen and (max-width: 1023px) {
+    .video-player iframe
+    {
+       height: 400px;
+    }
+}
+@media only screen and (min-width: 0) and (max-width: 767px) {
+    .video-placeholder::after {
+        background-size: 15% auto;
+     }
+}

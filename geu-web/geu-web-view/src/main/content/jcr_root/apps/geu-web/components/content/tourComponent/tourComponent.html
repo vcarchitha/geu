@@ -1,0 +1,14 @@
+<div class="cq-placeholder"
+   data-sly-test.author="${wcmmode.edit || wcmmode.design}"
+   data-emptytext="Tour Component"></div>
+<section class="content-page-wrapper tour">
+   <sly data-sly-use.tiles="com.geu.aem.web.core.models.TourModel" data-sly-unwrap>
+      <h3>${tiles.heading @ context='html'}</h3>
+      <div class="iframe-wrapper">
+         <iframe src="${tiles.tourUrl}"></iframe>  
+      </div>
+      <div  data-sly-test="${tiles.campusTourUrl}" data-sly-unwrap>
+      		<h3><a href="${tiles.campusTourUrl}" target="_blank">${tiles.campusTourLabel}<i class="fas fa-caret-right"></i></a></h3>
+      </div>    
+</section>
+</sly>

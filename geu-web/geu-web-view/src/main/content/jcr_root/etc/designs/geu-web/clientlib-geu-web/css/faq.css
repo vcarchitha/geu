@@ -1,0 +1,67 @@
+.faq-container .panel {
+	border: none;
+	box-shadow: none;
+	margin: 0 0 5px;
+}
+.faq-container .panel-heading[aria-expanded="true"] {
+	background-color: #dc2e27;
+	height: 50px;
+}
+.faq-container .panel-heading.active {
+	background-color: #dc2e27;
+}
+.faq-container .panel-heading .panel-title {
+	text-transform: uppercase;
+	vertical-align: middle;
+	color: #fff;
+	line-height: 30px;
+}
+.faq-container .panel-heading,
+.faq-container .panel-heading.collapsed {
+	background-color: #373737;
+	border-radius: 0;
+	cursor: pointer;
+}
+.faq-container .collapse.in {
+	display: none;
+	padding: 20px 0 15px;
+}
+.faq.cq-Editable-dom .faq-container .collapse.in {
+	display: block;
+}
+.panel-collapse.collapse.in > div,
+.panel-collapse.collapse.in > div ul {
+    padding-left: 15px;
+}
+.faq-container .panel-heading .plusminus {
+	color: #fff;
+    float: right;
+    position: relative;
+    top: -32px;
+    font-size: 24px;
+}
+.faq-container .panel-body .heading {
+	font: 14px/16px 'Roboto-Bold';
+	margin: 0 0 10px;
+}
+.faq-container .panel-body .sub-heading {
+	font: 14px/16px 'Roboto-Regular';
+	margin: 0 0 10px;
+}
+.faq-container .panel-body p {
+	font: 12px/15px 'Roboto-Regular';
+	margin: 0 0 15px;
+}
+
+/*Mobile, Tablet and Medium device styles*/
+@media only screen and (max-width: 1199px) {
+	.faq-container .panel-heading .panel-title {
+		font-size: 13px;
+	}
+	.faq-container .panel-body .heading, .panel-body .sub-heading {
+		font-size: 12px;
+	}
+	.faq-container .panel-body p {
+		font-size: 11px;
+	}
+}

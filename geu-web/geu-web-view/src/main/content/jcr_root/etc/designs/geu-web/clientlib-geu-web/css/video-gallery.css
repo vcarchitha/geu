@@ -1,0 +1,94 @@
+.video-list-component
+{
+    padding-top: 40px;
+    border-top:1px solid #000; 
+    margin-top: 40px;
+}
+.video-item-wrapper
+{
+    width:33.3%;
+    float: left;
+    padding:0 10px 20px;
+    cursor: pointer;
+    display:none;
+}
+.video-item-wrapper:nth-of-type(3n+1) {
+    clear: left;
+}
+
+.video-item-wrapper:hover .video-lsit-descriptions,
+.video-item-wrapper.selected .video-lsit-descriptions
+{
+    background: #dc2e27;
+    color: #fff;
+}
+.video-image
+{
+    overflow: hidden;
+    position: relative;
+}
+.video-image::after
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: url("/content/dam/geu/about/the-university/play-icon-medium.png") no-repeat center center;
+    background-size: 15% auto;
+}
+.video-image img
+{
+    max-width: 100%;
+}
+.video-list-row
+{
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.video-list-row::after
+{
+    content: "";
+    display: table;
+    width: 100%;
+}
+.video-lsit-descriptions {
+    padding: 20px;
+}
+.video-lsit-descriptions h3
+{
+    font-weight: bold;
+}
+.load-more-videos
+{
+    font-size: 20px;
+    padding: 8px;
+    background: #e5e5e5;
+    font-weight: bold;
+    width: 320px;
+    text-align: center;
+    margin: 20px auto 0;
+    cursor: pointer;
+}
+
+/*Mobile Styles*/
+@media only screen and (max-width: 767px) {
+    .video-item-wrapper {
+    	max-width: 400px;
+        margin: 0 auto;
+        float: none;
+        width: 100%;
+    }
+
+    .video-player iframe
+    {
+       height: 300px;
+    }
+
+    .video-list-component
+    {
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+}

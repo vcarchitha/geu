@@ -1,0 +1,19 @@
+<div class="cq-placeholder"
+   data-sly-test.author="${wcmmode.edit || wcmmode.design}"
+   data-emptytext="Download Component"></div>
+<sly data-sly-use.download="com.geu.aem.web.core.models.DownloadModel" data-sly-unwrap/>
+
+<div class="download-page-content">
+	<sly data-sly-test="${download.headerTitle}">
+	    <div class="heading-section">
+	        <h3>${download.headerTitle}</h3>
+	    </div>
+    </sly>
+    <div class="download-section-wrapper" data-sly-list="${download.downloadListItems}">
+        <a class="download-section" target="_blank" href="${item.documentPath}">
+            <span class="icon ${item.documentFormatIcon}"></span>
+            <div class="title">${item.documentTitle} [${item.documentFormat} ${item.documentSize}] <i class="fas fa-angle-right"></i></div>
+        </a>
+    </div>
+</div>
+

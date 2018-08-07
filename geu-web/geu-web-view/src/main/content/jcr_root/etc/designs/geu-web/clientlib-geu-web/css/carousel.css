@@ -1,0 +1,5 @@
+.geu-banner-carousel.owl-theme .owl-nav.disabled+.owl-dots {
+    position: relative;
+    margin-top: -26px;
+}
+

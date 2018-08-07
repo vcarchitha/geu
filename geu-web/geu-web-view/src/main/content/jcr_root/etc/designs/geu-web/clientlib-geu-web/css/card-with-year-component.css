@@ -1,0 +1,74 @@
+   section.cards-with-year-section {
+      margin-bottom: 30px;
+      margin-left: 15px;
+   }
+   .cards-with-year-content-wrap {
+       text-align: center;
+       margin-bottom: 10px;
+       float: left;
+   }
+
+    .color .cards-with-text-textcontent {
+        background: #dc2e27;
+
+    }
+   .cards-with-year-textcontent {
+        background: #dc2e27;
+        display: inline-block;
+        word-wrap: break-word;
+        width: 200px;
+        color: #fff;
+        height: 160px;
+        vertical-align: middle;
+        line-height: 20px;
+        padding: 70px 30px;
+        margin-right: 12px;
+        margin-bottom: 10px;
+   }
+
+   .slick-dotted.slick-slider {
+       margin-bottom: 30px;
+   }
+
+   .bg-color-scooter {
+      background: #2bcbd9;
+   }
+
+   .bg-color-fuchsia-pink {
+      background: #cf4cb5;
+   }
+
+   .bg-color-fuel-yellow {
+      background: #e6ab2d;
+   }
+
+   .bg-color-christi {
+      background: #6aae12;
+   }
+
+   .bg-color-indigo {
+      background: #4c4fd2;
+   }
+   
+   /*Mobile and Small Device Styles*/
+
+   @media only screen and (min-width: 0) and (max-width: 767px) {
+       .pagingInfo,
+       .next,
+       .slick-dots {
+           font-size: 12px;
+       }
+       .upcoming-events-component-wrapper:first-child {
+           margin-left: 0;
+       }
+       .cards-with-year-textcontent {
+           width: 97%;
+       }
+   }
+   /*Tablet and Medium Device Styles*/
+
+   @media only screen and (min-width: 768px) and (max-width: 1199px) {
+       .cards-with-year-textcontent {
+           width: 97%;
+       }
+   }

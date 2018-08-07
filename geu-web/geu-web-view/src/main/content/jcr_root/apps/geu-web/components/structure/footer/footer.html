@@ -1,0 +1,37 @@
+<div class="cq-placeholder" data-sly-test.author="${wcmmode.edit || wcmmode.design}" data-emptytext="Footer component."></div>
+<div class="scroll-top-wrapper container">
+    <a href="#top" class="scrollup"> <i class="fa fa-arrow-up"></i> </a>
+</div>
+<footer>
+    <div class="footer-wrapper container">
+        <sly data-sly-use.footer="com.geu.aem.web.core.models.FooterModel" data-sly-unwrap>
+          <div data-sly-test="${footer.footerLogo}"  data-sly-unwrap>
+            <a href="${footer.footerURL}" class="logo">
+                <img src="${footer.footerLogo}" alt="GEU logo" class="img-responsive">
+            </a>
+            </div>
+            <div class="social-icons-wrapper">
+                <ul>
+                    <li data-sly-test="${!footer.facebookCheck}"><a href="${footer.facebookURL}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li data-sly-test="${!footer.twitterCheck}"><a href="${footer.twitterURL}" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li data-sly-test="${!footer.linkedInCheck}"><a href="${footer.linkedInURL}" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li data-sly-test="${!footer.youtubeCheck}"><a href="${footer.youtubeURL}" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                    <li data-sly-test="${!footer.googleCheck}"><a href="${footer.googlePlusURL}" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
+                    <li data-sly-test="${!footer.instagramCheck}"><a href="${footer.instagramURL}" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li data-sly-test="${!footer.snapchatCheck}"><a href="${footer.snapchatURL}" target="_blank"><i class="fab fa-snapchat-ghost"></i></a></li>
+                </ul>
+                <div class="border">
+                </div>
+                <div class="tour">
+                    ${footer.tourInLabel}<a href="${footer.virtualURL}"><img class="img-responsive" src="${footer.virtualImage}" alt="360 view"></a>
+                </div>
+            </div>
+            <nav class="footer-links">
+                <ul data-sly-list.footerlinks="${footer.footerLinksList}">
+                    <li><a href="${footerlinks.linkPath}" target="${footerlinks.newWindow}">${footerlinks.label @ context='html'}</a></li>
+                </ul>
+            </nav>
+            <div class="copy-right">${footer.copyrightText}</div>
+        </sly>
+    </div>
+</footer>

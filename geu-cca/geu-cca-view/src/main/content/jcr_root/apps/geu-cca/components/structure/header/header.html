@@ -1,0 +1,42 @@
+<div class="cq-placeholder" data-sly-test.author="${wcmmode.edit || wcmmode.design}" data-emptytext="Header component."></div>
+<header>
+   <div class="header-band clearfix" >
+   <div data-sly-use.header="com.geu.aem.cca.core.models.HeaderModel" data-sly-unwrap/>
+      <div data-sly-test.login="${properties.loginHeader}" data-sly-unwrap>
+         <div data-sly-test.loggedUser="${header.loggedInUser}" data-sly-unwrap>
+            <input type="hidden"  id="loggedUser" value="true">
+         </div>
+      </div>
+      <div data-sly-test.login="${!properties.loginHeader}" >
+         <div class="user-login-details">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+               <div class="right-side-nav-bar">
+                  <div class="nav-bar-wrapper">
+                     <nav>
+                        <ul>
+                           <li><a>Hi, ${header.userID}</a></li>
+                           <li data-sly-list="${header.pageList}"><i class="far fa-user"></i> <a href="${item.linkPath}">${item.linkLabel}</a></li>
+                           <li><i class="fas fa-power-off"></i><a onclick="location.href = '/system/sling/logout.html'" class="apply">${header.logoutLabel}</a></li>
+                        </ul>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="container">
+      <div class="row">
+         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="logo-wrapper">
+               <div class="logo">
+                  <a href="${header.homeURL}">
+                  <img src="${header.homeLogo}" alt="GEU logo" class="img-responsive">
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
+<!-- HEADER STARTS -->

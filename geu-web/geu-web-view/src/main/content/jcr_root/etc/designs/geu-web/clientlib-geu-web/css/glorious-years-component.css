@@ -1,0 +1,52 @@
+/*Glorius Section*/
+.glorious-wrapper {
+  background-color: #fff;
+  margin: 50px 0; }
+
+.glorious-wrapper h2 {
+  font-family: 'Roboto-Medium';
+  text-transform: uppercase;
+  text-align: center;
+  color: #373737;
+  font-size: 30px;
+  margin: 0 0 40px; }
+
+.glorious-wrapper .owl-carousel .owl-item img {
+  float: left;
+  width: auto; }
+
+.glorious-wrapper .item p {
+  width: 45%;
+  float: left;
+  margin: 0 0 75px 25px; }
+
+.glorious-carousel-year {
+  margin-bottom: 20px;
+  border-top: 2px solid #ff0a14; }
+
+.glorious-carousel-image .owl-item {
+  padding-left: 0.6%; }
+
+.glorious-carousel-year a {
+  cursor: pointer;
+  margin: 10px 60px;
+  color: #ff1e27; }
+
+.glorious-carousel-year a:first-child {
+  margin-left: 0; }
+
+.glorious-carousel-year a:last-child {
+  margin-right: 0; }
+
+.glorious-carousel-year .current .item:after {
+  content: '';
+  position: absolute;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #ff0a14;
+  left: 15px;
+  bottom: 22px; }
+
+.glorious-carousel-year .owl-stage-outer {
+  margin-top: -25px;
+  padding: 25px 0; }

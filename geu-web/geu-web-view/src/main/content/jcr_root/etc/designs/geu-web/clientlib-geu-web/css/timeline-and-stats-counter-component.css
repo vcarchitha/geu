@@ -1,0 +1,86 @@
+.statistics {
+  background-color: #373737; }
+
+.statistics-block {
+  width: 220px;
+  display: inline-block;
+  vertical-align: top; }
+
+.statistics-image {
+  width: 85px;
+  height: 85px;
+  border-radius: 85px;
+  background-color: #dc2e27;
+  margin: 20px 0;
+  float: left; }
+
+.statistics-image:hover {
+  background-color: #d65b56;
+  cursor: pointer; }
+
+.statistics-image img {
+  padding: 24px 10px; }
+
+.statistics-image.alumnus img {
+  padding: 15px 22px; }
+
+.statistics-image.students-placed img {
+  padding: 13px 15px; }
+
+.statistics-image.updated-computers img {
+  padding: 15px 18px; }
+
+.statistics-image.scholarship img {
+  padding: 15px; }
+
+.statistics-content {
+  color: #fff;
+  float: left;
+  width: 135px;
+  padding: 30px 0 30px 10px; }
+
+.statistics-content h3 {
+  font-size: 20px;
+  font-family: 'Roboto-Bold';
+  margin: 0 0 5px;
+  display: inline-block; }
+
+.statistics-content span {
+  font-size: 20px; }
+
+.statistics-content p {
+  font-size: 12px; }
+
+/*.timeline-and-stats-counter-component {
+	background: $secion-background;
+	.each-records {
+	    width: 19.66%;
+	    display: $field-inline-block;
+	    padding-right: $padding-right-ten;
+	    img {
+		    width: $width-auto;
+		}
+		.media-body {
+		    vertical-align: $vertical-align-top;
+		    padding: $padding-twenty-zero-zero-ten;
+		    line-height: $small-line-height;
+		    text-align: $text-align-left;
+		    strong {
+			    margin: $strong-margin-zero-zero-ten;
+			    display: $field-inline-block;
+			    width: 100%;
+			}
+			small {
+			    font-size: $small-font-size;
+			    line-height: $small-line-height;
+			    display: $field-inline-block;
+			}
+		}
+	}
+	.timeline-and-stats-counter {
+	    margin: $margin-thirty-zero;
+	    padding-left: $padding-left-zero;
+	    padding-right: $padding-right-zero;
+	    color: $white;
+	}
+}*/

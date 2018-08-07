@@ -1,0 +1,92 @@
+.ugpg-component ul > li > div {
+    border: 0;
+    font-size: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+.ugpg-component li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.ugpg-component .tabs-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ugpg-component .tabs-nav .tab-active a {
+    background: #dc2e27;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.ugpg-component .tabs-nav .tab-active a:hover {
+    background: #d65b56;
+}
+.ugpg-component .tabs-nav a {
+    background: #373737;
+    color: #fff;
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    height: 90px;
+    line-height: 91px;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+}
+.ugpg-component .tabs-nav a:hover {
+    background-color: #494949
+}
+.ugpg-component .tabs-nav li {
+    float: left;
+    width: 50%;
+}
+
+.ugpg-component .tabs-stage {
+    clear: both;
+}
+
+.ugpg-component .tabs-stage p {
+    margin: 0;
+    padding: 20px;
+    color: hsl(0, 0%, 33%);
+}
+
+
+/*Mobile and Small Device Styles*/
+
+@media only screen and (min-width: 0) and (max-width: 767px) {
+    .ugpg-component .tabs-nav {
+        padding: 0;
+    }
+    .ugpg-component .tabs-nav li {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .ugpg-component .tabs-nav a {
+        width: 100%;
+        margin-left: 0;
+    }
+    .ugpg-component .tabs-nav a {
+        font-size: 16px;
+        height: 50px;
+        line-height: 51px;
+    }
+    .ugpg-component .tabs-nav .tab-active a {
+        margin-left: 0;
+    }
+}
+
+
+/*Tablet and Medium Device Styles*/
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .ugpg-component .tabs-nav {
+        padding: 0;
+    }
+}

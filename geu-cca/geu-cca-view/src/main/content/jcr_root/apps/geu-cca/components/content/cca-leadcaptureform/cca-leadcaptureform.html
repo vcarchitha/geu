@@ -1,0 +1,375 @@
+<div class="cq-placeholder" data-sly-test.author="${wcmmode.edit || wcmmode.design}" data-emptytext="Lead Capture component."></div>
+<div class="form-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-8">
+                <div class="form-container">
+                    <form name="ccaLeadForm" id="ccaLeadForm">
+                        <sly data-sly-use.leadcapture="com.geu.aem.cca.core.models.LeadCaptureModel" data-sly-unwrap>
+                            <div class="heading">
+                                <h3>${properties.title}</h3>
+                                <div id="spinner" class="spinner loading" style="display:none;">
+                                    <img id="img-spinner" src="/content/dam/cca/spinner.gif" alt="Loading" />
+                                </div>
+                            </div>
+                            <input type="hidden" id="user_id" name="user_id" value=${currentSession.userID}>
+                            <div class="form-content get-info">
+                                <div class="formGetInfo-form">
+                                    <div class="form-group">
+                                        <label for="firstName">${'firstName' @ i18n} <span class="req">*</span> </label>
+                                        <input type="text" id="firstName" placeholder="Enter First Name" name="firstName">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">${'lastName' @ i18n} <span class="req">*</span> </label>
+                                        <input type="text" id="lastName" placeholder="Enter Last Name" name="lastName">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contactNum">${'contactNum' @ i18n} <span class="req">*</span> </label>
+                                        <input type="text" maxlength="10" id="contactNum" placeholder="Contact Number" name="contactNum">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="buttonWrapper">
+                                            <button id="btn-get-info" name="btn-get-info" class="btn-get-info"> ${'get_info' @ i18n}</button>
+                                            <button id="btn-clear" name="btn-clear" class="btn-clear"> ${'clear' @ i18n}</button>
+                                        </div>
+                                    </div>
+                                    <ul>
+                                        <li id="noRecord" class="noRecord"><span>No Record Found !</span></li>
+                                        <li id="errormsg" name="errormsg" class="errormsg"><span>Please enter mandatory fields</span></li>
+                                        <li id="emailerrormsg" name="emailerrormsg" class="emailerrormsg"><span>Please enter valid emails </span></li>
+                                        <li id="futureDataError" name="futureDataError" class="futureDataError"><span>Please select the future dates as follow up date</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-content lead-capture-details">
+                                <form id="leadCaptureFormSubmit">
+                                    <div class="formsubmit-form">
+                                        <div class="form-group">
+                                            <div class="input-group-custom">
+                                                <div class="select">
+                                                    <label for="interest"> ${'interest' @ i18n} <span class="required">*</span> </label>
+                                                    <select name="interest" class="chosen-select" id="interest">
+                                                        <option selected="selected" value="">-Select-</option>
+                                                        <sly data-sly-list.areaOfInterest="${leadcapture.areaOfInterestList}" data-sly-unwrap>
+                                                            <option value="${areaOfInterest.value}">${areaOfInterest.value}</option>
+                                                        </sly>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group input-custom-date">
+                                            <label for="lead_generation_date">${'lead_generation_date' @ i18n}</label>
+                                            <span class="input-custom-date-wrapper">
+                                        <input type="text"  id="lead_generation_date" placeholder="Date of Lead Generation" name="lead_generation_date" readonly>
+
+                                    </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group-custom">
+                                                <div class="select">
+                                                    <label for="gender"> ${'gender' @ i18n} </label>
+                                                    <select name="gender" id="gender">
+                                                        <option selected="selected" value="">-Select-</option>
+                                                        <sly data-sly-list.gender="${leadcapture.genderList}" data-sly-unwrap>
+                                                            <option value="${gender.value}">${gender.value}</option>
+                                                        </sly>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group input-custom-date">
+                                            <label>${'date_of_birth' @ i18n}</label>
+                                            <span class="date-of-birth-wrapper">
+                                        <input type="text" placeholder="Date of Birth" name="date_of_birth" id="date_of_birth" readonly>
+                                        <span class="glyphicon glyphicon-calendar date-bg"></span>
+                                            </span>
+                                            <span class="dateClearbtn"> x </span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">${'email' @ i18n} </label>
+                                            <input type="text" id="email" placeholder="Enter your Email" name="email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="age">${'age' @ i18n}</label>
+                                            <input type="text" id="age" placeholder="Age (as on Date of Lead Generation)" name="age" readonly>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="mother_name">${'mother_name' @ i18n} </label>
+                                            <input type="text" id="mother_name" placeholder="Mother Name" name="mother_name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="mother_contact">${'mother_contact' @ i18n} </label>
+                                            <input type="text" id="mother_contact" placeholder="Mother's Contact Number" name="mother_contact" maxlength="10">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="mother_email">${'mother_email' @ i18n,context='html'}</label>
+                                            <input type="text" id="mother_email" placeholder="Mother's e-mail" name="mother_email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="father_email">${'father_email' @ i18n,context='html'}</label>
+                                            <input type="text" id="father_email" placeholder="Father's e-mail" name="father_email">
+                                        </div>
+                                        <div class="address-fields">
+                                            <div class="form-group">
+                                                <label for="correspondence_address">${'correspondence_address' @ i18n} </label>
+                                                <input type="text" id="correspondence_address" placeholder="Correspondence Address" name="correspondence_address">
+                                            </div>
+                                        </div>
+                                        <div class="address-fields">
+                                            <div class="form-group">
+                                                <label for="permanent_address">${'permanent_address' @ i18n} </label>
+                                                <input type="text" id="permanent_address" placeholder="Permanent Address" name="permanent_address">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="city">${'city' @ i18n} </label>
+                                            <input type="text" id="city" placeholder="City" name="city">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="state">${'state' @ i18n} </label>
+                                            <input type="text" id="state" placeholder="State" name="state">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="country">${'country' @ i18n}</label>
+                                            <input type="text" id="country" placeholder="Country" name="country">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group-custom">
+                                                <div class="select">
+                                                    <label for="level">${'level' @ i18n} </label>
+                                                    <select name="level" id="level">
+                                                        <option selected="selected" value="">-Select-</option>
+                                                        <sly data-sly-list.level="${leadcapture.levelList}" data-sly-unwrap>
+                                                            <option value="${level.value}">${level.value}</option>
+                                                        </sly>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group-custom">
+                                                <div class="select">
+                                                    <label for="campus_preference_1">${'campus_preference_1' @ i18n} </label>
+                                                    <select name="campus_preference_1" id="campus_preference_1">
+                                                        <option selected="selected" value="">-Select-</option>
+                                                        <sly data-sly-list.campusPreference="${leadcapture.campusPreferenceList}" data-sly-unwrap>
+                                                            <option value="${campusPreference.value}">${campusPreference.value}</option>
+                                                        </sly>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group-custom">
+                                                <div class="select">
+                                                    <label for="course_preference_1">${'course_preference_1' @ i18n} </label>
+                                                    <select name="course_preference_1" id="course_preference_1">
+                                                        <option selected="selected" value="">-Select-</option>
+                                                        <sly data-sly-list.coursePreference="${leadcapture.coursePreferenceList}" data-sly-unwrap>
+                                                            <option value="${coursePreference.value}">${coursePreference.value}</option>
+                                                        </sly>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group-custom">
+                                                <div class="select">
+                                                    <label for="campus_preference_2">${'campus_preference_2' @ i18n} </label>
+                                                    <select name="campus_preference_2" id="campus_preference_2">
+                                                        <option selected="selected" value="">-Select-</option>
+                                                        <sly data-sly-list.campusPreference="${leadcapture.campusPreferenceList}" data-sly-unwrap>
+                                                            <option value="${campusPreference.value}">${campusPreference.value}</option>
+                                                        </sly>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group-custom">
+                                                <div class="select">
+                                                    <label for="course_preference_2">${'course_preference_2' @ i18n} </label>
+                                                    <select name="course_preference_2" id="course_preference_2">
+                                                        <option selected="selected" value="">-Select-</option>
+                                                        <sly data-sly-list.coursePreference="${leadcapture.coursePreferenceList}" data-sly-unwrap>
+                                                            <option value="${coursePreference.value}">${coursePreference.value}</option>
+                                                        </sly>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group-custom">
+                                                <div class="select">
+                                                    <label for="category">${'category' @ i18n} </label>
+                                                    <select name="category" id="category">
+                                                        <option selected="selected" value="">-Select-</option>
+                                                        <sly data-sly-list.category="${leadcapture.categoryList}" data-sly-unwrap>
+                                                            <option value="${category.value}">${category.value}</option>
+                                                        </sly>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group-custom">
+                                                <div class="select">
+                                                    <label for="provisions">${'provisions' @ i18n} </label>
+                                                    <select name="provisions" id="provisions">
+                                                        <option selected="selected" value="">-Select-</option>
+                                                        <sly data-sly-list.specialProvisions="${leadcapture.specialProvisionsList}" data-sly-unwrap>
+                                                            <option value="${specialProvisions.value}">${specialProvisions.value}</option>
+                                                        </sly>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group-custom">
+                                                <div class="select">
+                                                    <label for="prior_association">${'prior_association' @ i18n} </label>
+                                                    <select name="prior_association" id="prior_association">
+                                                        <option selected="selected" value="">-Select-</option>
+                                                        <sly data-sly-list.priorAssociation="${leadcapture.priorAssociationList}" data-sly-unwrap>
+                                                            <option value="${priorAssociation.value}">${priorAssociation.value}</option>
+                                                        </sly>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="board_10th">${'board_10th' @ i18n}</label>
+                                            <input type="text" id="board_10th" placeholder="10th Board" name="board_10th">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="school_name_10th">${'school_name_10th' @ i18n} </label>
+                                            <input type="text" id="school_name_10th" placeholder="10th School Name" name="school_name_10th">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="year_of_passing_10th">${'year_of_passing_10th' @ i18n} </label>
+                                            <input type="text" id="year_of_passing_10th" placeholder="10th Year of Passing" name="year_of_passing_10th">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="aggregate_marks_10th">${'aggregate_marks_10th' @ i18n}</label>
+                                            <input type="text" id="aggregate_marks_10th" placeholder="10th Aggregate Marks" name="aggregate_marks_10th">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="board_12th">${'board_12th' @ i18n}</label>
+                                            <input type="text" id="board_12th" placeholder="12th Board" name="board_12th">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="intermediate_senior">${'intermediate_senior' @ i18n}</label>
+                                            <input type="text" id="intermediate_senior" placeholder="Intermediate/ Senior School Name" name="intermediate_senior">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="projected_marks_12th">${'projected_marks_12th' @ i18n}</label>
+                                            <input type="text" id="projected_marks_12th" placeholder="12th Preboard/ Projected Marks" name="projected_marks_12th">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="preboard_year">${'preboard_year' @ i18n}</label>
+                                            <input type="text" id="preboard_year" placeholder="Preboard Year" name="preboard_year">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="marks_12th">${'marks_12th' @ i18n}</label>
+                                            <input type="text" id="marks_12th" placeholder="12th Marks" name="marks_12th">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="year_of_passing_12th">${'year_of_passing_12th' @ i18n}</label>
+                                            <input type="text" id="year_of_passing_12th" placeholder="12th Year of Passing" name="year_of_passing_12th">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="higher_education_institute">${'higher_education_institute' @ i18n} </label>
+                                            <input type="text" id="higher_education_institute" placeholder="Higher Education Institute Name (Only for GRADUATE COURSES)" name="higher_education_institute">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cgpa_percentage">${'cgpa_percentage' @ i18n} </label>
+                                            <input type="text" id="cgpa_percentage" placeholder="Cumulative CGPA/ Percentage" name="cgpa_percentage">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="year_of_graduation">${'year_of_graduation' @ i18n} </label>
+                                            <input type="text" id="year_of_graduation" placeholder="Year of Graduation" name="year_of_graduation">
+                                        </div>
+                                        <div class="lead-status-radio address-fields">
+                                            <div class="form-group" id="callerTarget">
+                                                <label for="leadStatus">${'leadStatus' @ i18n} </label>
+                                                <sly data-sly-list.leadStatus="${leadcapture.leadStatusList}" data-sly-unwrap>
+                                                    <input type="radio" id="leadStatus${leadStatusList.index}" class="leadStatus" name="leadStatus" value="${leadStatus.value}" />
+                                                    <label for="leadStatus${leadStatusList.index}" class="radioBtn">${leadStatus.value}</label>
+                                                </sly>
+                                                <sly data-sly-use.header="com.geu.aem.cca.core.models.HeaderModel" data-sly-unwrap>
+                                                    <sly data-sly-test=${header.typeOfUser}>
+                                                        <input type="radio" id="leadStatusConverted" class="leadStatus" name="leadStatus" value="Converted">
+                                                        <label for="leadStatusConverted" class="radioBtn">Converted</label>
+                                                    </sly>
+                                                </sly>
+                                            </div>
+                                        </div>
+                                        <div class="form-group input-custom-date">
+                                            <label>${'follow_up_date' @ i18n} <span id="followReq" class="req">*</span></label>
+                                            <span class="follow-up-date-wrapper">
+                                        <input type="text" placeholder="Follow Up Date" name="follow_up_date" id="follow_up_date" readonly>
+                                        <span class="glyphicon glyphicon-calendar date-bg"></span>
+                                            </span>
+                                            <span class="followUpDateClearbtn"> x </span>
+                                        </div>
+                                        <div class="form-group converted-lead-status">
+                                            <label for="admission_id">${'admission_id' @ i18n} <span class="required">*</span></label>
+                                            <input type="text" id="admission_id" placeholder="Admission Id" name="admission_id">
+                                        </div>
+                                        <div class="form-group input-custom-date converted-lead-status">
+                                            <label>${'date_of_admission' @ i18n} <span class="required">*</span></label>
+                                            <span class="date-of-admission-wrapper">
+                                        <input type="text"  id="date_of_admission" placeholder="Date of Admission" name="date_of_admission"  readonly>
+                                        <span class="glyphicon glyphicon-calendar date-bg"></span>
+                                            </span>
+                                            <span class="dateOfAdmissionClearbtn"> x </span>
+                                        </div>
+                                        <div class="form-group converted-lead-status">
+                                            <div class="input-group-custom">
+                                                <div class="select">
+                                                    <label for="paymentMode">${'paymentMode' @ i18n} <span class="required">*</span> </label>
+                                                    <select name="paymentMode" id="paymentMode" disabled="disabled">
+                                                        <option value="">-Select-</option>
+                                                        <sly data-sly-list.paymentMode="${leadcapture.paymentModeList}" data-sly-unwrap>
+                                                            <option value="${paymentMode.value}">${paymentMode.value}</option>
+                                                        </sly>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="address-fields">
+                                            <div class="form-group">
+                                                <label for="previous_comment">${'previous_comment' @ i18n} </label>
+                                                <textarea rows="4" cols="80" readonly id="previous_comment" name="previous_comment"></textarea>
+                                                <div id="combined-values"> </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="comment">${'comment' @ i18n} </label>
+                                                <textarea rows="4" cols="80" placeholder="Your Comments Here" id="comment" name="comment"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="submit-btn-wrapper">
+                                            <div class="form-group">
+                                                <button id="ccalead-btn-submit" name="btn-submit" class="btn-get-info"> ${'submit' @ i18n}</button>
+                                            </div>
+                                        </div>
+                                        <div class="successMsg-wrapper">
+                                            <div class="form-group">
+                                                <span id="successMsg" class="successMsg">Inserted Successfully ! </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </sly>
+                        </form>
+                </div>
+            </div>
+            <sly data-sly-resource="${@path='followup', resourceType='geu-cca/components/content/cca-followup'}"></sly>
+            <sly data-sly-use.header="com.geu.aem.cca.core.models.HeaderModel" data-sly-unwrap/>
+            <sly data-sly-test='${header.typeOfUser==false}'>
+                <input type="hidden" id="user_type" name="user_type" value="Caller">
+            </sly>
+            </sly>
+        </div>
+    </div>
+</div>

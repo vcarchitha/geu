@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:language="en"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="nt:folder">
+    <admission_id
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="admission_id"
+        sling:message="Admission Id"/>
+    <age
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="age"
+        sling:message="Age"/>
+    <aggregate_marks_10th
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aggregate_marks_10th"
+        sling:message="10th Aggregate Marks"/>
+    <board_10th
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="board_10th"
+        sling:message="10th Board"/>
+    <board_12th
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="board_12th"
+        sling:message="12th Board"/>
+    <campus_preference_1
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="campus_preference_1"
+        sling:message="Campus Preference 1"/>
+    <campus_preference_2
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="campus_preference_2"
+        sling:message="Campus Preference 2"/>
+    <category
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="category"
+        sling:message="Category"/>
+    <cgpa_percentage
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="cgpa_percentage"
+        sling:message="Cumulative CGPA/ Percentage"/>
+    <city
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="city"
+        sling:message="City"/>
+    <clear
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="clear"
+        sling:message="Reset"/>
+    <comment
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="comment"
+        sling:message="Comment"/>
+    <contactNum
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="contactNum"
+        sling:message="Contact Number"/>
+    <correspondence_address
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="correspondence_address"
+        sling:message="Present Address"/>
+    <country
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="country"
+        sling:message="Country"/>
+    <course_preference_1
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="course_preference_1"
+        sling:message="Course Preference 1"/>
+    <course_preference_2
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="course_preference_2"
+        sling:message="Course Preference 2"/>
+    <date_of_admission
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="date_of_admission"
+        sling:message="Date of Admission"/>
+    <date_of_birth
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="date_of_birth"
+        sling:message="Date of Birth"/>
+    <email
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="email"
+        sling:message="Email"/>
+    <father_email
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="father_email"
+        sling:message="Father's&lt;br/&gt; e-mail"/>
+    <firstName
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="firstName"
+        sling:message="First Name"/>
+    <follow_up_date
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="follow_up_date"
+        sling:message="Follow Up Date"/>
+    <gender
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="gender"
+        sling:message="Gender"/>
+    <get_info
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="get_info"
+        sling:message="Get User Info"/>
+    <higher_education_institute
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="higher_education_institute"
+        sling:message="Higher Education Institute Name"/>
+    <interest
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="interest"
+        sling:message="Area of Interest"/>
+    <intermediate_senior
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="intermediate_senior"
+        sling:message="Intermediate or Senior School Name"/>
+    <lastName
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="lastName"
+        sling:message="Last Name"/>
+    <lead_generation_date
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="lead_generation_date"
+        sling:message="Date of Lead Generation"/>
+    <leadStatus
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="leadStatus"
+        sling:message="Lead Status"/>
+    <level
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="level"
+        sling:message="Level"/>
+    <marks12th
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="marks_12th"
+        sling:message="12th Marks"/>
+    <mobile
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="mobile"
+        sling:message="Mobile"/>
+    <mother_contact
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="mother_contact"
+        sling:message="Mother's Contact Number"/>
+    <mother_email
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="mother_email"
+        sling:message="Mother's&lt;br/&gt; e-mail"/>
+    <mother_name
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="mother_name"
+        sling:message="Mother's Name"/>
+    <paymentMode
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="paymentMode"
+        sling:message="Payment Mode"/>
+    <permanent_address
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="permanent_address"
+        sling:message="Permanent Address"/>
+    <preboard_year
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="preboard_year"
+        sling:message="Preboard Year"/>
+    <previous_comment
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="previous_comment"
+        sling:message="Previous Comment"/>
+    <prior_association
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="prior_association"
+        sling:message="Prior Association with Graphic Era"/>
+    <projected_marks_12th
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="projected_marks_12th"
+        sling:message="12th Preboard/ Projected Marks"/>
+    <provisions
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="provisions"
+        sling:message="Special Provisions"/>
+    <school_name_10th
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="school_name_10th"
+        sling:message="10th School Name"/>
+    <serialNum
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="serialNum"
+        sling:message="#"/>
+    <state
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="state"
+        sling:message="State"/>
+    <submit
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="submit"
+        sling:message="Submit"/>
+    <year_of_graduation
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="year_of_graduation"
+        sling:message="Year of Graduation"/>
+    <year_of_passing_10th
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="year_of_passing_10th"
+        sling:message="10th Year of Passing"/>
+    <year_of_passing_12th
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="year_of_passing_12th"
+        sling:message="12th Year of Passing"/>
+</jcr:root>

@@ -1,0 +1,61 @@
+.find-a-course-section {
+    background: #373737;
+    padding: 50px 0;
+}
+.find-a-course-section h3 {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.find-a-course-section .course-details-wrapper {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    min-height: 280px;
+    padding: 20px 0;
+}
+.find-a-course-section .course-details-wrapper ul li {
+    padding: 20px 0;
+    display: inline-block;
+    width: 33%;
+    border-bottom: 1px solid #929292;
+    border-bottom-style: dashed;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.find-a-course-section .course-details-wrapper ul li a {
+    color: #fff;
+    text-decoration: none;
+    font: 14px 'Roboto-Light';
+    padding-left: 10px;
+}
+.find-a-course-section .course-details-wrapper {
+    border: none;
+}
+
+/*Mobile Styles*/
+@media only screen and (min-width: 0) and (max-width: 767px) {
+    .find-a-course-section .course-details-wrapper ul li {
+        padding: 20px 0 20px 5px;
+        width: 100%;
+        margin: 0 20px 0 0;
+    }
+    .find-a-course-section .course-details-wrapper ul li a {
+        font-size: 12px;
+        padding-left: 0;
+    }
+}
+
+/*Tablet and Medium Devices Styles*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .find-a-course-section .course-details-wrapper ul li {
+        width: 48%;
+        margin: 0 10px 0 0;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .find-a-course-section .course-details-wrapper ul li {
+        width: 48%;
+        margin: 0 15px 0 0;
+    }
+}

@@ -1,0 +1,23 @@
+<!--New And Events List-->
+<div class="cq-placeholder" data-sly-test.author="${wcmmode.edit || wcmmode.design}" data-emptytext="New And Events List component."></div>
+<sly data-sly-use.newsEvents="com.geu.aem.web.core.models.NewsEventsListModel" data-sly-unwrap>
+	<section class="upcoming-events-component upcoming-event-slider slider" data-sly-list.newsEventsMain="${newsEvents.newEventsDetailedList}">
+		<div class="upcoming-events-component-wrapper">
+        	<div class="content-page-image">
+            	<img src="${newsEventsMain.newsEventsImage}" alt="Upcoming Events" class="img-responsive">
+        	</div>
+			<a class="content-page-link" href="${newsEventsMain.pageURL}">
+                <div class="content-page-descriptions textWrapper">
+                    <h3>${newsEventsMain.newsEventsHeadline}</h3>
+                    <p>${newsEventsMain.newsEventsDescription @ context='html'}</p>
+                </div>
+			</a>
+        </div>
+	</section>
+</sly>
+<div class="slider-arrows">
+	<a class="next"> Next > </a>
+    <a class="prev"> < Prev </a>
+</div>
+<span class="pagingInfo"></span>
+<div id="numberOfPages" data-number= "${properties.numberOfCards}"> </div>

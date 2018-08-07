@@ -1,0 +1,67 @@
+<div class="cq-placeholder"
+   data-sly-test.author="${wcmmode.edit || wcmmode.design}"
+   data-emptytext="Statistics Counter Component"></div>
+<sly data-sly-use.stats="com.geu.aem.web.core.models.StatisticsCounterModel" data-sly-unwrap/>
+<section class="statistics">
+    <div class="container">
+        <div id="promoted-carousel-outer">
+            <div class="counter-carousel owl-theme" id="counter_mobile_slider">
+                <div class="statistics-wrapper">
+                    <div class="statistics-block clearfix">
+                        <div class="statistics-image">
+                            <img src="${stats.statsImage1}" alt="Research Papers" class="img-responsive">
+                        </div>
+                        <div class="statistics-content">
+                            <h3 class="count">${stats.statsCount1}</h3><span>${'+' @ i18n}</span>
+                            <p>${stats.statsTitle1}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="statistics-wrapper">
+                    <div class="statistics-block clearfix">
+                        <div class="statistics-image alumnus">
+                            <img src="${stats.statsImage2}" alt="Alumnus" class="img-responsive">
+                        </div>
+                        <div class="statistics-content">
+                            <h3 class="count">${stats.statsCount2}</h3><span>${'+' @ i18n}</span>
+                            <p>${stats.statsTitle2}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="statistics-wrapper">
+                    <div class="statistics-block clearfix">
+                        <div class="statistics-image students-placed">
+                            <img src="${stats.statsImage3}" alt="Students Placed" class="img-responsive">
+                        </div>
+                        <div class="statistics-content">
+                            <h3 class="count">${stats.statsCount3}</h3><span>${'+' @ i18n}</span>
+                            <p>${stats.statsTitle3}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="statistics-wrapper">
+                    <div class="statistics-block clearfix">
+                        <div class="statistics-image updated-computers">
+                            <img src="${stats.statsImage4}" alt="Updated Computers in Lab" class="img-responsive">
+                        </div>
+                        <div class="statistics-content">
+                            <h3 class="count">${stats.statsCount4}</h3><span>${'+' @ i18n}</span>
+                            <p>${stats.statsTitle4}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="statistics-wrapper">
+                    <div class="statistics-block clearfix">
+                        <div class="statistics-image scholarship">
+                            <img src="${stats.statsImage5}" alt="Scholarship" class="img-responsive">
+                        </div>
+                        <div class="statistics-content">
+                            <h3 class="count">${stats.statsCount5}</h3><span>${' Crores' @ i18n}${'+' @ i18n}</span>
+                            <p>${stats.statsTitle5}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

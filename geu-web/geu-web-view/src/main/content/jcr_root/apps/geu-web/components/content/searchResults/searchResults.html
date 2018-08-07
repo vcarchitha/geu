@@ -1,0 +1,41 @@
+<div class="cq-placeholder"
+	data-sly-test.author="${wcmmode.edit || wcmmode.design}"
+	data-emptytext="Search Results Component"></div>
+<sly data-sly-use.searchResults="com.geu.aem.web.core.models.SearchResultsModel" data-sly-unwrap/>
+
+<div class="search-results-component">
+
+
+	<div class="search-box">
+		<form action="${searchResults.searchResultsUrl}" method="get">
+			<input type="search" name="q" value="${searchResults.queryString}" /> 
+			<input type="submit" value="Search" />
+		</form>
+	</div>
+
+	<div class="search-results search-result-pages search-result-slider" data-sly-list="${searchResults.searchResultsList}">
+
+		<div class="search-result-item">
+			<div class="search-result-item-title">
+				<sly data-sly-test="${!item.pagePath}">
+					${item.pageTitle @context='html'}
+				</sly>
+				<sly data-sly-test="${item.pagePath}">
+					<a href="${item.pagePath}">${item.pageTitle @context='html'}</a>
+				</sly>
+			</div>
+			<div class="search-result-item-desc">${item.pageDescription}</div>
+		</div>
+	</div>
+	<div class="search-pagination">
+<div class="search-pagination-right slider-arrows">
+	<a class="search-next"> Next > </a>
+    <a class="search-prev"> < Prev </a>
+		</div>
+<span class="search-pagingInfo"></span>
+
+
+	</div>
+
+
+</div>

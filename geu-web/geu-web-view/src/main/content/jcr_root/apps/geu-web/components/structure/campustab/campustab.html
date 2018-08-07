@@ -1,0 +1,23 @@
+<div class="cq-placeholder"
+   data-sly-test.author="${wcmmode.edit || wcmmode.design}"
+   data-emptytext="Campus Switch"></div>
+<sly data-sly-use.campusModel="com.geu.aem.web.core.models.CampusSwitchModel" data-sly-unwrap>
+		<div class="campus-tab-wrapper">
+            <div class="ugpg-content-page-component">
+               <ul class="nav">
+				  <li class="active"><a data-toggle="tab" href="#dehradun">${campusModel.campusA}</a></li>
+                  <li><a data-toggle="tab" href="#bhimtal">${campusModel.campusB}</a></li>
+               </ul>
+            </div>
+            <div class="tab-content">
+                     <div id="dehradun" class="tab-pane fade in active tab-pane-campus-tab-details">
+						<div data-sly-resource="${'tabswitchitems_{0}' @ format=1, resourceType='wcm/foundation/components/parsys'}">
+                        </div>
+                     </div>
+                     <div id="bhimtal" class="tab-pane fade in tab-pane-campus-tab-details">
+                        <div data-sly-resource="${'tabswitchitems_{0}' @ format=2, resourceType='wcm/foundation/components/parsys'}">
+                        </div>
+                     </div>
+            </div>
+        </div>
+</sly>

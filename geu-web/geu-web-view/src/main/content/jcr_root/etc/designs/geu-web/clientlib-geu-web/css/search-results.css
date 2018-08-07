@@ -1,0 +1,97 @@
+.search-box
+{
+    position: relative;
+}
+.search-box input[type="search"]
+{
+    width:100%;
+    height: 70px;
+    font-size: 30px;
+    border: 1px solid #b5b5b5;
+    padding: 15px 200px 15px 15px;
+}
+.search-box input[type="submit"]
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #dc2e27 url('/etc/designs/geu-web/clientlib-geu-web/images/search-icon.png') 25px center no-repeat;
+    border: 1px solid #b5b5b5;
+    color: #fff;
+    font-size: 30px;
+    padding: 15px 20px 15px 70px;
+    height: 70px;
+    line-height: 40px;
+}
+.search-result-item
+{
+    padding-top: 30px;
+}
+.search-result-item-title a
+{
+    font-size: 24px;
+    text-decoration: underline;
+}
+.search-result-item-desc
+{
+    padding-top: 5px;
+}
+.search-pagination
+{
+    padding-top: 40px;
+}
+.search-pagination-left
+{
+    float: left;
+}
+.search-pagination-right
+{
+    float: right;
+}
+.search-pagination-right a
+{
+    color: #000;
+}
+.search-results-component .slick-dots .slick-active a
+{
+    color: #dc2e27;
+    text-decoration: underline;
+}
+.search-pagination-right a.disabled
+{
+    display: none;
+}
+.search-results-component .slick-dots {
+    text-align: right !important;
+    width: 300px !important;
+    right: 50px !important;
+    margin-bottom: -40px;
+}
+
+@media only screen and (max-width: 992px) {
+    .search-box input[type="search"] {
+      
+        height: 50px;
+        font-size: 16px;
+        border: 1px solid #b5b5b5;
+        padding: 10px 100px 10px 10px;
+    }
+
+    .search-box input[type="submit"] {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: #dc2e27 url(/etc/designs/geu-web/clientlib-geu-web/images/search-icon.png) 10px center no-repeat;
+        border: 1px solid #b5b5b5;
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 10px 10px 30px;
+        height: 50px;
+        background-size: 15%;
+        line-height: 20px;
+    }
+    .search-result-item-title a {
+        font-size: 15px;
+        text-decoration: underline;
+    }
+}

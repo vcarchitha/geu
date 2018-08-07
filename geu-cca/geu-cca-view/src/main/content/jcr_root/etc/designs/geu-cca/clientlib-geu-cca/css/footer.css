@@ -1,0 +1,15 @@
+/*Reusable Styles used as Varaibles*/
+/*Brand color*/
+/*Colors*/
+/*Display Properties */
+/*Floating Properties*/
+/*Vertical Alignment*/
+/*Postion*/
+/*Text Alignment*/
+/* font size and lign */
+footer {
+  background: #e5e5e5; }
+  footer .footer-wrapper .footer-copyright {
+    text-align: center;
+    color: #373737;
+    margin-bottom: 20px; }

@@ -1,0 +1,96 @@
+.download-page-content {
+	padding: 0 20px;
+}
+.download-page-content .heading-section {
+	margin: 0 0 40px;
+}
+.download-page-content h3 {
+	font-size: 24px;
+	line-height: 30px; 
+	margin: 0 0 30px;
+}
+.download-page-content p {
+	font-size: 14px;
+}
+
+/*Download Section*/
+.download-section {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	margin: 0 0 30px;
+	padding: 10px;
+}
+.download-section:hover {
+	cursor: pointer;
+	background: #e3e1e1;
+}
+.download-section:hover a {
+	color: #1b65d9;
+}
+
+.download-section .icon {
+	background: url('/etc/designs/geu-web/clientlib-geu-web/images/pdf-icon.png') no-repeat;
+	background-size: 100% auto;
+	height: 50px;
+	width: 50px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.download-section .icon.word {
+	background: url('/etc/designs/geu-web/clientlib-geu-web/images/word-icon.png') no-repeat;
+	background-size: 100% auto;
+}
+.download-section .icon.excel {
+	background: url('/etc/designs/geu-web/clientlib-geu-web/images/excel-icon.png') no-repeat;
+	background-size: 100% auto;
+}
+.download-section .icon.ppt {
+	background: url('/etc/designs/geu-web/clientlib-geu-web/images/ppt-icon.png') no-repeat;
+	background-size: 100% auto;
+}
+.download-section:hover .icon {
+	background: url('/etc/designs/geu-web/clientlib-geu-web/images/download-icon.png') no-repeat;
+	background-size: 100% auto;
+}
+.download-section .title {
+	font-size: 16px;
+	color: #373737;
+	display: inline-block;
+	vertical-align: top;
+}
+.download-section .title i {
+    color: #dc2e27;
+    font-size: 22px;
+    position: relative;
+    top: 2px;
+    left: 5px;
+}
+.download-section-wrapper h4 {
+	margin: 0 0 30px;
+}
+
+/*Mobile and Small Device Styles*/
+@media only screen and (min-width: 0) and (max-width: 767px) {
+	.download-page-content {
+	    padding: 0;
+	}
+	.download-section {
+		padding: 10px;
+	}
+	.download-section .icon {
+		height: 40px;
+		width: 40px;
+	}
+	.download-section .title {
+	    font-size: 12px;
+	    width: 70%;
+	}
+	.download-section .title i {
+	    font-size: 12px;
+	    top: 0;
+	    left: 0;
+	    vertical-align: middle;
+	}
+}

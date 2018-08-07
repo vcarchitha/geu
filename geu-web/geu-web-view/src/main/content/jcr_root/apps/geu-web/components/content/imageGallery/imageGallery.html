@@ -1,0 +1,24 @@
+<div class="cq-placeholder" data-sly-test.author="${wcmmode.edit || wcmmode.design}" data-emptytext="Image Gallery Component"></div>
+<sly data-sly-use.imageGallery="com.geu.aem.web.core.models.ImageGalleryModel" data-sly-unwrap/>
+
+<h1>${imageGallery.headerTitle}</h1>
+<section class="image-gallery-wrapper imggeupcoming-event-slider" data-sly-list="${imageGallery.imageGalleryListItems}">
+    <div class="image-gallery-component">
+        <div class="image-gallery-component-wrapper">
+            <div class="content-page-image">
+                <a class="fancybox" data-fancybox-group="gallery"  href="${item.imagePath}">
+                   <picture>
+                      <source media="(max-width: 767px)" srcset="${item.mobileImagePath}">
+                     <source media="(max-width: 1199px)" srcset="${item.tabletImagePath}">
+                     <img src="${item.imagePath}" class="img-responsive">
+                   </picture>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="slider-arrows">
+    <a class="image-gallery-next">${'Next' @ i18n}&nbsp;&gt;</a>
+    <a class="image-gallery-prev">&lt;&nbsp;${'Prev' @ i18n}</a>
+</div>
+<span class="pagingInfo"></span>

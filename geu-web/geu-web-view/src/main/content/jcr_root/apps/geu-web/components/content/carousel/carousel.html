@@ -1,0 +1,11 @@
+<div class="cq-placeholder"
+   data-sly-test.author="${wcmmode.edit || wcmmode.design}"
+   data-emptytext="Carousel Container"></div>
+<sly data-sly-use.carousel="com.geu.aem.web.core.models.CarouselModel" data-sly-unwrap/>
+<sly data-sly-test="${properties.hideCurrent}"/></sly>
+<div class="geu-banner-carousel owl-theme" data-sly-list="${carousel.imagePathItems}">
+    <div class="items">
+        <a href="${item.linkPath}"> <img src="${item.imagePath}"/></a>      
+   </div>
+</div>
+</sly>

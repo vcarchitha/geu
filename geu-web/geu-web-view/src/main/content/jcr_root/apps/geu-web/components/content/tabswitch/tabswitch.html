@@ -1,0 +1,33 @@
+<div class="cq-placeholder" data-sly-test.author="${wcmmode.edit || wcmmode.design}" data-emptytext="Tab Switch"></div>
+<sly data-sly-use.tabSwitch="com.geu.aem.web.core.models.TabSwitchModel" data-sly-unwrap>
+   <div class="tab-switch-component ${properties.navBackgroundColor}">
+    <div class="container">
+            <div class="tab-nav-wrapper">
+               <ul class="nav nav-tab" data-sly-list="${tabSwitch.tabNames}">
+                  <li class=" ${properties.navBackgroundColor}" data-sly-test="${itemList.index== 0 && item.trimmedName}" class="active"><a data-toggle="tab" href="#${item.trimmedName}">${item.name @ context='html'}</a></li>
+                  <li   data-sly-test="${itemList.index > 0 && item.trimmedName}"><a data-toggle="tab" href="#${item.trimmedName}">${item.name @ context='html'} </a></li>
+               </ul>
+            </div>
+            </div>
+        <div class="tab-switch-component-testing ${properties.navBackgroundColor}">
+            <div class="container">
+                <div class="row">
+            <div class="tab-content" >
+               <div data-sly-list="${tabSwitch.tabNames}" data-sly-unwrap>
+                  <div  data-sly-test="${item.trimmedName}" data-sly-unwrap>
+                     <div data-sly-test="${itemList.index== 0}" id="${item.trimmedName}" class="tab-pane fade in active tab-pane-academic-details">
+                        <div data-sly-resource="${'tabswitchitems_{0}' @ format=[itemList.count], resourceType='wcm/foundation/components/parsys'}">
+                        </div>
+                     </div>
+                     <div  data-sly-test="${itemList.index > 0}" id="${item.trimmedName}" class="tab-pane fade in tab-pane-academic-details">
+                        <div data-sly-resource="${'tabswitchitems_{0}' @ format=[itemList.count], resourceType='wcm/foundation/components/parsys'}">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+    </div>
+</sly>

@@ -1,0 +1,106 @@
+.sitemap-component::after {
+    content: "";
+    display: table;
+    width:100%;
+}
+.sitemap-col {
+    padding-right: 30px;
+}
+.sitemap-col.list {
+	width: 70%;
+	float: left;
+}
+
+.sitemap-col.list > ul > li {
+	width: 50%;
+	float: left;
+	padding-right: 35px;
+}
+.sitemap-col.menu {
+	width: 30%;
+	float: left;
+}
+.sitemap-col ul {
+    margin: 0;
+    padding: 0;
+}
+.sitemap-col ul li {
+    list-style: none;
+}
+.sitemap-col > ul > li {
+    margin-top: 15px;
+}
+.sitemap-col > ul > li > a {
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    display: block;
+    background: #373737;
+    padding: 5px;
+}
+.sitemap-col > ul > li > ul {
+    border-left: 1px solid #373737;
+    margin-left: 15px;
+    padding-top: 15px;
+    margin-bottom: 10px;
+}
+.sitemap-col > ul > li > ul::after {
+    margin-left: -1px;
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    content: "";
+    height: 10px;
+    width: 2px;
+    display: block;
+    margin-top: -15px;
+}
+.sitemap-col > ul > li > ul > li {
+    padding: 5px 10px 5px 30px;
+    background: url("/etc/designs/geu-web/clientlib-geu-web/images/sitemap-list-style.png") -25px 13px no-repeat;
+    margin-left: -1px;
+}
+.sitemap-col > ul > li > ul > li > a {
+    color: #373737;
+    font-size: 15px;
+}
+.sitemap-col > ul > li > ul > li > a:hover {
+    color: #dc2e27;
+}
+.sitemap-col > ul > li > a:hover {
+    background: #dc2e27;
+}
+
+@media only screen and (min-width: 0) and (max-width: 767px) {
+
+	.sitemap-col.list {
+        width: 100%;
+    }
+    .sitemap-col.list > ul > li {
+        width:100%;
+        padding-right: 0;
+    }
+
+    .sitemap-col {
+        padding-right: 0;
+    }
+    .sitemap-col.menu {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+	.sitemap-col.list {
+        width:100%;
+    }
+    .sitemap-col {
+        padding-right:0;
+    }
+    .sitemap-col.list > ul > li {
+        padding: 0 20px;
+    }
+    .sitemap-col.menu {
+        width: 100%;
+        padding: 0 20px;
+    }
+}

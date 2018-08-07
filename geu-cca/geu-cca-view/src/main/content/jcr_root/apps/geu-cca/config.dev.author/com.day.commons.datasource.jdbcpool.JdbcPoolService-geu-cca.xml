@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    datasource.name="ccaDataBase"
+    datasource.svc.properties="[\0]"
+    default.autocommit="{Boolean}true"
+    default.readonly="{Boolean}false"
+    jdbc.connection.uri="jdbc:mysql://192.168.140.75:3306/cq"
+    jdbc.driver.class="com.mysql.jdbc.Driver"
+    jdbc.password="Valtech@2017"
+    jdbc.username="root"
+    jdbc.validation.query=""
+    pool.max.wait.msec="{Long}10000"
+    pool.size="{Long}10"/>

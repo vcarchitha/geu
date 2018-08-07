@@ -1,0 +1,80 @@
+#enquiryModel .modal-content
+{
+	border-radius:0; 
+}
+#enquiryModel .modal-header
+{
+	background: #dc2e27;
+	color: #fff;
+	text-align: center;
+
+	padding: 20px 0;
+}
+#enquiryModel .modal-header h5
+{
+	font-size: 19px;
+}
+
+#enquiryModel .modal-header .close
+{
+	position: absolute;
+	right: -4px;
+	top: -4px;
+	background: #fff;
+	opacity: 1;
+	padding: 4px;
+	border-radius: 50%;
+	
+}
+
+#enquiryModel .modal-header .close span {
+	padding: 0 5px;
+	border-radius: 50%;
+	border: 2px solid #000;
+	display: block;
+}
+#enquiryModel .col-form-label
+{
+	text-align: right;
+	padding-top: 9px;
+}
+
+#enquiryModel .form-group label.error
+{
+	color: #dc2e27;
+	font-size: 11px;
+	float: right;
+}
+#enquiryModel .form-control 
+{
+	border-radius:0; 
+}
+
+#enquiryModel textarea.form-control 
+{
+	height: 90px;
+	resize: none;
+}
+#enquiryModel button.btn
+{
+	background: #dc2e27;
+	border-radius:0; 
+	border-color: #dc2e27;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.enquiry-successmsg-wrapper
+{	
+	display:none;
+    text-align: center;
+    padding: 80px 0;
+	
+}
+span.mandatory-field-icon {
+    color: #dc2e27;
+}
+
+.enquiry-successmsg-wrapper span#errormsg, #successMsg {
+    color: #050505 !important;
+    display: block !important;
+}

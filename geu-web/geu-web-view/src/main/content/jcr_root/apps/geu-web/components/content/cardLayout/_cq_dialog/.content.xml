@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="cardLayout"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                    margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <select_view
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                fieldLabel="Select type"
+                                name="./selectView">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <twoColumn
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Twocolumn"
+                                        value="twoColumn"/>
+                                    <threeColumn
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Threecolumn"
+                                        value="threeColumn"/>
+                                    <fourColumn
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Fourcolumn"
+                                        value="fourColumn"/>
+                                </items>
+                            </select_view>
+                            <gridview-style
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                class="cq-dialog-dropdown-showhide"
+                                cq-dialog-dropdown-showhide-target=".text-image-hide-show"
+                                fieldLabel="GridView Style">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <view_1
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Author Parent Path"
+                                        value="parentPath"/>
+                                    <view_2
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Custom Pages List"
+                                        value="customPagesList"/>
+                                </items>
+                            </gridview-style>
+                            <gv_view1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container"
+                                class="hide text-image-hide-show"
+                                showhidetargetvalue="parentPath">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <parentPath
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                        fieldLabel="List Child Pages Using Parent Path"
+                                        name="./parentPath"
+                                        rootPath="/content"/>
+                                </items>
+                            </gv_view1>
+                            <gv_view2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container"
+                                class="hide text-image-hide-show"
+                                showhidetargetvalue="customPagesList">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <linkvalues
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="geu-web/dialog_widgets/generic_multifield"
+                                        class="full-width"
+                                        composite="{Boolean}true"
+                                        fieldLabel="Fields">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                            name="./staticContent">
+                                            <layout
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                                method="absolute"/>
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <column
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/container">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <title
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                            fieldLabel="Title"
+                                                            name="./title"/>
+                                                        <image
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                            fieldLabel=" Image"
+                                                            name="./image"
+                                                            rootPath="/content/dam"/>
+                                                        <description
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/form/textarea"
+                                                            fieldLabel="Description"
+                                                            name="./description"/>
+                                                        <pathBrowser
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                            fieldLabel="Link URL"
+                                                            name="./pageUrl"
+                                                            rootPath="/content"/>
+                                                    </items>
+                                                </column>
+                                            </items>
+                                        </field>
+                                    </linkvalues>
+                                </items>
+                            </gv_view2>
+                            <select_view_color
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                fieldLabel="Select type"
+                                name="./selectViewColor">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <light
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Light"
+                                        value="light"/>
+                                    <dark
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Dark"
+                                        value="dark"/>
+                                </items>
+                            </select_view_color>
+                        </items>
+                    </column>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

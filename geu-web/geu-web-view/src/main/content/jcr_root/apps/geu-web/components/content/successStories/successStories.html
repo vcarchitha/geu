@@ -1,0 +1,27 @@
+<div class="cq-placeholder" data-sly-test.author="${wcmmode.edit || wcmmode.design}" data-emptytext="Sucess Stories Component"></div>
+<sly data-sly-use.successStory="com.geu.aem.web.core.models.SuccessStoriesModel" data-sly-unwrap>
+   <div class="success-stories-wrap">
+        <div class="success-stories-carousel owl-theme" data-sly-list="${successStory.storiesItems}">
+         <div class="items">
+            <div class="success-stories">
+                    <div class="success-stories-content-wrapper">
+                        <div class="success-stories-img-text-wrapper clearfix">
+                            <div class="success-stories-imgWrapper">
+                                <img alt="image" class="img-responsive img-circle columncontrol-img" src="${item.image}">
+                            </div>
+                            <div class="success-stories-headerWrapper">
+                                ${item.title}
+                            </div>
+                        </div>
+                        <div class="success-stories-description">
+                  <p>${item.description}<a href="${item.buttonURL}">${item.buttonLabel}</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+        </div>
+     <div data-sly-test="${successStory.readMoreText}" class="more-stories-wrapper">
+      <a href="${successStory.readMoreUrl}" class="more-stories">${successStory.readMoreText}</a>
+   </div>
+    </div>
+</sly>

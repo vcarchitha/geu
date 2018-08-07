@@ -1,0 +1,24 @@
+<div class="cq-placeholder" data-sly-test.author="${wcmmode.edit || wcmmode.design}" data-emptytext="Contact Us Component."></div>
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2X-x-fwpN5lbXT_URBgh-zaLH2s_-uxE&callback=initMap"></script>
+<section class="content-page-wrapper">
+<sly data-sly-use.contactUs="com.geu.aem.web.core.models.ContactUsModel" data-sly-unwrap />
+	<h1>${contactUs.title}</h1>
+    <div class="contactus-wrapper">
+        <div class="locations-wrapper">
+            <h4>${contactUs.callLabel} ${contactUs.phoneNumber}</h4>
+            <div class="address-details" id="AddressSelect">
+                <ul class="address-list">
+                    ${item.details}
+                </ul>
+                <select class="mobile-address-list">
+                </select>
+            </div>
+        </div>
+        <div class="address-container">
+            <div class="address">
+            </div>
+            <div id="map"></div>
+        </div>
+    </div>
+    <input type="hidden" id="jsonPath" value="${contactUs.jsonPath}">
+</section>

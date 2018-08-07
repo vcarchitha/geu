@@ -1,0 +1,212 @@
+.image-container {
+    background-color: #373737;
+    margin: 0 0 30px;
+}
+
+.image-container.padding-30 {
+    padding: 30px;
+}
+
+.image-container .image-block {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    margin-right: 15px;
+}
+
+.image-container .content-block {
+    color: #fff;
+    padding-top: 40px;
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+}
+
+.image-container .content-block h2 {
+    font: 26px/22px 'Merriweather-Bold';
+    margin: 0 0 20px;
+}
+
+.image-container .content-block p {
+    font: 16px/22px 'Roboto-Regular';
+    margin: 0 0 45px;
+    text-align: justify;
+}
+
+.image-container .content-bottom {
+    margin: 0 0 30px;
+}
+
+.image-container .content-bottom p {
+    font: 14px/15px 'Roboto-Regular';
+    margin: 0 0 10px;
+    text-align: justify;
+}
+
+.image-container.thirty-seventy .image-block {
+    width: 25%;
+}
+
+.image-container.thirty-seventy .image-block img {
+    min-height: 275px;
+    border: 1px solid #fff;
+}
+
+.image-container.thirty-seventy .content-block {
+    padding-top: 0;
+    width: 72%;
+}
+
+.image-container.no-padding .content-block {
+    padding-top: 30px;
+}
+
+
+/*One Button*/
+
+.buttons-wrapper>div {
+    display: inline-block;
+    width: 49%;
+}
+
+.buttons-wrapper>div:nth-child(2n+2) {
+    margin: 0 0 15px;
+}
+
+.buttons-wrapper a {
+    font: 14px/15px 'Roboto-Regular';
+    background-color: #dc2e27;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #fff;
+    display: inline-block;
+    width: 90%;
+    height: 40px;
+}
+
+.buttons-wrapper a:first-child {
+    margin-right: 35px;
+}
+
+
+/*Mobile and Device Styles*/
+
+@media only screen and (min-width: 0) and (max-width: 767px) {
+    .image-container .image-block {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+    .image-container .content-block,
+    .image-container.thirty-seventy .content-block {
+        width: 100%;
+    }
+    .image-container .content-block,
+    .image-container.padding-30.thirty-seventy .content-block {
+        padding: 20px 30px;
+    }
+    .image-container.padding-30 .content-block {
+        padding: 10px 0 0;
+    }
+    .image-container .content-block h4 {
+        font-size: 18px;
+    }
+    .image-container .content-block p {
+        font-size: 14px;
+    }
+    .image-container.thirty-seventy {
+        padding: 30px 0 0 0;
+    }
+    .image-container.thirty-seventy.no-padding {
+        padding: 0;
+    }
+    .image-container.thirty-seventy.no-padding .image-block,
+    .image-container.thirty-seventy.no-padding .image-block img {
+        width: 100%;
+    }
+    .image-container.thirty-seventy .image-block {
+        width: 80%;
+    }
+    .buttons-wrapper>div {
+        width: 100%;
+    }
+    .buttons-wrapper a {
+        font-size: 12px;
+        line-height: 20px;
+        width: 100%;
+        height: auto;
+    }
+    .buttons-wrapper {
+        text-align: center;
+    }
+    .buttons-wrapper a:first-child {
+        margin: 0 0 15px;
+    }
+}
+
+
+/*Tablet Device Styles*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .image-container.padding-30 {
+        padding: 20px;
+    }
+    .image-container .image-block {
+        margin-right: 8px;
+    }
+    .image-container .content-block {
+        padding-top: 0;
+    }
+    .image-container.no-padding .content-block {
+        padding-top: 10px;
+    }
+    .image-container .content-block h4,
+    .image-container .content-block p {
+        margin: 0 0 15px;
+        line-height: 18px;
+    }
+    .image-container .content-block h4 {
+        font-size: 16px;
+    }
+    .image-container .content-block p {
+        font-size: 14px;
+    }
+    .image-container .content-block .content-bottom p {
+        font-size: 13px;
+        margin: 0;
+    }
+    .image-container.thirty-seventy .image-block img {
+        min-height: 250px;
+    }
+    .buttons-wrapper a {
+        font-size: 12px;
+        line-height: 20px;
+        width: 100%;
+        height: auto;
+    }
+    .buttons-wrapper a:first-child {
+        margin-right: 10px;
+    }
+}
+
+
+/*Tablet Landscape and Medium Device Styles*/
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .image-container .image-block {
+        margin-right: 8px;
+    }
+    .image-container .content-block {
+        padding-top: 0;
+    }
+    .buttons-wrapper a {
+        font-size: 12px;
+        line-height: 20px;
+        width: 100%;
+        height: auto;
+    }
+    .buttons-wrapper .two-button a:first-child {
+        margin-right: 10px;
+    }
+}

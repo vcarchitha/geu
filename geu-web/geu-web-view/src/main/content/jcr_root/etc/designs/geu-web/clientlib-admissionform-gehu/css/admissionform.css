@@ -1,0 +1,1247 @@
+/*Login Page Styles*/
+.form-tabs ul {
+	border: 1px solid #ccc;
+}
+.form-tabs {
+	margin: 0 0 75px;
+}
+.form-tabs ul li {
+	border-right: 1px solid #ccc;
+	width: 25%;
+	height: 50px;
+	line-height: 50px;
+	float: left;
+	text-align: center;
+	list-style: none;
+	position: relative;
+}
+.form-tabs ul li:last-child {
+	border: none;
+}
+.form-tabs ul li a {
+	color: #373737;
+	display: block;
+}
+.form-tabs ul li.selected {
+	background-color: #dc2e27;
+}
+.form-tabs ul li.selected a {
+	color: #fff;
+}
+.form-tabs ul li:before,
+.form-tabs ul li.selected:before,
+.form-tabs ul li.changebg:before {
+	content: '';
+	font-size: 12px;
+	line-height: 20px;
+	position: absolute;
+    background: transparent;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    border: 2px solid #373737;
+    top: 13.5px;
+    left: 34%;
+}
+.form-tabs ul li.selected:before {
+    border: 2px solid #fff;
+}
+
+.form-tabs ul li.changebg:before {
+    content: '✓';
+    border: 2px solid #fff;
+    color: #fff;
+}
+.form-tabs ul li:nth-child(2).changebg:before,
+.form-tabs ul li:nth-child(2):before,
+.form-tabs ul li:nth-child(2).selected:before {
+	left: 23%;
+	border: 2px solid #fff;
+}
+.form-tabs ul li:nth-child(2):before {
+	border: 2px solid #373737;
+}
+.form-tabs ul li:nth-child(2).selected:before {
+	border: 2px solid #fff;
+}
+.form-tabs ul li:nth-child(3).changebg:before,
+.form-tabs ul li:nth-child(3):before,
+.form-tabs ul li:nth-child(3).selected:before {
+	left: 26%;
+	border: 2px solid #fff;
+}
+.form-tabs ul li.changebg:before,
+.form-tabs ul li:nth-child(2).changebg:before ,
+.form-tabs ul li:nth-child(3).changebg:before,
+.form-tabs ul li:last-child.changebg:before  {
+	background: #08cc57; 
+}
+.form-tabs ul li:nth-child(3):before {
+	border: 2px solid #373737;
+}
+.form-tabs ul li:nth-child(3).selected:before {
+	border: 2px solid #fff;
+}
+.form-tabs ul li:last-child.changebg:before,
+.form-tabs ul li:last-child:before,
+.form-tabs ul li:last-child.selected:before {
+	left: 6%;
+	border: 2px solid #fff;
+}
+.form-tabs ul li:last-child:before {
+	border: 2px solid #373737;
+}
+.form-tabs ul li:last-child.selected:before {
+	border: 2px solid #fff;
+}
+/*Login Styles*/
+.form-two-column-wrapper {
+	padding: 0 50px;
+}
+.form-two-column-wrapper .login-component-wrapper {
+	background-color: #e5e5e5;
+	display: inline-block;
+	vertical-align: top;
+	width: 49%;
+	min-height: 450px;
+}
+.form-two-column-wrapper .login-component-wrapper.changebg,
+.form-two-column-wrapper .partially-filled-form.changebg {
+	background-color: #373737;
+}
+.form-two-column-wrapper .login-component-wrapper.changebg .login-form label,
+.form-two-column-wrapper .partially-filled-form.changebg label {
+	color: #fff;
+}
+.form-two-column-wrapper .two-column-heading {
+	text-align: center;
+}
+.form-two-column-wrapper .two-column-heading h4 {
+	color: #fff;
+	background-color: #dc2e27;
+	height: 50px;
+	line-height: 50px;
+}
+.form-two-column-wrapper .login-form form {
+	padding: 0 50px;
+}
+.form-two-column-wrapper .login-form label {
+	color: #373737;
+	width: 30%;
+	text-transform: capitalize;
+	font: 12px/15px 'Roboto-Regular';
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 10px;
+}
+.form-two-column-wrapper .login-form input,
+.form-two-column-wrapper .login-form select {
+	width: 250px;
+	height: 35px;
+}
+.form-two-column-wrapper .login-form .otp-wrapper {
+	padding-left: 115px;
+}
+.form-two-column-wrapper .partially-filled-form .otp-wrapper {
+	padding-left: 125px;
+}
+.form-two-column-wrapper .login-form .otp,
+.form-two-column-wrapper .partially-filled-form .otp {
+	display: inline-block;
+	vertical-align: top;
+}
+.form-two-column-wrapper .login-form .enterOtp,
+.form-two-column-wrapper .login-form .sendOtp,
+.form-two-column-wrapper .partially-filled-form .enterOtpPartially,
+.form-two-column-wrapper .partially-filled-form .sendOtpPartially {
+	visibility: hidden;
+}
+.form-two-column-wrapper .login-form .enterOtp,
+.form-two-column-wrapper .login-form .sendOtp,
+.form-two-column-wrapper .partially-filled-form .enterOtpPartially,
+.form-two-column-wrapper .partially-filled-form .sendOtpPartially {
+	width: 115px;
+}
+.form-two-column-wrapper .partially-filled-form .sendOtpPartially {
+	text-align: center;
+}
+.form-two-column-wrapper .login-form .sendOtp,
+.form-two-column-wrapper .partially-filled-form .sendOtpPartially {
+	background: #dc2e27;
+	border: 1px solid #fff;
+	color: #fff;
+	margin-left: 18px;
+}
+.form-two-column-wrapper .login-form .submit,
+.form-two-column-wrapper .partially-filled-form .submit {
+	float: right;
+	padding-right: 13px;
+}
+.form-two-column-wrapper .login-form input.submit-button {
+	display: inline-block;
+	vertical-align: top;
+	width: 150px;
+	height: 40px;
+	line-height: 40px;
+	color: #fff;
+	background-color: #dc2e27;
+	border: 1px solid #9a8783;
+	text-align: center;
+}
+.form-two-column-wrapper .login-form #hideMsg,
+.form-two-column-wrapper .partially-filled-form #hideMsgPartially {
+	display: none;
+	color: #fff;
+	margin: 0 0 15px;
+}
+/*Error Message Styles*/
+.form-error-message,
+.partially-filled-form-error-message,
+.basic-details-form-error-message,
+.basic-details-mobile-error-message,
+.upload-registration-error,
+.aadhar-error-message,
+.email-error-message,
+.invalid-error-message,
+.custom-error-message,
+.upload-error-message,
+.declaration-error,
+.one-field-mandate,
+.selection-mode-error {
+	color: #dc2e27;
+	text-align: center;
+	font: 12px/15px 'Roboto-Regular';
+	margin: 15px 0 20px;
+}
+.basic-pcm-error-message {
+	color: #dc2e27;
+	font: 12px/15px 'Roboto-Regular';
+	margin: 5px 0 10px;
+}
+
+input:required,
+select:required,
+textarea:required {
+    outline: 2px solid #dc2e27;
+}
+label.required::after, .required:after {
+	content: '*';
+	margin-left: 5px;
+	color: #dc2e27;
+}
+
+.form-two-column-wrapper .login-form input:disabled,
+.form-two-column-wrapper .partially-filled-form input:disabled {
+	background-color: #e5e5e5;
+}
+.form-two-column-wrapper .login-form .submit-button[disabled] {
+	background-color: #ccc;
+}
+/*Partial Form Styles*/
+.partially-filled-form, .payment-success {
+	background-color: #e5e5e5;
+	display: inline-block;
+	vertical-align: top;
+	width: 49%;
+	min-height: 450px;
+	text-align: center;
+	margin: 0 0 0 15px;
+}
+.payment-success {
+	padding: 15% 0 0;
+}
+.partially-filled-form .two-column-heading h4 {
+	color: #fff;
+	background-color: #dc2e27;
+	height: 50px;
+	line-height: 50px;
+}
+.partially-filled-form .partial-form {
+	padding-top: 80px;
+}
+.partially-filled-form .partial-form label {
+	color: #373737;
+	width: 25%;
+	font: 12px/15px 'Roboto-Regular';
+	text-transform: capitalize;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: right;
+	padding-right: 10px;
+}
+.partially-filled-form .partial-form input,
+.partially-filled-form .partial-form select {
+	width: 250px;
+	height: 35px;
+}
+.partially-filled-form .partial-form .form-group {
+	margin: 0 0 30px;
+}
+.partially-filled-form .partial-form input.submit-button {
+	display: inline-block;
+	vertical-align: top;
+	width: 150px;
+	height: 40px;
+	float: right;
+	margin-right: 38px;
+	line-height: 40px;
+	color: #fff;
+	background-color: #dc2e27;
+	border: 1px solid #9a8783;
+}
+
+/*Selection Mode Styles*/
+.selection-mode {
+    text-align: center;
+}
+.selection-mode .form-group {
+	margin: 0 0 35px;
+}
+.selection-mode .form-group.select-option div {
+	width: 25%;
+	display: inline-block;
+	vertical-align: middle;
+}
+.selection-mode .form-group.select-option label {
+    font-size: 18px;
+    display: block;
+}
+.selection-mode .form-group.select-option input[type="radio"] {
+    margin-right: 10px;
+    height: 1.5em;
+    width: 10%;
+    display: inline-block;
+    vertical-align: bottom;
+}
+.selection-mode input.submit-button {
+	display: inline-block;
+	vertical-align: top;
+	width: 150px;
+	height: 40px;
+	margin-right: 38px;
+	line-height: 40px;
+	color: #fff;
+	background-color: #dc2e27;
+	border: 1px solid #9a8783;
+}
+
+/*Personal Details*/
+/*#basic-details-form {
+	display: none;
+}*/
+#basic-details-form #area-of-interest {
+	font-size: 16px;
+	background: #dc2e27;
+	color: #fff;
+	outline: none;
+	border: none;
+	position: relative;
+}
+#basic-details-form .form-group.selection {
+	position: relative;
+}
+/*#basic-details-form .form-group.area-of-interest label:after {
+	content: "\f0d7";
+    font-family: FontAwesome;
+    color: #fff;
+    position: absolute;
+    right: 35px;
+    top: 27px;
+    z-index: 1;
+    width: 10%;
+    height: 100%;
+    pointer-events: none;
+    font-size: 26px;
+}*/
+.top-section-wrapper .personal-details {
+	background-color: #373737;
+	min-height: 80px;
+	width: 75%;
+	float: left;
+}
+.top-section-wrapper .personal-details .each-section {
+	width: 25%;
+	padding: 15px 15px 0 15px;
+	float: left;
+}
+.top-section-wrapper .personal-details .each-section .label {
+	font: 14px/15px "Roboto-Regular";
+	color: #fff;
+	padding: 0 0 8px;
+	display: inline-block;
+}
+.top-section-wrapper .personal-details .each-section .content {
+	font: 14px/15px "Roboto-Regular";
+	color: #989898;
+	word-wrap: break-word;
+}
+.basic-details-wrapper .selection {
+	background-color: #dc2e27;
+	min-height: 80px;
+	padding: 10px 0 0 30px;
+	float: left;
+	width: 25%;
+}
+.basic-details-wrapper .selection label {
+	display: block;
+	color: #fff;
+}
+.basic-details-wrapper .selection select {
+	width: 210px;
+}
+.personal-details .form-group.defence {
+    margin: 25px 0 10px;
+}
+/*Program-wrapper*/
+.program-wrapper {
+	margin: 0 0 50px;
+}
+.tab-heading {
+	background-color: #373737;
+	padding-left: 10px;
+	width: 250px;
+	height: 40px;
+	color: #fff;
+	line-height: 40px;
+	margin: 0 0 25px;
+}
+.program-wrapper .form-group.selection,
+.program-wrapper .form-group.selection-ug,
+.program-wrapper .form-group.selection-pg {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 0 30px;
+}
+/*.program-wrapper select:after {
+	content: "/f0d7";
+	font-family: "Font Awesome";
+}*/
+.program-wrapper label {
+	font: 12px/15px "Roboto-Regular";
+	display: block;
+}
+.program-wrapper select {
+	width: 250px;
+	height: 40px;
+	margin-right: 35px;
+	cursor: pointer;
+}
+/*.program-wrapper .form-group.selection,
+.program-wrapper .form-group.selection-ug,
+.program-wrapper .form-group.selection-pg {
+	position: relative;
+}
+.program-wrapper .form-group.selection select:after,
+.program-wrapper .form-group.selection-ug select:after,
+.program-wrapper .form-group.selection-pg select:after {
+    content: "\f0d7";
+    font-family: FontAwesome;
+    color: #6b7376;
+    position: absolute;
+    right: 35px;
+    top: 27px;
+    z-index: 1;
+    width: 10%;
+    height: 100%;
+    pointer-events: none;
+    font-size: 26px;
+}*/
+.program-wrapper select:required {
+	outline: 1px solid #f00;
+}
+.program-wrapper .course-details-wrapper {
+	border: 1px solid #ccc;
+	padding: 15px;
+	margin: 30px 0 0;
+	display: none;
+}
+.program-wrapper .course-details-wrapper .heading {
+	padding: 0 0 10px 25px;
+}
+.program-wrapper .course-details-wrapper .course-details {
+	border: 1px solid #ccc;
+	padding: 0 10px;
+	line-height: 50px;
+}
+.program-wrapper .course-details-wrapper .course-title {
+	float: left;
+	width: 20%;
+}
+.program-wrapper .course-details-wrapper .course-description,
+.program-wrapper .course-details-wrapper .course-duration,
+.program-wrapper .course-details-wrapper .course-toalFees,
+.program-wrapper .course-details-wrapper .course-discountPercentage,
+.program-wrapper .course-details-wrapper .course-discountAmount {
+	border-left: 1px solid #ccc;
+	padding-left: 15px;
+	float: left;
+	width: 80%;
+}
+
+/*Education System*/
+.education-wrapper .education-heading {
+	font-size: 16px;
+	padding: 0 0 20px;
+}
+.campus-level-choice {
+	margin-bottom: 30px;
+}
+.education-wrapper label, .choose-campus label, .choose-level label {
+	font: 12px/15px "Roboto-Regular";
+	display: block;
+	margin: 0 0 10px;
+}
+#basic-details-form .choose-campus {
+	margin-right: 30px;
+}
+#basic-details-form .choose-campus, #basic-details-form .choose-level {
+	display: inline-block;
+}
+.education-wrapper .form-group {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 15px 25px 0;
+}
+.education-wrapper input, .education-wrapper select, .choose-campus select, .choose-level select {
+	font-size: 12px;
+	width: 250px;
+	height: 40px;
+}
+/*.education-wrapper select {
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}*/
+/*.education-wrapper .form-group.selection {
+	position: relative;
+}
+.education-wrapper .form-group.selection label:after {
+    content: "\f0d7";
+    font-family: FontAwesome;
+    color: #6b7376;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    z-index: 1;
+    width: 10%;
+    height: 100%;
+    pointer-events: none;
+    font-size: 26px;
+}*/
+.education-wrapper .sslc-wrapper,
+.education-wrapper .hsc-wrapper {
+	margin: 0 0 35px;
+}
+.education-wrapper .hsc-wrapper {
+	display: none;
+}
+.education-wrapper .hsc-wrapper .bottom-section {
+	margin: 25px 0 0;
+}
+.education-wrapper .sslc-wrapper .bottom-section .form-group, 
+.education-wrapper .hsc-wrapper .bottom-section .form-group,
+.education-wrapper .graduation-wrapper .bottom-section .form-group {
+	width: 40%;
+}
+.education-wrapper .hsc-wrapper .bottom-section .form-group.pucPercentage,
+.education-wrapper .hsc-wrapper .bottom-section .form-group.pcmPercentage {
+	width: 250px;
+}
+
+.education-wrapper .sslc-wrapper .bottom-section .form-group .heading,
+.education-wrapper .hsc-wrapper .bottom-section .form-group .heading,
+.education-wrapper .graduation-wrapper .bottom-section .form-group .heading {
+	margin: 0 0 10px;
+}
+.education-wrapper .sslc-wrapper .bottom-section .form-group.select-option label,
+.education-wrapper .hsc-wrapper .bottom-section .form-group.select-option label,
+.education-wrapper .graduation-wrapper .bottom-section .form-group.select-option label {
+	padding: 0;
+	margin: 0 0 10px;
+	display: inline-block;
+}
+.education-wrapper .graduation-wrapper .bottom-section .form-group.select-option label {
+	width: 50%;
+}
+.education-wrapper .sslc-wrapper .bottom-section .form-group input[type="radio"],
+.education-wrapper .hsc-wrapper .bottom-section .form-group input[type="radio"],
+.education-wrapper .graduation-wrapper .bottom-section .form-group input[type="radio"]{
+	width: 20px;
+	height: auto;
+	margin: 0;
+	vertical-align: middle;
+}
+.education-wrapper .graduation-wrapper {
+	display: none;
+	border-bottom: 1px solid #000;
+	margin: 0 0 30px;
+	padding: 0 0 30px;
+}
+
+/*Personal Details*/
+.personal-details-wrapper {
+	border-bottom: 1px solid #000;
+	margin: 0 0 30px;
+	padding: 0 0 30px;
+}
+.personal-details {
+	margin: 0 0 30px;
+	float: left;
+}
+.personal-details .form-group,
+.personal-details .form-group  input {
+	width: 250px;
+	height: 40px;
+	float: left;
+	margin-right: 17px;
+}
+.personal-details-wrapper .form-group input[type="radio"] {
+	width: 20px;
+	height: auto;
+	margin: 0;
+	vertical-align: middle;
+}
+.personal-details .heading {
+	margin: 0 0 15px;
+}
+.personal-details label {
+	font: 12px "Roboto-Regular";
+	padding-right: 10px;
+}
+.communication-address, .permanent-address {
+	float: left;
+	width: 100%;
+}
+.communication-address textarea, 
+.permanent-address textarea,
+.suffer-section textarea {
+	width: 100%;
+	resize: vertical;
+	height: 80px;
+	margin: 0 0 30px;
+}
+.permanentAddress.changebg {
+	background-color: #e5e5e5;
+}
+.address-heading {
+	text-transform: uppercase;
+}
+.permanent-address .address-heading .heading {
+	display: inline-block;
+}
+.permanent-address .address-heading input {
+	margin: 0 5px 0 15px;
+	vertical-align: bottom;
+}
+.permanent-address .address-heading label {
+	font: 12px "Roboto-Bold";
+}
+.personal-details-wrapper .suffer-section label {
+	font: 12px "Roboto-Regular";
+	padding-right: 10px;
+}
+.personal-details-wrapper .suffer-section .heading {
+	font-size: 12px;
+	display: inline-block;
+	padding-right: 15px;
+}
+.personal-details-wrapper #suffering {
+	display: none;
+}
+.personal-details-wrapper .permanent-address[readonly] {
+	background-color: rgb(235, 235, 228);
+}
+
+/*dob*/
+#ui-datepicker-div {
+	width: 250px;
+}
+/*Family Details*/
+.family-details-wrapper .heading {
+	font-size: 16px;
+	margin: 0 0 10px;
+}
+.family-details-wrapper .father-details,
+.family-details-wrapper .mother-details {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 0 30px;
+}
+.family-details-wrapper .form-group label {
+	font: 12px/14px "Roboto-Regular";
+}
+.family-details-wrapper .form-group,
+.family-details-wrapper .form-group  input {
+	width: 250px;
+	height: 40px;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 17px;
+}
+.family-details-wrapper .mobile-disclaimer {
+	font-size: 12px;
+	margin: 0 0 20px;
+}
+.family-details-wrapper .relation-section {
+	display: block;
+	width: 100%;
+	margin: 0 0 50px;
+}
+.family-details-wrapper .relation-section .heading {
+	font-size: 12px;
+	padding-right: 20px;
+	float: left;
+}
+.family-details-wrapper .relation-section input[type="radio"] {
+	width: 15px;
+	height: 15px;
+	vertical-align: middle;
+	margin: 0 5px 0 0;
+}
+.family-details-wrapper .relation-section label {
+	font: 12px "Roboto-Regular";
+	padding-right: 10px;
+}
+#save {
+	float: right;
+	width: 250px;
+	height: 40px;
+	color: #fff;
+	background-color: #dc2e27;
+	text-align: center;
+}
+.program-wrapper .no-course-found {
+    margin: 30px 0 0;
+}
+/*Upload Documents Styles*/
+.upload-section {
+	padding: 0 100px;
+}
+/*.upload-section-wrapper .uploadPhoto,
+.upload-section-wrapper .uploadSslcMarksheet,
+.upload-section-wrapper .uploadHscMarksheet,
+.upload-section-wrapper .uploadUgMarksheet {
+	width: 25%;
+	height: 160px;
+	float: left;
+	padding: 65px 15px 0;
+	border: 1px solid #373737;
+}*/
+.upload-registration .upload-registration-option.changebg,
+.upload-section-wrapper .upload-option.changebg, 
+.upload-section-wrapper .upload-sslc-option.changebg, 
+.upload-section-wrapper .upload-hsc-option.changebg, 
+.upload-section-wrapper .upload-ug-option.changebg {
+    background-color: #373737;
+    color: #fff;
+}
+.upload-registration .upload-registration-option,
+.upload-section-wrapper .upload-option, 
+.upload-section-wrapper .upload-sslc-option, 
+.upload-section-wrapper .upload-hsc-option, 
+.upload-section-wrapper .upload-ug-option {
+    width: 25%;
+    float: left;
+    padding: 65px 15px 0 50px;
+    border: 1px solid #373737;
+    border-spacing: 0;
+    min-height: 180px;
+}
+.upload-registration .upload-registration-option, .upload-option, .upload-sslc-option, .upload-hsc-option, .upload-ug-option {
+    position: relative;
+}
+.upload-registration .upload-registration-option span:before, .upload-option span:before, .upload-sslc-option span:before, .upload-hsc-option span:before, .upload-ug-option span:before {
+    content: 'x';
+    color: #dc2e27;
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    border: 1px solid #dc2e27;
+    position: absolute;
+    top: 6px;
+    text-align: center;
+    right: 2px;
+    font-size: 16px;
+    line-height: 12px;
+    cursor: pointer;
+}
+/*#photoWrapper span, #sslcWrapper span, .HscMarksheet span, .UgMarksheet span {
+	position: absolute;
+    left: 13%;
+    top: 68px;
+}*/
+.upload-section-wrapper #uploadPhoto.changebg.hideText, 
+.upload-section-wrapper #uploadSslcMarksheet.changebg.hideText, 
+.upload-section-wrapper #uploadHscMarksheet.changebg.hideText, 
+.upload-section-wrapper #uploadUgMarksheet.changebg.hideText {
+	color: transparent;
+}
+.upload-section-wrapper #uploadPhoto.showText, 
+.upload-section-wrapper #uploadSslcMarksheet.showText, 
+.upload-section-wrapper #uploadHscMarksheet.showText, 
+.upload-section-wrapper #uploadUgMarksheet.showText {
+	color: #fff;
+}
+.upload-section-wrapper .custom-file-upload,
+.upload-registration-option .custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+.upload-registration-option #registration-marksheet-name, 
+.upload-section-wrapper #photo-name, 
+.upload-section-wrapper #sslc-marksheet-name,
+.upload-section-wrapper #hsc-marksheet-name,
+.upload-section-wrapper #ug-marksheet-name {
+	word-break: break-word;
+}
+.upload-registration-option #registrationMarksheet.changebg,
+.upload-section-wrapper #uploadPhoto.changebg,
+.upload-section-wrapper #uploadSslcMarksheet.changebg,
+.upload-section-wrapper #uploadHscMarksheet.changebg ,
+.upload-section-wrapper #uploadUgMarksheet.changebg {
+	background-color: #373737;
+	color: #fff;
+}
+.upload-registration-option span, 
+.upload-section-wrapper span {
+	color: #fff;
+}
+.upload-registration .upload-registration-marksheet, 
+.upload-section-wrapper .upload-photo,
+.upload-section-wrapper .upload-sslc-marksheet,
+.upload-section-wrapper .upload-hsc-marksheet,
+.upload-section-wrapper .upload-ug-marksheet {
+	float: left;
+	width: 72.68%;
+	margin: 0 0 30px 20px;
+	border: 1px solid #373737;
+	min-height: 180px;
+}
+.upload-registration .upload-registration-marksheet-content,
+.upload-section-wrapper .upload-photo .upload-photo-content,
+.upload-section-wrapper .upload-sslc-marksheet .upload-sslc-marksheet-content,
+.upload-section-wrapper .upload-hsc-marksheet .upload-hsc-marksheet-content,
+.upload-section-wrapper .upload-ug-marksheet .upload-ug-marksheet-content  {
+	background-color: #fff;
+	color: #373737;
+	padding: 50px 45px 50px;
+}
+.upload-registration .upload-registration-marksheet-content.changebg, 
+.upload-section-wrapper .upload-photo .upload-photo-content.changebg,
+.upload-section-wrapper .upload-sslc-marksheet .upload-sslc-marksheet-content.changebg,
+.upload-section-wrapper .upload-hsc-marksheet .upload-hsc-marksheet-content.changebg,
+.upload-section-wrapper .upload-ug-marksheet .upload-ug-marksheet-content.changebg {
+	background-color: #dc2e27;
+	color: #fff;
+}
+.upload-section-wrapper h4,
+.upload-registration h4  {
+	font-size: 18px;
+	margin: 0 0 15px;
+}
+.upload-section-wrapper p,
+.upload-registration p {
+	font-size: 16px;
+}
+.upload-section-wrapper .video-disclaimer {
+	margin: 0 0 20px;
+}
+.upload-section-wrapper .uploadSubmit {
+	background-color: #dc2e27;
+	color: #fff;
+	width: 130px;
+	height: 40px;
+	margin: 30px auto 0;
+	display: block;
+	line-height: 40px;
+}
+.video-section {
+	background-color: #e5e5e5;
+	padding: 25px;
+	margin: 0 0 20px;
+	float: left;
+	width: 100%;
+}
+.video-section-content {
+	font-size: 18px;
+}
+.video-section .video-input input {
+	width: 100%;
+}
+.video-checkbox {
+	margin: 15px 0 0;
+}
+.video-checkbox label {
+	font: 16px 'Roboto-Regular';
+}
+.video-checkbox input {
+	margin-right: 10px;
+	vertical-align: top;
+}
+#whatsAppPhone {
+	display: inline-block;
+}
+.essay-question-first,
+.essay-question-second {
+	background-color: #e5e5e5;
+	padding: 10px 25px;
+	float: left;
+	width: 100%;
+	margin: 0 0 20px;
+}
+.essay-question-first .essay-question,
+.essay-question-second .essay-question {
+	margin: 0 0 10px;
+}
+.essay-question-first {
+	margin: 0 0 20px;
+}
+.essay-question-first textarea,
+.essay-question-second textarea {
+	width: 100%;
+	min-height: 100px;
+	resize: vertical;
+	padding: 0;
+}
+.essay-answer textarea::placeholder {
+    padding-top: 75px;
+    text-align: right;
+}
+.declarion-section {
+	float: left;
+	margin: 0 0 20px;
+}
+.declarion-checkbox input[type="checkbox"] {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+}
+.declarion-checkbox span {
+    font: 12px/18px 'Roboto-Regular';
+    color: #373737;
+    display: block;
+    text-align: left;
+    padding-left: 35px;
+}
+.payment-section .registration-payment-wrapper {
+	background-color: #e5e5e5;
+	min-height: 80px;
+	margin: 0 0 30px;
+}
+.payment-section .registration-payment-wrapper h3 {
+	color: #373737;
+	line-height: 80px;
+}
+.thanks-content {
+	text-align: center;
+}
+/*Mobile and small devvices styles*/
+@media only screen and (min-width: 0) and (max-width: 767px) {
+	.form-tabs {
+		display: none;
+	}
+
+	/*Step-1 Registration*/
+	.form-two-column-wrapper {
+	    padding: 0;
+	}
+	.form-two-column-wrapper .login-component-wrapper {
+		width: 100%;
+		margin: 0 0 30px;
+	}
+	.form-two-column-wrapper .login-form form,
+	.partially-filled-form .partial-form .form-group {
+	    padding: 0 10px;
+	}
+	.form-two-column-wrapper .login-form label {
+	    padding-right: 15px;
+	    line-height: 30px;
+	    float: left;
+	    text-align: right;
+	    width: 40%;
+	}
+	.form-two-column-wrapper .login-form input, 
+	.form-two-column-wrapper .login-form select {
+	    width: 60%;
+	}
+	.partially-filled-form .partial-form {
+		padding-top: 50px;
+	}
+	.partially-filled-form .two-column-heading h4 {
+		font-size: 14px;
+	}
+	.partially-filled-form {
+		width: 100%;
+		margin: 0;
+	}
+	.partially-filled-form .partial-form label {
+	    width: 30%;
+	}
+	.partially-filled-form .partial-form input, 
+	.partially-filled-form .partial-form select {
+		width: 65%;
+	}
+	.partially-filled-form .partial-form input.submit-button {
+		margin-right: 3px;
+	}
+	.selection-mode .form-group.select-option div {
+		width: 100%;
+	}
+	/*Step-2*/
+	.basic-details-wrapper .top-section-wrapper {
+		background-color: #373737;
+		clear: both;
+		margin: 0 0 30px;
+	}
+	.top-section-wrapper .personal-details {
+		height: auto;
+	}
+	.course-details-wrapper .heading {
+		padding: 0 0 10px 0;
+	}
+	.course-details-wrapper .course-title {
+		width: 35%;
+	}
+	.course-details-wrapper .course-description {
+		width: 65%;
+	}
+	.top-section-wrapper .personal-details .each-section,
+	.basic-details-wrapper .selection,
+	.tab-heading, #basic-details-form .form-group.selection,
+	.program-wrapper .form-group.selection-ug,
+	.education-wrapper input, .education-wrapper select,
+	.education-wrapper .form-group, .education-wrapper .hsc-wrapper .bottom-section .form-group,
+	.family-details-wrapper .form-group, .family-details-wrapper .form-group input, 
+	.personal-details .form-group, .personal-details .form-group input, #save {
+		width: 100%;
+	}
+	.course-details-wrapper .course-details {
+		line-height: 30px;
+	}
+	.personal-details-wrapper .personal-details .form-group.selection,
+	.personal-details .form-group, .personal-details .form-group input,
+	.family-details-wrapper .form-group {
+		margin: 0 0 15px;
+		height: auto;
+	}
+	.permanent-address .address-heading input {
+		margin: 0 5px 0 0;
+	}
+	.family-details-wrapper .relation-section label {
+		padding-right: 3px;
+	}
+	.program-wrapper .course-details-wrapper .course-title {
+		width: 25%;
+		padding-top: 15px;
+		line-height: 20px;
+	}
+	.program-wrapper .course-details-wrapper .course-description, .program-wrapper .course-details-wrapper .course-duration, .program-wrapper .course-details-wrapper .course-toalFees, .program-wrapper .course-details-wrapper .course-discountPercentage, .program-wrapper .course-details-wrapper .course-discountAmount {
+		width: 75%;
+		min-height: 85px;
+		padding-top: 15px;
+		line-height: 20px;
+	}
+	.payment-section .registration-payment-wrapper h3 {
+		line-height: 25px;
+		padding-top: 15px;
+	}
+	/*Step-3 Upload Section*/
+	.upload-section {
+	    padding: 0;
+	}
+	.upload-registration .upload-registration-option,
+	.upload-registration .upload-registration-marksheet,
+	.upload-section-wrapper .upload-option, .upload-section-wrapper .upload-sslc-option, 
+	.upload-section-wrapper .upload-hsc-option, .upload-section-wrapper .upload-ug-option,
+	.upload-section-wrapper .upload-photo, .upload-section-wrapper .upload-sslc-marksheet, 
+	.upload-section-wrapper .upload-hsc-marksheet, .upload-section-wrapper .upload-ug-marksheet {
+		width: 100%;
+		height: auto;
+		min-height: 160px;
+	}
+	.upload-registration .upload-registration-marksheet,
+	.upload-section-wrapper .upload-photo, .upload-section-wrapper .upload-sslc-marksheet, 
+	.upload-section-wrapper .upload-hsc-marksheet, .upload-section-wrapper .upload-ug-marksheet {
+		margin: 0 0 30px 0;
+	}
+	.upload-registration-marksheet .upload-registration-marksheet-content,
+	.upload-section-wrapper .upload-photo .upload-photo-content, 
+	.upload-section-wrapper .upload-sslc-marksheet .upload-sslc-marksheet-content, 
+	.upload-section-wrapper .upload-hsc-marksheet .upload-hsc-marksheet-content, 
+	.upload-section-wrapper .upload-ug-marksheet .upload-ug-marksheet-content {
+		padding:15px 25px;
+	}
+	.upload-section-wrapper .uploadSubmit {
+		width: 100%;
+	}
+}
+
+/*Tablet and Medium Device Styles*/
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+	.form-tabs ul li {
+		line-height: 18px;
+		padding-top: 14px;
+	}
+	.form-tabs ul li.selected:before,
+	.form-tabs ul li.changebg:before {
+		left: 27%;
+	}
+	.form-tabs ul li:nth-child(2):before, 
+	.form-tabs ul li:nth-child(2).selected:before, 
+	.form-tabs ul li:nth-child(2).changebg:before {
+		left: 10%;
+	}
+	.form-tabs ul li:nth-child(3):before, 
+	.form-tabs ul li:nth-child(3).selected:before, 
+	.form-tabs ul li:nth-child(3).changebg:before {
+		left: 13%;
+	}
+	.form-tabs ul li:last-child:before,
+	.form-tabs ul li:last-child.selected:before, 
+	.form-tabs ul li:last-child.changebg:before {
+		left: 2%;
+	}
+
+	/*Step-1*/
+	.form-two-column-wrapper {
+	    padding: 0;
+	}
+	.form-two-column-wrapper .login-form form {
+	    padding: 0 25px;
+	}
+	.form-two-column-wrapper .login-form label {
+		width: 31%;
+		padding-right: 5px;
+	}
+	.form-two-column-wrapper .login-component-wrapper {
+		width: 48%;
+	}
+	.partially-filled-form {
+		min-height: 475px;
+	}
+	.form-two-column-wrapper .login-form .otp-wrapper {
+	    padding-left: 0;
+	}
+	.form-two-column-wrapper .login-form .submit {
+		padding-right: 38px;
+	}
+	.form-two-column-wrapper .partially-filled-form .otp-wrapper {
+		padding-left: 25.5%;
+	}
+	.partially-filled-form .partial-form input, .partially-filled-form .partial-form select {
+	    width: 225px;
+	}
+	.form-two-column-wrapper .login-form #hideMsg,
+	.form-two-column-wrapper .partially-filled-form #hideMsgPartially {
+		text-align: left;
+		margin: 0 0 15px 20px;
+		width: 95%;
+	}
+	.form-two-column-wrapper .partially-filled-form .enterOtpPartially, .form-two-column-wrapper .partially-filled-form .sendOtpPartially {
+		width: 100px;
+	}
+	.partially-filled-form .partial-form input.submit-button {
+		margin-right: 0;
+	}
+	.selection-mode .form-group.select-option div {
+		width: 48%;
+	}
+	/*Step-2*/
+	.basic-details-wrapper .top-section-wrapper .personal-details,
+	.basic-details-wrapper .top-section-wrapper .form-group.selection {
+		min-height: 100px;
+	}
+	.basic-details-wrapper .selection select {
+	    width: 85%;
+	}
+	.education-wrapper input, .education-wrapper select {
+		width: 155px;
+	}
+	.family-details-wrapper .form-group, .family-details-wrapper .form-group input {
+		width: 175px;
+	}
+	.personal-details .form-group.dob, .personal-details .form-group.aadharNo {
+	    margin-top: 15px;
+	}
+	.family-details-wrapper .form-group.relation-section {
+		width: 100%;
+	}
+	.form-group.course-preference {
+	    margin-left: 10%;
+	}
+	.program-wrapper select {
+		width: 200px;
+	}
+	.program-wrapper .form-group.level,
+	.program-wrapper .form-group.course-preference {
+		margin-left: 0;
+	}
+	/*Step-3*/
+	.upload-section {
+	    padding: 0;
+	}
+	.upload-registration .upload-registration-marksheet, .upload-section-wrapper .upload-photo, .upload-section-wrapper .upload-sslc-marksheet, 
+	.upload-section-wrapper .upload-hsc-marksheet, .upload-section-wrapper .upload-ug-marksheet {
+		width: 72%;
+	}
+	.upload-registration .upload-registration-option,
+	.upload-section-wrapper .upload-option, .upload-section-wrapper .upload-sslc-option, 
+	.upload-section-wrapper .upload-hsc-option, .upload-section-wrapper .upload-ug-option, 
+	.upload-section-wrapper .upload-option.changebg, .upload-section-wrapper .upload-sslc-option.changebg, 
+	.upload-section-wrapper .upload-hsc-option.changebg, .upload-section-wrapper .upload-ug-option.changebg
+	.upload-section-wrapper .upload-photo, .upload-section-wrapper .upload-sslc-marksheet, 
+	.upload-section-wrapper .upload-hsc-marksheet, .upload-section-wrapper .upload-ug-marksheet, 
+	.upload-section-wrapper .upload-photo .upload-photo-content.changebg, 
+	.upload-section-wrapper .upload-sslc-marksheet .upload-sslc-marksheet-content.changebg, 
+	.upload-section-wrapper .upload-hsc-marksheet .upload-hsc-marksheet-content.changebg, 
+	.upload-section-wrapper .upload-ug-marksheet .upload-ug-marksheet-content.changebg,
+	.upload-registration .upload-registration-marksheet,
+	.upload-registration .upload-registration-marksheet-content.changebg {
+		min-height: 200px;
+	}
+}
+
+/*Tablet Landscape and Medium Device Styles*/ 
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.form-tabs ul li.selected:before,
+	.form-tabs ul li.changebg:before {
+		left: 31%;
+	}
+	.form-tabs ul li:nth-child(2):before, 
+	.form-tabs ul li:nth-child(2).selected:before, 
+	.form-tabs ul li:nth-child(2).changebg:before {
+		left: 19%;
+	}
+	.form-tabs ul li:nth-child(3):before, 
+	.form-tabs ul li:nth-child(3).selected:before, 
+	.form-tabs ul li:nth-child(3).changebg:before {
+		left: 22%;
+	}
+	.form-tabs ul li:last-child {
+		width: 20%;
+		padding-left: 5%;
+	}
+	.form-tabs ul li:last-child:before,
+	.form-tabs ul li:last-child.selected:before, 
+	.form-tabs ul li:last-child.changebg:before {
+		left: 14%;
+	}
+	.form-two-column-wrapper .login-form .otp-wrapper {
+		padding-left: 31%;
+	}
+	.form-two-column-wrapper .login-form .submit {
+		padding-right: 17px;
+	}
+	.partially-filled-form .partial-form input.submit-button {
+		margin-right: 45px;
+	}
+	.personal-details .form-group.dob {
+		margin-top: 0;
+	}
+	 .personal-details .form-group.aadharNo {
+	    margin-top: 15px;
+	}
+}

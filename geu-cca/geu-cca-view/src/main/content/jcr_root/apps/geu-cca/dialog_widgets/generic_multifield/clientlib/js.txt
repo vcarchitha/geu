@@ -1,0 +1,4 @@
+#base=js
+Coral-Checkbox.js
+Coral-GenericMultiField.js
+

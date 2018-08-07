@@ -1,0 +1,6 @@
+#base=js
+CustomList.js
+TableStyles.js
+Coral.templates.js
+CustomStyle.js
+List.js

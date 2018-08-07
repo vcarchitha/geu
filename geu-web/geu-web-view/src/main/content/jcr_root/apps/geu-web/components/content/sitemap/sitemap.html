@@ -1,0 +1,20 @@
+<div class="cq-placeholder"
+   data-sly-test.author="${wcmmode.edit || wcmmode.design}"
+   data-emptytext="Sitemap"></div>
+<div class="sitemap-component" data-sly-use.sitemap="com.geu.aem.web.core.models.SiteMapModel">
+   <div class="sitemap-col list">
+      <ul data-sly-list="${sitemap.withChildPages}" class="clearfix">
+         <li>
+            <a href="${item.pageURL}">${item.pageTitle}</a>
+            <ul data-sly-list="${item.childPages}">
+               <li><a href="${item.pageURL}">${item.pageTitle}</a></li>
+            </ul>
+         </li>
+      </ul>
+   </div>
+   <div class="sitemap-col menu">
+      <ul data-sly-list="${sitemap.withoutChildPages}">
+         <li><a href="${item.pageURL}">${item.pageTitle}</a></li>
+      </ul>
+   </div>
+</div>

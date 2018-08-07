@@ -1,0 +1,21 @@
+<!--New And Events Teaser List-->
+<div class="cq-placeholder" data-sly-test.author="${wcmmode.edit || wcmmode.design}" data-emptytext="New And Events Teaser List component."></div>
+<div class="control-component-inner-wrapper">
+	<sly data-sly-use.newsEvents="com.geu.aem.web.core.models.NewsEventsTeaserListModel" data-sly-unwrap>
+    	<h3>${newsEvents.newsEventsTitle}</h3>
+		<sly data-sly-list.newsEventsList="${newsEvents.newEventsList}" data-sly-unwrap>
+			<div class="each-records clearfix">
+				<div class="pull-left">
+					<img alt="image" class="img-responsive columncontrol-img" src="${newsEventsList.thumbnailImage}">
+				</div>
+				<a class="content-page-link" href="${newsEventsList.pageURL}">				
+					<div class="headlines pull-left">
+	                    <p class="bold">${newsEventsList.newsEventsHeadline}</p>
+	                    <p>${newsEventsList.newsEventsSubTitle}</p>
+	                </div>
+	             </a>   
+			</div>
+		</sly>
+    	<a href="${newsEvents.buttonURL}" class="view-more">${newsEvents.buttonLabel}</a>
+    </sly>
+</div>

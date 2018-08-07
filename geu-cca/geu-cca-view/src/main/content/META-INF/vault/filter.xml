@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/geu-cca"/>
+    <filter root="/etc/designs/geu-cca/clientlib-geu-cca" />
+	<filter root="/etc/designs/geu-cca/clientlib-third-party" />
+</workspaceFilter>
